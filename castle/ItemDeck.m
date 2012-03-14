@@ -7,11 +7,16 @@
 //
 
 #import "ItemDeck.h"
+#import "JSONKit.h"
 
 @implementation ItemDeck
 
 - (id)init {
-    NSArray *cards = @[ @"Testing", @"Whee", @"One", @"Two", @"Three" ];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"items" ofType:@"json"];
+    NSData *items = [NSData dataWithContentsOfFile:filePath];                       
+    NSArray *cards = [items objectFromJSONData];
+    NSLog(@"%@", [cards objectAtIndex:0]);
+    
     self = [super initWithCards:cards];
     return self;
 }

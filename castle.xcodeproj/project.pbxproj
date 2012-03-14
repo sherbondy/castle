@@ -36,6 +36,9 @@
 		3E75941B15114E2100C5F6E6 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941A15114E2100C5F6E6 /* DeckViewController.m */; };
 		3E75941E15114EDA00C5F6E6 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941D15114EDA00C5F6E6 /* Deck.m */; };
 		3E759421151151CA00C5F6E6 /* ItemDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E759420151151CA00C5F6E6 /* ItemDeck.m */; };
+		3E7594281511555400C5F6E6 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594241511555400C5F6E6 /* CHANGELOG.md */; };
+		3E7594291511555400C5F6E6 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7594261511555400C5F6E6 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3E75942A1511555400C5F6E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594271511555400C5F6E6 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,10 @@
 		3E75941D15114EDA00C5F6E6 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		3E75941F151151CA00C5F6E6 /* ItemDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDeck.h; sourceTree = "<group>"; };
 		3E759420151151CA00C5F6E6 /* ItemDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDeck.m; sourceTree = "<group>"; };
+		3E7594241511555400C5F6E6 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		3E7594251511555400C5F6E6 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		3E7594261511555400C5F6E6 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		3E7594271511555400C5F6E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +122,7 @@
 		3E7593B4151147FA00C5F6E6 = {
 			isa = PBXGroup;
 			children = (
+				3E7594221511554E00C5F6E6 /* external */,
 				3E75940C15114D7000C5F6E6 /* text */,
 				3E7593F215114D6B00C5F6E6 /* resources */,
 				3E7593C9151147FA00C5F6E6 /* castle */,
@@ -227,6 +235,26 @@
 			path = text;
 			sourceTree = "<group>";
 		};
+		3E7594221511554E00C5F6E6 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				3E7594231511555400C5F6E6 /* JSONKit */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		3E7594231511555400C5F6E6 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				3E7594241511555400C5F6E6 /* CHANGELOG.md */,
+				3E7594251511555400C5F6E6 /* JSONKit.h */,
+				3E7594261511555400C5F6E6 /* JSONKit.m */,
+				3E7594271511555400C5F6E6 /* README.md */,
+			);
+			name = JSONKit;
+			path = external/JSONKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +342,8 @@
 				3E75941015114D7000C5F6E6 /* characters.json in Resources */,
 				3E75941115114D7000C5F6E6 /* items.json in Resources */,
 				3E75941215114D7000C5F6E6 /* professions.json in Resources */,
+				3E7594281511555400C5F6E6 /* CHANGELOG.md in Resources */,
+				3E75942A1511555400C5F6E6 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +383,7 @@
 				3E75941B15114E2100C5F6E6 /* DeckViewController.m in Sources */,
 				3E75941E15114EDA00C5F6E6 /* Deck.m in Sources */,
 				3E759421151151CA00C5F6E6 /* ItemDeck.m in Sources */,
+				3E7594291511555400C5F6E6 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
