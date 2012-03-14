@@ -35,17 +35,17 @@
 		3E7593C3151147FA00C5F6E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E7593C5151147FA00C5F6E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3E7593CB151147FA00C5F6E6 /* castle-Info.plist */ = {isa = PBXFileReference; path = "castle-Info.plist"; sourceTree = "<group>"; };
+		3E7593CB151147FA00C5F6E6 /* castle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "castle-Info.plist"; sourceTree = "<group>"; };
 		3E7593CD151147FA00C5F6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E7593CF151147FA00C5F6E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3E7593D1151147FA00C5F6E6 /* castle-Prefix.pch */ = {isa = PBXFileReference; path = "castle-Prefix.pch"; sourceTree = "<group>"; };
-		3E7593D2151147FA00C5F6E6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E7593D1151147FA00C5F6E6 /* castle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "castle-Prefix.pch"; sourceTree = "<group>"; };
+		3E7593D2151147FA00C5F6E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E7593D3151147FA00C5F6E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3E7593DA151147FA00C5F6E6 /* castleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = castleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7593DB151147FA00C5F6E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3E7593E3151147FB00C5F6E6 /* castleTests-Info.plist */ = {isa = PBXFileReference; path = "castleTests-Info.plist"; sourceTree = "<group>"; };
+		3E7593E3151147FB00C5F6E6 /* castleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "castleTests-Info.plist"; sourceTree = "<group>"; };
 		3E7593E5151147FB00C5F6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3E7593E7151147FB00C5F6E6 /* castleTests.h */ = {isa = PBXFileReference; path = castleTests.h; sourceTree = "<group>"; };
+		3E7593E7151147FB00C5F6E6 /* castleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = castleTests.h; sourceTree = "<group>"; };
 		3E7593E8151147FB00C5F6E6 /* castleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = castleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
