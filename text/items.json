@@ -2,11 +2,13 @@
   {
     "id": 0,
     "name": "Key",
-    "description": "The Order can proclaim victory if it holds at least 3 Keys."
+    "description": "The Order can proclaim victory if it holds at least 3 Keys.",
+    "count": 3
   }, {
     "id": 1,
     "name": "Goblet",
-    "description": "The Brotherhood can proclaim victory if it holds at least 3 Goblets."
+    "description": "The Brotherhood can proclaim victory if it holds at least 3 Goblets.",
+    "count": 3
   }, {
     "id": 2,
     "name": "Bag of Secrets",
