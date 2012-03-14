@@ -1,0 +1,71 @@
+[
+  {
+    "id": 0,
+    "name": "Key",
+    "description": "The Order can proclaim victory if it holds at least 3 Keys."
+  }, {
+    "id": 1,
+    "name": "Goblet",
+    "description": "The Brotherhood can proclaim victory if it holds at least 3 Goblets."
+  }, {
+    "id": 2,
+    "name": "Bag of Secrets",
+    "description": "Trade this object and you can draw the top object from the \ndraw pile. You cannot trade this for another Bag of Secrets. \nThis bag turns into a Key as soon as all objects have been drawn."
+  }, {
+    "id": 3,
+    "name": "Bag of Secrets",
+    "description": "Trade this object and you can draw the top object from the \ndraw pile. You cannot trade this for another Bag of Secrets. \nThis bag turns into a Goblet as soon as all objects have been drawn."
+  }, {
+    "id": 4,
+    "name": "Dagger",
+    "description": "Add +1 to your score in any duel if you are the attacker. \nYou cannot use this bonus if you are supporting another player."
+  }, {
+    "id": 5,
+    "name": "Gloves",
+    "description": "Add +1 to your score in any duel if you are the defender. \nYou cannot use this bonus if you are supporting another player."
+  }, {
+    "id": 6,
+    "name": "Poison Ring",
+    "description": "You win any duel that ends in a tie if you are either the \nattacker or the defender. You cannot use this bonus if you are \nsupporting another player."
+  }, {
+    "id": 7,
+    "name": "Throwing Knives",
+    "description": "If you support the attacker in any duel add +1 to his score."
+  }, {
+    "id": 8,
+    "name": "Whip",
+    "description": "If you suport the defender in any duel add +1 to his score"
+  }, {
+    "id": 9,
+    "name": "Tome",
+    "description": "Trade this object and you can exchange your profession with \nyour trading partner. Turn these professions face-down if they \nwere face up."
+  }, {
+    "id": 10,
+    "name": "Monocle",
+    "description": "Trade this object and you can look at your trading \npartner&rsquo;s Secret Society card."
+  }, {
+    "id": 11,
+    "name": "Privilege",
+    "description": "Trade this object and you can look at all of your trading \npartner&rsquo;s objects."
+  }, {
+    "id": 12,
+    "name": "Coat",
+    "description": "Trade this object and you can choose a new profession \nfrom those left over. Place your new profession face-down \nin front of you and add the old one to those left over."
+  }, {
+    "id": 13,
+    "name": "Sextant",
+    "description": "Trade this object and you can choose a direction \n(right or left). All players must then pass one object of \ntheir choice to their neighbor in the chosen direction."
+  }, {
+    "id": 14,
+    "name": "Shattered Mirror",
+    "description": "You must always accept this object if offered in a trade. \nYou cannot use the trade ability of any object you exchange \nfor the Shattered Mirror"
+  }, {
+    "id": 15,
+    "name": "Black Pearl",
+    "description": "You must always accept this object if offered in a trade. \nIf you hold the Black Pearl you cannot proclaim victory for \nyour Secret Society."
+  }, {
+    "id": 16,
+    "name": "Seal of the Lodge",
+    "description": "You can proclaim yourself the sole winner if you hold the \nSeal of the Lodge and at least 3 Keys and/or Goblets"
+  }
+]
