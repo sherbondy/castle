@@ -14,10 +14,14 @@
 - (id)init {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"items" ofType:@"json"];
     NSData *items = [NSData dataWithContentsOfFile:filePath];                       
-    NSArray *cards = [items objectFromJSONData];
-    NSLog(@"%@", [cards objectAtIndex:0]);
+    NSArray *itemCards = [items objectFromJSONData];
+    NSLog(@"%@", [itemCards objectAtIndex:0]);
     
-    self = [super initWithCards:cards];
+    self = [super initWithCards:itemCards];
+    [self shuffle];
+    
+    NSLog(@"%@", [[self cards] objectAtIndex:0]);
+    
     return self;
 }
 

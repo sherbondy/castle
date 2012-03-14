@@ -31,7 +31,6 @@
     
     _deck = [[ItemDeck alloc] init];
     textView.text = [_deck cards].description;
-    NSLog(@"%@", [_deck cards]);
 }
 
 - (void)viewDidLoad

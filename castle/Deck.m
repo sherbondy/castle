@@ -19,7 +19,7 @@
                 
 - (id)initWithCards:(NSArray *)cards {
     if ((self = [super init])){
-        _cards = [NSMutableArray arrayWithObjects:cards, nil];
+        _cards = [NSMutableArray arrayWithArray:cards];
     }
     return self;
 }
