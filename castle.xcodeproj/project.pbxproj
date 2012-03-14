@@ -18,6 +18,24 @@
 		3E7593DE151147FA00C5F6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C5151147FA00C5F6E6 /* Foundation.framework */; };
 		3E7593E6151147FB00C5F6E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593E4151147FB00C5F6E6 /* InfoPlist.strings */; };
 		3E7593E9151147FB00C5F6E6 /* castleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7593E8151147FB00C5F6E6 /* castleTests.m */; };
+		3E75940015114D6B00C5F6E6 /* ava.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593F415114D6B00C5F6E6 /* ava.jpg */; };
+		3E75940115114D6B00C5F6E6 /* brother.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593F515114D6B00C5F6E6 /* brother.jpg */; };
+		3E75940215114D6B00C5F6E6 /* dimitri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593F615114D6B00C5F6E6 /* dimitri.jpg */; };
+		3E75940315114D6B00C5F6E6 /* juan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593F715114D6B00C5F6E6 /* juan.jpg */; };
+		3E75940415114D6B00C5F6E6 /* marie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593F815114D6B00C5F6E6 /* marie.jpg */; };
+		3E75940515114D6B00C5F6E6 /* michel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593F915114D6B00C5F6E6 /* michel.jpg */; };
+		3E75940615114D6B00C5F6E6 /* romana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FA15114D6B00C5F6E6 /* romana.jpg */; };
+		3E75940715114D6B00C5F6E6 /* sarah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FB15114D6B00C5F6E6 /* sarah.jpg */; };
+		3E75940815114D6B00C5F6E6 /* sir.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FC15114D6B00C5F6E6 /* sir.jpg */; };
+		3E75940915114D6B00C5F6E6 /* theodora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FD15114D6B00C5F6E6 /* theodora.jpg */; };
+		3E75940A15114D6B00C5F6E6 /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FE15114D6B00C5F6E6 /* shield.png */; };
+		3E75940B15114D6B00C5F6E6 /* sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FF15114D6B00C5F6E6 /* sword.png */; };
+		3E75941015114D7000C5F6E6 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940D15114D7000C5F6E6 /* characters.json */; };
+		3E75941115114D7000C5F6E6 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940E15114D7000C5F6E6 /* items.json */; };
+		3E75941215114D7000C5F6E6 /* professions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940F15114D7000C5F6E6 /* professions.json */; };
+		3E75941B15114E2100C5F6E6 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941A15114E2100C5F6E6 /* DeckViewController.m */; };
+		3E75941E15114EDA00C5F6E6 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941D15114EDA00C5F6E6 /* Deck.m */; };
+		3E759421151151CA00C5F6E6 /* ItemDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E759420151151CA00C5F6E6 /* ItemDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +65,27 @@
 		3E7593E5151147FB00C5F6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E7593E7151147FB00C5F6E6 /* castleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = castleTests.h; sourceTree = "<group>"; };
 		3E7593E8151147FB00C5F6E6 /* castleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = castleTests.m; sourceTree = "<group>"; };
+		3E7593F415114D6B00C5F6E6 /* ava.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ava.jpg; sourceTree = "<group>"; };
+		3E7593F515114D6B00C5F6E6 /* brother.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brother.jpg; sourceTree = "<group>"; };
+		3E7593F615114D6B00C5F6E6 /* dimitri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dimitri.jpg; sourceTree = "<group>"; };
+		3E7593F715114D6B00C5F6E6 /* juan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = juan.jpg; sourceTree = "<group>"; };
+		3E7593F815114D6B00C5F6E6 /* marie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marie.jpg; sourceTree = "<group>"; };
+		3E7593F915114D6B00C5F6E6 /* michel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = michel.jpg; sourceTree = "<group>"; };
+		3E7593FA15114D6B00C5F6E6 /* romana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = romana.jpg; sourceTree = "<group>"; };
+		3E7593FB15114D6B00C5F6E6 /* sarah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sarah.jpg; sourceTree = "<group>"; };
+		3E7593FC15114D6B00C5F6E6 /* sir.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sir.jpg; sourceTree = "<group>"; };
+		3E7593FD15114D6B00C5F6E6 /* theodora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theodora.jpg; sourceTree = "<group>"; };
+		3E7593FE15114D6B00C5F6E6 /* shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield.png; sourceTree = "<group>"; };
+		3E7593FF15114D6B00C5F6E6 /* sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sword.png; sourceTree = "<group>"; };
+		3E75940D15114D7000C5F6E6 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
+		3E75940E15114D7000C5F6E6 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		3E75940F15114D7000C5F6E6 /* professions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = professions.json; sourceTree = "<group>"; };
+		3E75941915114E2100C5F6E6 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
+		3E75941A15114E2100C5F6E6 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
+		3E75941C15114EDA00C5F6E6 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		3E75941D15114EDA00C5F6E6 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		3E75941F151151CA00C5F6E6 /* ItemDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDeck.h; sourceTree = "<group>"; };
+		3E759420151151CA00C5F6E6 /* ItemDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +115,8 @@
 		3E7593B4151147FA00C5F6E6 = {
 			isa = PBXGroup;
 			children = (
+				3E75940C15114D7000C5F6E6 /* text */,
+				3E7593F215114D6B00C5F6E6 /* resources */,
 				3E7593C9151147FA00C5F6E6 /* castle */,
 				3E7593E1151147FA00C5F6E6 /* castleTests */,
 				3E7593C2151147FA00C5F6E6 /* Frameworks */,
@@ -106,6 +147,12 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
+				3E75941915114E2100C5F6E6 /* DeckViewController.h */,
+				3E75941A15114E2100C5F6E6 /* DeckViewController.m */,
+				3E75941C15114EDA00C5F6E6 /* Deck.h */,
+				3E75941D15114EDA00C5F6E6 /* Deck.m */,
+				3E75941F151151CA00C5F6E6 /* ItemDeck.h */,
+				3E759420151151CA00C5F6E6 /* ItemDeck.m */,
 				3E7593D2151147FA00C5F6E6 /* AppDelegate.h */,
 				3E7593D3151147FA00C5F6E6 /* AppDelegate.m */,
 				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
@@ -141,6 +188,43 @@
 				3E7593E4151147FB00C5F6E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E7593F215114D6B00C5F6E6 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E7593F315114D6B00C5F6E6 /* characters */,
+				3E7593FE15114D6B00C5F6E6 /* shield.png */,
+				3E7593FF15114D6B00C5F6E6 /* sword.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		3E7593F315114D6B00C5F6E6 /* characters */ = {
+			isa = PBXGroup;
+			children = (
+				3E7593F415114D6B00C5F6E6 /* ava.jpg */,
+				3E7593F515114D6B00C5F6E6 /* brother.jpg */,
+				3E7593F615114D6B00C5F6E6 /* dimitri.jpg */,
+				3E7593F715114D6B00C5F6E6 /* juan.jpg */,
+				3E7593F815114D6B00C5F6E6 /* marie.jpg */,
+				3E7593F915114D6B00C5F6E6 /* michel.jpg */,
+				3E7593FA15114D6B00C5F6E6 /* romana.jpg */,
+				3E7593FB15114D6B00C5F6E6 /* sarah.jpg */,
+				3E7593FC15114D6B00C5F6E6 /* sir.jpg */,
+				3E7593FD15114D6B00C5F6E6 /* theodora.jpg */,
+			);
+			path = characters;
+			sourceTree = "<group>";
+		};
+		3E75940C15114D7000C5F6E6 /* text */ = {
+			isa = PBXGroup;
+			children = (
+				3E75940D15114D7000C5F6E6 /* characters.json */,
+				3E75940E15114D7000C5F6E6 /* items.json */,
+				3E75940F15114D7000C5F6E6 /* professions.json */,
+			);
+			path = text;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +299,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7593CE151147FA00C5F6E6 /* InfoPlist.strings in Resources */,
+				3E75940015114D6B00C5F6E6 /* ava.jpg in Resources */,
+				3E75940115114D6B00C5F6E6 /* brother.jpg in Resources */,
+				3E75940215114D6B00C5F6E6 /* dimitri.jpg in Resources */,
+				3E75940315114D6B00C5F6E6 /* juan.jpg in Resources */,
+				3E75940415114D6B00C5F6E6 /* marie.jpg in Resources */,
+				3E75940515114D6B00C5F6E6 /* michel.jpg in Resources */,
+				3E75940615114D6B00C5F6E6 /* romana.jpg in Resources */,
+				3E75940715114D6B00C5F6E6 /* sarah.jpg in Resources */,
+				3E75940815114D6B00C5F6E6 /* sir.jpg in Resources */,
+				3E75940915114D6B00C5F6E6 /* theodora.jpg in Resources */,
+				3E75940A15114D6B00C5F6E6 /* shield.png in Resources */,
+				3E75940B15114D6B00C5F6E6 /* sword.png in Resources */,
+				3E75941015114D7000C5F6E6 /* characters.json in Resources */,
+				3E75941115114D7000C5F6E6 /* items.json in Resources */,
+				3E75941215114D7000C5F6E6 /* professions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +350,9 @@
 			files = (
 				3E7593D0151147FA00C5F6E6 /* main.m in Sources */,
 				3E7593D4151147FA00C5F6E6 /* AppDelegate.m in Sources */,
+				3E75941B15114E2100C5F6E6 /* DeckViewController.m in Sources */,
+				3E75941E15114EDA00C5F6E6 /* Deck.m in Sources */,
+				3E759421151151CA00C5F6E6 /* ItemDeck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
