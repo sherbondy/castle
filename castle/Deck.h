@@ -13,6 +13,8 @@
     NSMutableArray *_cards;
 }
 
+@property (nonatomic, readonly) NSUInteger count;
+
 - (id)init;
 - (id)initWithCards:(NSArray *)cards;
 - (void)shuffle;

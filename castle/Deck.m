@@ -46,4 +46,8 @@
     return [NSArray arrayWithArray:_cards];
 }
 
+- (NSUInteger)count {
+    return _cards.count;
+}
+
 @end

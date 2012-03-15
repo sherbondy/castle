@@ -21,7 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Players";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(next:)];
     }
     return self;
 }
@@ -53,7 +53,7 @@
     _countLabel.text = [NSString stringWithFormat:@"%i", (int)_stepper.value];
 }
 
-- (void)done:(id)sender {
+- (void)next:(id)sender {
     [[Game sharedGame] setPlayerCount:(NSUInteger)_stepper.value];
     CharacterPickerViewController *characterPickerVC = [[CharacterPickerViewController alloc] init];
     [self.navigationController pushViewController:characterPickerVC animated:YES];

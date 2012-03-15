@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Player.h"
+#import "ItemDeck.h"
 
 @interface Game : NSObject {
     @private
@@ -17,6 +18,7 @@
     NSUInteger      _round;
     Player         *_currentPlayer;
     NSMutableArray *_players;
+    ItemDeck       *_itemDeck;
 }
 
 @property (nonatomic, assign)   NSUInteger playerCount;
@@ -27,5 +29,6 @@
 + (Game *)sharedGame;
 - (void)nextTurn;
 - (void)setPlayerCount:(NSUInteger)count;
+- (void)distributeCards;
 
 @end

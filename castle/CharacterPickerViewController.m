@@ -25,7 +25,7 @@
         _characters = [NSMutableArray arrayWithArray:[characterData objectFromJSONData]];
         
         self.title = @"Pick your Character";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(pickNextCharacter:)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(pickNextCharacter:)];
     }
     return self;
 }
@@ -69,6 +69,7 @@
     
     if ([Game sharedGame].round != 0){
         NSLog(@"Moving on to next step.");
+        [[Game sharedGame] distributeCards];
     }
 }
 

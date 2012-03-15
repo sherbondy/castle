@@ -32,9 +32,7 @@
     
     self = [super initWithCards:itemCards];
     [self shuffle];
-    
-    NSLog(@"%@", [self cards]);
-    
+        
     return self;
 }
 

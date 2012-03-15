@@ -56,4 +56,16 @@
     }
 }
 
+- (void)distributeCards {
+    [_players shuffle];
+    // count of goblets/bags/etc actually varies based on number of players
+    _itemDeck = [[ItemDeck alloc] init];
+    
+    for (Player *player in _players){
+        [_itemDeck drawCard];
+        [_itemDeck drawCard];
+        NSLog(@"%i", _itemDeck.count);
+    }
+}
+
 @end
