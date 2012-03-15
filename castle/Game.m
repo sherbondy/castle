@@ -13,7 +13,7 @@
 @synthesize turn = _turn;
 @synthesize round = _round;
 
-+ (id)sharedGame {
++ (Game *)sharedGame {
     static dispatch_once_t pred;
     static Game *game = nil;
     

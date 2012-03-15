@@ -22,9 +22,10 @@
     if (self) {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"characters" ofType:@"json"];
         NSData *characterData = [NSData dataWithContentsOfFile:filePath];
-        _characters = [characterData objectFromJSONData];
+        _characters = [NSMutableArray arrayWithArray:[characterData objectFromJSONData]];
         
         self.title = @"Pick your Character";
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(pickNextCharacter:)];
     }
     return self;
 }
@@ -55,6 +56,20 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)pickNextCharacter:(id)sender {
+    NSUInteger characterIndex = _carousel.currentItemIndex;
+    NSString *character = [_characters objectAtIndex:characterIndex];
+    [[[Game sharedGame] currentPlayer] setCharacter:character];
+    [_characters removeObjectAtIndex:characterIndex];
+    [_carousel removeItemAtIndex:characterIndex animated:YES];
+    [[Game sharedGame] nextTurn];
+    [self updatePlayerNameLabel];
+    
+    if ([Game sharedGame].round != 0){
+        NSLog(@"Moving on to next step.");
+    }
 }
 
 - (void)updatePlayerNameLabel {

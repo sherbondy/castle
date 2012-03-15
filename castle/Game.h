@@ -24,7 +24,7 @@
 @property (nonatomic, readonly) NSUInteger round;
 @property (nonatomic, readonly) Player    *currentPlayer;
 
-+ (id)sharedGame;
++ (Game *)sharedGame;
 - (void)nextTurn;
 - (void)setPlayerCount:(NSUInteger)count;
 
