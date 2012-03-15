@@ -11,14 +11,17 @@
 @interface Player : NSObject {
     @private
     NSString *_character;
+    NSMutableArray *_items;
 }
 
-@property (nonatomic, strong) NSString *character;
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong)   NSString   *character;
+@property (nonatomic, strong)   NSString   *name;
+@property (nonatomic, readonly) NSUInteger handSize;
 
 + (UIImage *)imageForCharacter:(NSString *)character;
 
 - (id)initWithName:(NSString *)name;
 - (UIImage *)characterImage;
+- (void)addItemToHand:(id)item;
 
 @end

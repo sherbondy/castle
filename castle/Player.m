@@ -34,4 +34,16 @@
     return [Player imageForCharacter:_character];
 }
 
+- (void)addItemToHand:(id)item {
+    if (!_items){
+        _items = [NSMutableArray arrayWithObject:item];
+    } else {
+        [_items addObject:item];
+    }
+}
+
+- (NSUInteger)handSize {
+    return _items.count;
+}
+
 @end

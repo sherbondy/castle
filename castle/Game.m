@@ -62,8 +62,7 @@
     _itemDeck = [[ItemDeck alloc] init];
     
     for (Player *player in _players){
-        [_itemDeck drawCard];
-        [_itemDeck drawCard];
+        [player addItemToHand:[_itemDeck drawCard]];
         NSLog(@"%i", _itemDeck.count);
     }
 }
