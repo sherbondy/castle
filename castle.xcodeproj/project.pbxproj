@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6E96EA1511D28100626416 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
+		3E6E96EE1511D96D00626416 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
 		3E7593C4151147FA00C5F6E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C3151147FA00C5F6E6 /* UIKit.framework */; };
 		3E7593C6151147FA00C5F6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C5151147FA00C5F6E6 /* Foundation.framework */; };
 		3E7593C8151147FA00C5F6E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */; };
@@ -52,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		3E6E96E91511D28100626416 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		3E6E96EC1511D96D00626416 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3E6E96ED1511D96D00626416 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		3E7593BF151147FA00C5F6E6 /* castle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = castle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7593C3151147FA00C5F6E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E7593C5151147FA00C5F6E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -163,6 +169,10 @@
 				3E759420151151CA00C5F6E6 /* ItemDeck.m */,
 				3E7593D2151147FA00C5F6E6 /* AppDelegate.h */,
 				3E7593D3151147FA00C5F6E6 /* AppDelegate.m */,
+				3E6E96E81511D28100626416 /* Game.h */,
+				3E6E96E91511D28100626416 /* Game.m */,
+				3E6E96EC1511D96D00626416 /* Player.h */,
+				3E6E96ED1511D96D00626416 /* Player.m */,
 				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
 			);
 			path = castle;
@@ -384,6 +394,8 @@
 				3E75941E15114EDA00C5F6E6 /* Deck.m in Sources */,
 				3E759421151151CA00C5F6E6 /* ItemDeck.m in Sources */,
 				3E7594291511555400C5F6E6 /* JSONKit.m in Sources */,
+				3E6E96EA1511D28100626416 /* Game.m in Sources */,
+				3E6E96EE1511D96D00626416 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +559,7 @@
 				3E7593EE151147FB00C5F6E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E7593EF151147FB00C5F6E6 /* Build configuration list for PBXNativeTarget "castleTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +568,7 @@
 				3E7593F1151147FB00C5F6E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

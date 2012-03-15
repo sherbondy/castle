@@ -20,6 +20,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    // playercountvc -> characterpickervc -> distribute items, professions, and orders -> randomly decide who goes first
+    
     DeckViewController *deckVC = [[DeckViewController alloc] init];
     [self.window setRootViewController:deckVC];
     
