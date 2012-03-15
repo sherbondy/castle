@@ -13,6 +13,14 @@
 @synthesize turn = _turn;
 @synthesize round = _round;
 
++ (id)sharedGame {
+    static dispatch_once_t pred;
+    static Game *game = nil;
+    
+    dispatch_once(&pred, ^{ game = [[self alloc] init]; });
+    return game;
+}
+
 - (id)init {
     if ((self = [super init])){
         _turn = 0;
@@ -33,9 +41,19 @@
     _currentPlayer = [_players objectAtIndex:_turn];
 }
 
-- (void)setPlayers:(NSArray *)players {
-    _players = players;
-    _playerCount = [players count];
+- (void)setPlayerCount:(NSUInteger)count {
+    if (!_playerCount){
+        NSMutableArray *players = [NSMutableArray arrayWithCapacity:count];
+        for (int i = 0; i < count; i++) {
+            Player *player = [[Player alloc] initWithName:[NSString stringWithFormat:@"Player %i", i]];
+            [players insertObject:player atIndex:i];
+        }
+        _players = players;
+        _currentPlayer = [players objectAtIndex:0];
+        _playerCount = count;
+    } else {
+        NSLog(@"Player count alreay set.");
+    }
 }
 
 @end

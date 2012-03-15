@@ -12,6 +12,13 @@
 
 @synthesize character = _character;
 
+- (id)initWithName:(NSString *)name {
+    if ((self = [super init])){
+        self.name = name;
+    }
+    return self;
+}
+
 - (void)setCharacter:(NSString *)character {
     if (!_character) {
         _character = character;

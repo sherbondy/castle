@@ -14,5 +14,8 @@
 }
 
 @property (nonatomic, strong) NSString *character;
+@property (nonatomic, strong) NSString *name;
+
+- (id)initWithName:(NSString *)name;
 
 @end

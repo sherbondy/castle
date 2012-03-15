@@ -1,3 +1,6 @@
 [submodule "external/JSONKit"]
 	path = external/JSONKit
 	url = https://github.com/johnezang/JSONKit.git
+[submodule "external/iCarousel"]
+	path = external/iCarousel
+	url = https://github.com/nicklockwood/iCarousel.git

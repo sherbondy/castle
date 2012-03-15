@@ -19,12 +19,13 @@
     NSArray   *_players;
 }
 
-@property (nonatomic, readonly) NSUInteger playerCount;
+@property (nonatomic, assign)   NSUInteger playerCount;
 @property (nonatomic, readonly) NSUInteger turn;
 @property (nonatomic, readonly) NSUInteger round;
 @property (nonatomic, readonly) Player    *currentPlayer;
 
++ (id)sharedGame;
 - (void)nextTurn;
-- (void)setPlayers:(NSArray *)players;
+- (void)setPlayerCount:(NSUInteger)count;
 
 @end

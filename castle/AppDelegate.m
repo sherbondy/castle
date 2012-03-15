@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DeckViewController.h"
+#import "PlayerCountViewController.h"
 
 @implementation AppDelegate
 
@@ -22,8 +23,11 @@
     
     // playercountvc -> characterpickervc -> distribute items, professions, and orders -> randomly decide who goes first
     
+    PlayerCountViewController *playerCountVC = [[PlayerCountViewController alloc] init];
     DeckViewController *deckVC = [[DeckViewController alloc] init];
-    [self.window setRootViewController:deckVC];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:playerCountVC];
+    [self.window setRootViewController:navController];
     
     return YES;
 }
