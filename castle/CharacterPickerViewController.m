@@ -8,6 +8,7 @@
 
 #import "CharacterPickerViewController.h"
 #import "Game.h"
+#import "JSONKit.h"
 
 @interface CharacterPickerViewController ()
 
@@ -19,7 +20,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"characters" ofType:@"json"];
+        NSData *characterData = [NSData dataWithContentsOfFile:filePath];
+        _characters = [characterData objectFromJSONData];
     }
     return self;
 }
@@ -31,6 +34,11 @@
     _playerNameLabel.textAlignment = UITextAlignmentCenter;
     [self updatePlayerNameLabel];
     [self.view addSubview:_playerNameLabel];
+    _carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+    _carousel.delegate = self;
+    _carousel.dataSource = self;
+    _carousel.type = iCarouselTypeCoverFlow;
+    [self.view addSubview:_carousel];
 }
 
 - (void)viewDidLoad
@@ -48,6 +56,25 @@
 - (void)updatePlayerNameLabel {
     _playerNameLabel.text = [NSString stringWithFormat:@"Pick your Character, %@", 
                              [[Game sharedGame] currentPlayer].name];
+}
+
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
+    return _characters.count;
+}
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
+    UIImageView *imageView;
+    if (!view) {
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 270)];
+    } else {
+        imageView = (UIImageView *)view;
+    }
+    imageView.image = [Player imageForCharacter:[_characters objectAtIndex:index]];
+    
+    return imageView;
+}
+
+- (CGFloat)carouselItemWidth:(iCarousel *)carousel {
+    return 150;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

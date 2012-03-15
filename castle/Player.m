@@ -12,6 +12,11 @@
 
 @synthesize character = _character;
 
++ (UIImage *)imageForCharacter:(NSString *)character {
+    NSString *imageName = [NSString stringWithFormat:@"%@.jpg", [[[character componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] objectAtIndex:0] lowercaseString]];
+    return [UIImage imageNamed:imageName];
+}
+
 - (id)initWithName:(NSString *)name {
     if ((self = [super init])){
         self.name = name;
@@ -23,6 +28,10 @@
     if (!_character) {
         _character = character;
     }
+}
+
+- (UIImage *)characterImage {
+    return [Player imageForCharacter:_character];
 }
 
 @end

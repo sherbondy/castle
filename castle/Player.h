@@ -16,6 +16,9 @@
 @property (nonatomic, strong) NSString *character;
 @property (nonatomic, strong) NSString *name;
 
++ (UIImage *)imageForCharacter:(NSString *)character;
+
 - (id)initWithName:(NSString *)name;
+- (UIImage *)characterImage;
 
 @end

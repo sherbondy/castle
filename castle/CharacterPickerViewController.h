@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
 
-@interface CharacterPickerViewController : UIViewController {
+@interface CharacterPickerViewController : UIViewController <iCarouselDataSource, iCarouselDelegate> {
     UILabel *_playerNameLabel;
+    NSMutableArray *_characters;
+    iCarousel *_carousel;
 }
 
 @end
