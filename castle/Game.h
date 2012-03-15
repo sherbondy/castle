@@ -12,11 +12,11 @@
 
 @interface Game : NSObject {
     @private
-    NSUInteger _playerCount;
-    NSUInteger _turn;
-    NSUInteger _round;
-    Player    *_currentPlayer;
-    NSArray   *_players;
+    NSUInteger      _playerCount;
+    NSUInteger      _turn;
+    NSUInteger      _round;
+    Player         *_currentPlayer;
+    NSMutableArray *_players;
 }
 
 @property (nonatomic, assign)   NSUInteger playerCount;

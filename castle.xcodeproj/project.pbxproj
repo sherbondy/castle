@@ -46,6 +46,7 @@
 		3EBB28461511ED68000236C3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBB28451511ED68000236C3 /* iCarousel.m */; };
 		3EBB28491511EDED000236C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBB28471511EDDB000236C3 /* QuartzCore.framework */; };
 		3EBB284A1511EE15000236C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */; };
+		3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		3EBB28441511ED68000236C3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		3EBB28451511ED68000236C3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		3EBB28471511EDDB000236C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3ECEDF2C1512A9E900EC30E8 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 				3E75941A15114E2100C5F6E6 /* DeckViewController.m */,
 				3E75941C15114EDA00C5F6E6 /* Deck.h */,
 				3E75941D15114EDA00C5F6E6 /* Deck.m */,
+				3ECEDF2C1512A9E900EC30E8 /* NSMutableArray+Shuffle.h */,
+				3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */,
 				3E75941F151151CA00C5F6E6 /* ItemDeck.h */,
 				3E759420151151CA00C5F6E6 /* ItemDeck.m */,
 				3E7593D2151147FA00C5F6E6 /* AppDelegate.h */,
@@ -433,6 +438,7 @@
 				3E6E96F41511DED000626416 /* UIView+Utilities.m in Sources */,
 				3EBB28411511E79F000236C3 /* CharacterPickerViewController.m in Sources */,
 				3EBB28461511ED68000236C3 /* iCarousel.m in Sources */,
+				3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

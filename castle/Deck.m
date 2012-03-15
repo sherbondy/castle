@@ -25,12 +25,7 @@
 }
 
 - (void)shuffle {
-    NSUInteger count = [_cards count];
-    for (NSUInteger i = 0; i < count; ++i) {
-        int nElements = count - i;
-        int n = (arc4random() % nElements) + i;
-        [_cards exchangeObjectAtIndex:i withObjectAtIndex:n];
-    }
+    [_cards shuffle];
 }
 
 - (id)drawCard {
