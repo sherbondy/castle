@@ -37,12 +37,14 @@
     _stepper.maximumValue = 10;
     _stepper.value = 6;
     _stepper.stepValue = 1;
+    _stepper.autoresizingMask = UIViewAutoresizingFlexibleMargins;
     [_stepper addTarget:self action:@selector(updateCount:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_stepper];
     
     _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 64)];
     _countLabel.textAlignment = UITextAlignmentCenter;
     _countLabel.font = [UIFont systemFontOfSize:32];
+    _countLabel.autoresizingMask = UIViewAutoresizingFlexibleMargins;
     [self updateCount:nil];
     [self.view addSubview:_countLabel];
 }

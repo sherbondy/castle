@@ -23,6 +23,8 @@
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"characters" ofType:@"json"];
         NSData *characterData = [NSData dataWithContentsOfFile:filePath];
         _characters = [characterData objectFromJSONData];
+        
+        self.title = @"Pick your Character";
     }
     return self;
 }
@@ -32,12 +34,14 @@
     [super loadView];
     _playerNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 32)];
     _playerNameLabel.textAlignment = UITextAlignmentCenter;
+    _playerNameLabel.autoresizingMask = UIViewAutoresizingHorizontal;
     [self updatePlayerNameLabel];
     [self.view addSubview:_playerNameLabel];
     _carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
     _carousel.delegate = self;
     _carousel.dataSource = self;
     _carousel.type = iCarouselTypeCoverFlow;
+    _carousel.autoresizingMask = UIViewAutoresizingAll;
     [self.view addSubview:_carousel];
 }
 
@@ -54,8 +58,7 @@
 }
 
 - (void)updatePlayerNameLabel {
-    _playerNameLabel.text = [NSString stringWithFormat:@"Pick your Character, %@", 
-                             [[Game sharedGame] currentPlayer].name];
+    _playerNameLabel.text = [[Game sharedGame] currentPlayer].name;
 }
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {

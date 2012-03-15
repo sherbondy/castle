@@ -10,6 +10,28 @@
 
 @interface UIView (Utilities)
 
+enum {
+    UIViewAutoresizingHorizontal = (UIViewAutoresizingFlexibleLeftMargin | 
+                                    UIViewAutoresizingFlexibleWidth | 
+                                    UIViewAutoresizingFlexibleRightMargin),
+    UIViewAutoresizingVertical = (UIViewAutoresizingFlexibleTopMargin | 
+                                  UIViewAutoresizingFlexibleHeight | 
+                                  UIViewAutoresizingFlexibleBottomMargin),
+    UIViewAutoresizingFlexibleMargins = (UIViewAutoresizingFlexibleTopMargin |
+                                         UIViewAutoresizingFlexibleLeftMargin |
+                                         UIViewAutoresizingFlexibleRightMargin |
+                                         UIViewAutoresizingFlexibleBottomMargin),
+    UIViewAutoResizingFlexibleDimensions = (UIViewAutoresizingFlexibleWidth |
+                                            UIViewAutoresizingFlexibleHeight),
+    UIViewAutoresizingAll = (UIViewAutoresizingFlexibleLeftMargin | 
+                             UIViewAutoresizingFlexibleWidth | 
+                             UIViewAutoresizingFlexibleRightMargin | 
+                             UIViewAutoresizingFlexibleTopMargin | 
+                             UIViewAutoresizingFlexibleHeight | 
+                             UIViewAutoresizingFlexibleBottomMargin)
+};
+typedef NSUInteger UIViewAutoresizing;
+
 @property (nonatomic, readonly) CGFloat height;
 @property (nonatomic, readonly) CGFloat width;
 @property (nonatomic, readonly) CGFloat x;
