@@ -63,9 +63,7 @@
     while (startingObjects.count < playerCount) {
         [startingObjects addObject:[self drawCard]];
     }
-    
-    NSLog(@"%@", startingObjects);
-        
+            
     return startingObjects;
 }
 

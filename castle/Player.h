@@ -8,20 +8,31 @@
 
 #import <Foundation/Foundation.h>
 
+enum {
+	kOrderTeam = 0,
+	kBrotherHoodTeam = 1,
+};
+typedef NSUInteger Affiliation;
+
 @interface Player : NSObject {
     @private
     NSString *_character;
     NSMutableArray *_items;
+    Affiliation _affiliation;
 }
 
 @property (nonatomic, strong)   NSString   *character;
 @property (nonatomic, strong)   NSString   *name;
-@property (nonatomic, readonly) NSUInteger handSize;
+@property (nonatomic, readonly) NSUInteger  handSize;
+@property (nonatomic, readonly) Affiliation affiliation;
+@property (nonatomic, readonly) NSString   *teamName;
 
 + (UIImage *)imageForCharacter:(NSString *)character;
 
 - (id)initWithName:(NSString *)name;
 - (UIImage *)characterImage;
+- (NSString *)teamName;
 - (void)addItemToHand:(id)item;
+- (void)setAffiliation:(Affiliation)affiliation;
 
 @end

@@ -11,6 +11,7 @@
 @implementation Player
 
 @synthesize character = _character;
+@synthesize affiliation = _affiliation;
 
 + (UIImage *)imageForCharacter:(NSString *)character {
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", [[[character componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] objectAtIndex:0] lowercaseString]];
@@ -40,6 +41,17 @@
     } else {
         [_items addObject:item];
     }
+}
+
+- (void)setAffiliation:(Affiliation)affiliation {
+    _affiliation = affiliation;
+}
+
+- (NSString *)teamName {
+    if (self.affiliation == kOrderTeam){
+        return @"The Order of Open Secrets";
+    }
+    return @"The Brotherhood of True Lies";
 }
 
 - (NSUInteger)handSize {

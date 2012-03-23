@@ -59,10 +59,22 @@
     _itemDeck = [[ItemDeck alloc] init];
     NSMutableArray *startingObjects = [_itemDeck drawStartingObjectsForPlayerCount:_playerCount];
     
+    int affiliationAmount = ceil(_playerCount/2.0);
+    NSMutableArray *affiliationArray = [NSMutableArray arrayWithCapacity:affiliationAmount*2];
+    for (int i = 0; i < affiliationAmount; i++) {
+        [affiliationArray addObject:@0];
+        [affiliationArray addObject:@1];
+    }
+    [affiliationArray shuffle];
+    
     int i = 0;
     for (Player *player in _players){
         [player addItemToHand:[startingObjects objectAtIndex:i]];
-        NSLog(@"%i", _itemDeck.count);
+        
+        NSNumber *affiliation = [affiliationArray objectAtIndex:i];
+        [player setAffiliation:[affiliation unsignedIntValue]];
+        
+        NSLog(@"%@", player.teamName);
         i++;
     }
 }

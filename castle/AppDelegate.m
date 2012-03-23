@@ -24,7 +24,6 @@
     // playercountvc -> characterpickervc -> distribute items, professions, and orders -> randomly decide who goes first
     
     PlayerCountViewController *playerCountVC = [[PlayerCountViewController alloc] init];
-    DeckViewController *deckVC = [[DeckViewController alloc] init];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:playerCountVC];
     [self.window setRootViewController:navController];
