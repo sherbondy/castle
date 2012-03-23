@@ -47,6 +47,8 @@
     _itemCarousel.type = iCarouselTypeLinear;
     _itemCarousel.autoresizingMask = UIViewAutoresizingAll;
     
+    _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
+    
     [self.view addSubviews:duelButton, spyButton, _affiliationLabel, _professionLabel, _itemCarousel, nil];
 }
 
@@ -100,16 +102,25 @@
     return 150;
 }
 
+- (void)presentPlayerPickerWithAction:(PlayerAction)action {
+    _playerPicker.action = action;
+    UINavigationController *playerPickerNav = [[UINavigationController alloc] initWithRootViewController:_playerPicker];
+    [self presentModalViewController:playerPickerNav animated:YES];
+}
+
 - (void)pressedDuel:(id)sender {
     NSLog(@"Duel time.");
+    [self presentPlayerPickerWithAction:kDuelAction];
 }
 
 - (void)pressedSpy:(id)sender {
     NSLog(@"Spy time.");
+    [self presentPlayerPickerWithAction:kSpyAction];
 }
 
 - (void)pressedTrade:(id)sender {
     NSLog(@"Trade offered");
+    [self presentPlayerPickerWithAction:kTradeAction];
 }
 
 @end

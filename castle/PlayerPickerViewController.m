@@ -9,17 +9,13 @@
 #import "PlayerPickerViewController.h"
 #import "Game.h"
 
-@interface PlayerPickerViewController ()
-
-@end
-
 @implementation PlayerPickerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Pick a Player";
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     }
     return self;
 }
@@ -41,6 +37,23 @@
 	return YES;
 }
 
+- (void)setAction:(PlayerAction)action {
+    switch (action) {
+        case kDuelAction:
+            self.title = @"Duel with?";
+            break;
+        case kSpyAction:
+            self.title = @"Spy on?";
+            break;
+        case kTradeAction:
+            self.title = @"Trade with?";
+            break;
+        default:
+            break;
+    }
+    _action = action;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [Game sharedGame].playerCount - 1;
 }
@@ -53,17 +66,25 @@
     
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"PLAYER CELL"];
-    if (!cell) {
+    if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"PLAYER CELL"];
     }
     
     cell.textLabel.text = thePlayer.name;
     if (thePlayer.professionRevealed) {
         cell.detailTextLabel.text = [thePlayer.profession objectForKey:@"name"];
+    } else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@" has %i item%@",
+                                     thePlayer.items.count,
+                                     ((thePlayer.items.count != 1) ? @"s" : @"")];
     }
     cell.imageView.image = thePlayer.characterImage;
     
     return cell;
+}
+
+- (void)cancel {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

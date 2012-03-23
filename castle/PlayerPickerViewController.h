@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+enum {
+	kDuelAction = 0,
+	kSpyAction = 1,
+    kTradeAction = 2,
+};
+typedef NSUInteger PlayerAction;
+
 @interface PlayerPickerViewController : UITableViewController
+
+@property (nonatomic, assign) PlayerAction action;
 
 @end
