@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
 
-@interface TurnViewController : UIViewController
+@interface TurnViewController : UIViewController {
+    UILabel *_affiliationLabel;
+    UILabel *_professionLabel;
+    iCarousel *_itemCarousel;
+}
 
 @end
