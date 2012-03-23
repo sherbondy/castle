@@ -32,6 +32,7 @@
 @property (nonatomic, readonly) NSUInteger round;
 @property (nonatomic, readonly) Player    *currentPlayer;
 @property (nonatomic, readonly) UIViewController *navController;
+@property (nonatomic, readonly) NSArray *players;
 
 + (Game *)sharedGame;
 - (void)start;
@@ -39,5 +40,8 @@
 - (void)nextTurn;
 - (void)setPlayerCount:(NSUInteger)count;
 - (void)distributeCards;
+- (NSArray *)players;
+- (NSArray *)playersOmitting:(Player *)player;
+- (NSArray *)playersOmittingCurrent;
 
 @end

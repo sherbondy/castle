@@ -68,6 +68,19 @@
     }
 }
 
+- (NSArray *)players {
+    return [NSArray arrayWithArray:_players];
+}
+
+- (NSArray *)playersOmitting:(Player *)player {
+    NSMutableArray *omittingArray = [NSMutableArray arrayWithArray:_players];
+    [omittingArray removeObject:player];
+    return [NSArray arrayWithArray:omittingArray];
+}
+- (NSArray *)playersOmittingCurrent {
+    return [self playersOmitting:self.currentPlayer];
+}
+
 - (void)newTurn {
     [_navController pushViewController:_turnVC animated:YES];
 }

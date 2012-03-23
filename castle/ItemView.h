@@ -15,7 +15,8 @@
 }
 
 @property (nonatomic, strong) NSDictionary *item;
+@property (nonatomic, weak) id delegate;
 
-- (id)initWithItem:(NSDictionary *)item;
+- (id)initWithItem:(NSDictionary *)item andDelegate:(id)delegate;
 
 @end

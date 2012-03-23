@@ -18,4 +18,6 @@
 
 @property (nonatomic, strong) Player *currentPlayer;
 
+- (void)pressedTrade:(id)sender;
+
 @end

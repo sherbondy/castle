@@ -7,6 +7,7 @@
 //
 
 #import "PlayerPickerViewController.h"
+#import "Game.h"
 
 @interface PlayerPickerViewController ()
 
@@ -18,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"Pick a Player";
     }
     return self;
 }
@@ -38,6 +39,31 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [Game sharedGame].playerCount - 1;
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Player *thePlayer = [[[Game sharedGame] playersOmittingCurrent] objectAtIndex:indexPath.row];
+    
+    UITableViewCell *cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"PLAYER CELL"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"PLAYER CELL"];
+    }
+    
+    cell.textLabel.text = thePlayer.name;
+    if (thePlayer.professionRevealed) {
+        cell.detailTextLabel.text = [thePlayer.profession objectForKey:@"name"];
+    }
+    cell.imageView.image = thePlayer.characterImage;
+    
+    return cell;
 }
 
 @end

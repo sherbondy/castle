@@ -26,12 +26,14 @@
     return self;
 }
 
-- (id)initWithItem:(NSDictionary *)item {
+- (id)initWithItem:(NSDictionary *)item andDelegate:(id)delegate {
     self = [self initWithFrame:CGRectMake(0,0,150,200)];
     if (self){
+        self.delegate = delegate;
         _nameLabel.text = [item objectForKey:@"name"];
         _descriptionView.text = [item objectForKey:@"description"];
-        NSLog(@"Initialized item view with name: %@", _nameLabel.text);
+        [_tradeButton addTarget:self.delegate action:@selector(pressedTrade:)
+               forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
