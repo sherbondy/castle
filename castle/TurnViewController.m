@@ -9,6 +9,7 @@
 #import "TurnViewController.h"
 #import "Game.h"
 #import "ItemView.h"
+#import "DescriptionViewController.h"
 
 @implementation TurnViewController
 
@@ -31,15 +32,19 @@
 
     UIButton *spyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [spyButton setTitle:@"Spy" forState:UIControlStateNormal];
-    [spyButton setFrame:CGRectMake(170, self.view.height-64, 130, 48)];
+    [spyButton setFrame:CGRectMake(self.view.width-130-20, self.view.height-64, 130, 48)];
     spyButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleMargins;
     [spyButton addTarget:self action:@selector(pressedSpy:) forControlEvents:UIControlEventTouchUpInside];
     
     _affiliationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 160, 24)];
     _affiliationLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    _professionLabel = [[UILabel alloc] initWithFrame:CGRectMake(160, 0, 160, 24)];
+    _professionLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.width-160, 0, 120, 24)];
     _professionLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleLeftMargin;
     _professionLabel.textAlignment = UITextAlignmentRight;
+    UIButton *professionButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    [professionButton addTarget:self action:@selector(getProfessionDescription:)
+               forControlEvents:UIControlEventTouchUpInside];
+    professionButton.frame = CGRectMake(self.view.width-28, 4, 24, 24);
     
     _itemCarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 32, self.view.width, self.view.height-96)];
     _itemCarousel.delegate = self;
@@ -49,7 +54,8 @@
     
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    [self.view addSubviews:duelButton, spyButton, _affiliationLabel, _professionLabel, _itemCarousel, nil];
+    [self.view addSubviews:duelButton, spyButton, _affiliationLabel,
+                           _professionLabel, _itemCarousel, professionButton, nil];
 }
 
 - (void)viewDidLoad
@@ -121,6 +127,14 @@
 - (void)pressedTrade:(id)sender {
     NSLog(@"Trade offered");
     [self presentPlayerPickerWithAction:kTradeAction];
+}
+
+- (void)getProfessionDescription:(id)sender {
+    NSDictionary *profession = self.currentPlayer.profession;
+    DescriptionViewController *descriptionVC = [[DescriptionViewController alloc] initWithTitle:[profession objectForKey:@"title"] andDescription:[profession objectForKey:@"description"]];
+    UINavigationController *descriptionNav = [[UINavigationController alloc] initWithRootViewController:descriptionVC];
+    // if iPad, show popover instead
+    [self presentModalViewController:descriptionNav animated:YES];
 }
 
 @end
