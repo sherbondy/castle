@@ -48,6 +48,7 @@
 		3EBB284A1511EE15000236C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */; };
 		3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */; };
 		3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
+		3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfessionDeck.h; path = castle/ProfessionDeck.h; sourceTree = SOURCE_ROOT; };
 		3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfessionDeck.m; path = castle/ProfessionDeck.m; sourceTree = SOURCE_ROOT; };
+		3EEF1A5C151C4F1A006E1D8F /* TurnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnViewController.h; sourceTree = "<group>"; };
+		3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
+				3EEF1A5C151C4F1A006E1D8F /* TurnViewController.h */,
+				3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */,
 				3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */,
 				3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */,
 				3E75941915114E2100C5F6E6 /* DeckViewController.h */,
@@ -445,6 +450,7 @@
 				3EBB28461511ED68000236C3 /* iCarousel.m in Sources */,
 				3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */,
 				3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */,
+				3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

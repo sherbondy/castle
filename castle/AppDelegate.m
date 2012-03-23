@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DeckViewController.h"
-#import "PlayerCountViewController.h"
 
 @implementation AppDelegate
 
@@ -20,13 +18,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    // playercountvc -> characterpickervc -> distribute items, professions, and orders -> randomly decide who goes first
-    
-    PlayerCountViewController *playerCountVC = [[PlayerCountViewController alloc] init];
-    
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:playerCountVC];
-    [self.window setRootViewController:navController];
+            
+    [[Game sharedGame] start];
+    [self.window setRootViewController:[Game sharedGame].navController];
     
     return YES;
 }

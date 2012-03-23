@@ -55,8 +55,7 @@
 
 - (void)next:(id)sender {
     [[Game sharedGame] setPlayerCount:(NSUInteger)_stepper.value];
-    CharacterPickerViewController *characterPickerVC = [[CharacterPickerViewController alloc] init];
-    [self.navigationController pushViewController:characterPickerVC animated:YES];
+    [[Game sharedGame] pickCharacters];
 }
 
 - (void)viewDidLoad

@@ -7,8 +7,11 @@
 //
 
 #import "Game.h"
+#import "CharacterPickerViewController.h"
 
 @implementation Game
+
+@synthesize navController = _navController;
 
 + (Game *)sharedGame {
     static dispatch_once_t pred;
@@ -22,8 +25,20 @@
     if ((self = [super init])){
         _turn = 0;
         _round = 0;
+        _navController = [UINavigationController new];
+        _turnVC = [TurnViewController new];
     }
     return self;
+}
+
+- (void)start {
+    PlayerCountViewController *playerCountVC = [PlayerCountViewController new];
+    [_navController addChildViewController:playerCountVC];
+}
+
+- (void)pickCharacters {
+    CharacterPickerViewController *characterPickerVC = [CharacterPickerViewController new];
+    [_navController pushViewController:characterPickerVC animated:YES];
 }
 
 - (void)nextTurn {
@@ -51,6 +66,10 @@
     } else {
         NSLog(@"Player count alreay set.");
     }
+}
+
+- (void)newTurn {
+    [_navController pushViewController:_turnVC animated:YES];
 }
 
 - (void)distributeCards {
@@ -81,6 +100,8 @@
         NSLog(@"%@, %@, %@", player.teamName, player.profession, player.items);
         i++;
     }
+    
+    [self newTurn];
 }
 
 @end
