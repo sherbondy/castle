@@ -19,6 +19,7 @@ typedef NSUInteger Affiliation;
     NSString *_character;
     NSMutableArray *_items;
     Affiliation _affiliation;
+    BOOL _professionRevealed;
 }
 
 @property (nonatomic, strong)   NSString     *character;
@@ -27,6 +28,7 @@ typedef NSUInteger Affiliation;
 @property (nonatomic, readonly) Affiliation   affiliation;
 @property (nonatomic, readonly) NSString     *teamName;
 @property (nonatomic, strong)   NSDictionary *profession;
+@property (nonatomic, assign)   BOOL          professionRevealed;
 @property (nonatomic, readonly) NSArray      *items;
 
 + (UIImage *)imageForCharacter:(NSString *)character;

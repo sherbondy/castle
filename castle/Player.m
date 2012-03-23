@@ -56,6 +56,11 @@
     return @"The Brotherhood of True Lies";
 }
 
+- (void)setProfession:(NSDictionary *)profession {
+    _profession = profession;
+    _professionRevealed = NO;
+}
+
 - (NSArray *)items {
     return _items;
 }
