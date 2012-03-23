@@ -10,9 +10,6 @@
 
 @implementation Game
 
-@synthesize turn = _turn;
-@synthesize round = _round;
-
 + (Game *)sharedGame {
     static dispatch_once_t pred;
     static Game *game = nil;
@@ -60,10 +57,13 @@
     [_players shuffle];
     // count of goblets/bags/etc actually varies based on number of players
     _itemDeck = [[ItemDeck alloc] init];
+    NSMutableArray *startingObjects = [_itemDeck drawStartingObjectsForPlayerCount:_playerCount];
     
+    int i = 0;
     for (Player *player in _players){
-        [player addItemToHand:[_itemDeck drawCard]];
+        [player addItemToHand:[startingObjects objectAtIndex:i]];
         NSLog(@"%i", _itemDeck.count);
+        i++;
     }
 }
 

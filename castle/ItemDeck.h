@@ -11,5 +11,6 @@
 @interface ItemDeck : Deck
 
 - (id)init;
+- (NSMutableArray *)drawStartingObjectsForPlayerCount:(NSUInteger)playerCount;
 
 @end

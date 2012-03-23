@@ -33,6 +33,16 @@
     [_cards removeObjectAtIndex:1];
     return card;
 }
+- (id)drawCardAtIndex:(NSUInteger)index {
+    id card = [[_cards objectAtIndex:index] copy];
+    [_cards removeObjectAtIndex:index];
+    return card;
+}
+- (NSArray *)drawCardsAtIndics:(NSIndexSet *)indices {
+    NSArray *cards = [[_cards objectsAtIndexes:indices] copy];
+    [_cards removeObjectsAtIndexes:indices];
+    return cards;
+}
 
 - (void)placeCardAtTop:(id)card {
     [_cards insertObject:card atIndex:0];

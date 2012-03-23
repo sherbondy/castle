@@ -19,6 +19,8 @@
 - (id)initWithCards:(NSArray *)cards;
 - (void)shuffle;
 - (id)drawCard;
+- (id)drawCardAtIndex:(NSUInteger)index;
+- (NSArray *)drawCardsAtIndics:(NSIndexSet *)indices;
 - (void)placeCardAtTop:(id)card;
 - (void)placeCardAtBottom:(id)card;
 - (NSArray *)cards;
