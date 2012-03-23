@@ -11,8 +11,6 @@
 
 @implementation ItemDeck
 
-// Need to implement the red and green seal mechanic for distributing cards!
-
 - (id)init {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"items" ofType:@"json"];
     NSData *items = [NSData dataWithContentsOfFile:filePath];                       

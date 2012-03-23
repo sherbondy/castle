@@ -47,6 +47,7 @@
 		3EBB28491511EDED000236C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBB28471511EDDB000236C3 /* QuartzCore.framework */; };
 		3EBB284A1511EE15000236C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */; };
 		3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */; };
+		3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		3EBB28471511EDDB000236C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3ECEDF2C1512A9E900EC30E8 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfessionDeck.h; path = castle/ProfessionDeck.h; sourceTree = SOURCE_ROOT; };
+		3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfessionDeck.m; path = castle/ProfessionDeck.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
+				3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */,
+				3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */,
 				3E75941915114E2100C5F6E6 /* DeckViewController.h */,
 				3E75941A15114E2100C5F6E6 /* DeckViewController.m */,
 				3E75941C15114EDA00C5F6E6 /* Deck.h */,
@@ -439,6 +444,7 @@
 				3EBB28411511E79F000236C3 /* CharacterPickerViewController.m in Sources */,
 				3EBB28461511ED68000236C3 /* iCarousel.m in Sources */,
 				3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */,
+				3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

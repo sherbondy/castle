@@ -56,7 +56,9 @@
 - (void)distributeCards {
     [_players shuffle];
     // count of goblets/bags/etc actually varies based on number of players
-    _itemDeck = [[ItemDeck alloc] init];
+    _itemDeck = [ItemDeck new];
+    _professionDeck = [ProfessionDeck new];
+
     NSMutableArray *startingObjects = [_itemDeck drawStartingObjectsForPlayerCount:_playerCount];
     
     int affiliationAmount = ceil(_playerCount/2.0);
@@ -66,7 +68,7 @@
         [affiliationArray addObject:@1];
     }
     [affiliationArray shuffle];
-    
+        
     int i = 0;
     for (Player *player in _players){
         [player addItemToHand:[startingObjects objectAtIndex:i]];
@@ -74,7 +76,9 @@
         NSNumber *affiliation = [affiliationArray objectAtIndex:i];
         [player setAffiliation:[affiliation unsignedIntValue]];
         
-        NSLog(@"%@", player.teamName);
+        player.profession = [_professionDeck drawCard];
+        
+        NSLog(@"%@, %@, %@", player.teamName, player.profession, player.items);
         i++;
     }
 }

@@ -21,17 +21,20 @@ typedef NSUInteger Affiliation;
     Affiliation _affiliation;
 }
 
-@property (nonatomic, strong)   NSString   *character;
-@property (nonatomic, strong)   NSString   *name;
-@property (nonatomic, readonly) NSUInteger  handSize;
-@property (nonatomic, readonly) Affiliation affiliation;
-@property (nonatomic, readonly) NSString   *teamName;
+@property (nonatomic, strong)   NSString     *character;
+@property (nonatomic, strong)   NSString     *name;
+@property (nonatomic, readonly) NSUInteger    handSize;
+@property (nonatomic, readonly) Affiliation   affiliation;
+@property (nonatomic, readonly) NSString     *teamName;
+@property (nonatomic, strong)   NSDictionary *profession;
+@property (nonatomic, readonly) NSArray      *items;
 
 + (UIImage *)imageForCharacter:(NSString *)character;
 
 - (id)initWithName:(NSString *)name;
 - (UIImage *)characterImage;
 - (NSString *)teamName;
+- (NSArray *)items;
 - (void)addItemToHand:(id)item;
 - (void)setAffiliation:(Affiliation)affiliation;
 

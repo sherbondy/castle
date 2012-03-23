@@ -44,7 +44,9 @@
 }
 
 - (void)setAffiliation:(Affiliation)affiliation {
-    _affiliation = affiliation;
+    if (!_affiliation){
+        _affiliation = affiliation;
+    }
 }
 
 - (NSString *)teamName {
@@ -52,6 +54,10 @@
         return @"The Order of Open Secrets";
     }
     return @"The Brotherhood of True Lies";
+}
+
+- (NSArray *)items {
+    return _items;
 }
 
 - (NSUInteger)handSize {

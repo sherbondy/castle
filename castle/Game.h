@@ -10,6 +10,7 @@
 
 #import "Player.h"
 #import "ItemDeck.h"
+#import "ProfessionDeck.h"
 
 @interface Game : NSObject {
     @private
@@ -19,6 +20,7 @@
     Player         *_currentPlayer;
     NSMutableArray *_players;
     ItemDeck       *_itemDeck;
+    ProfessionDeck *_professionDeck;
 }
 
 @property (nonatomic, assign)   NSUInteger playerCount;

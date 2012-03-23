@@ -7,6 +7,7 @@
 //
 
 #import "Deck.h"
+#import "JSONKit.h"
 
 @implementation Deck
 
