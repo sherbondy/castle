@@ -25,4 +25,17 @@
     return self.frame.origin.y;
 }
 
+- (void)addSubviews:(UIView *)firstSubview, ... {    
+    va_list args;
+    va_start(args, firstSubview);
+    UIView *nextView = firstSubview;
+    
+    while (nextView) {
+        [self addSubview:nextView];
+        nextView = va_arg(args, UIView *);
+    }
+    
+    va_end(args);
+}
+
 @end

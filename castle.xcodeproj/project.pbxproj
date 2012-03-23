@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0B9437151C61710086E62B /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B9436151C61710086E62B /* ItemView.m */; };
 		3E6E96EA1511D28100626416 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
 		3E6E96EE1511D96D00626416 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
 		3E6E96F11511DDC100626416 /* PlayerCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96F01511DDC100626416 /* PlayerCountViewController.m */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E0B9435151C61710086E62B /* ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemView.h; sourceTree = "<group>"; };
+		3E0B9436151C61710086E62B /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
 		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		3E6E96E91511D28100626416 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		3E6E96EC1511D96D00626416 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
+				3E0B9435151C61710086E62B /* ItemView.h */,
+				3E0B9436151C61710086E62B /* ItemView.m */,
 				3EEF1A5C151C4F1A006E1D8F /* TurnViewController.h */,
 				3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */,
 				3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */,
@@ -451,6 +456,7 @@
 				3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */,
 				3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */,
 				3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */,
+				3E0B9437151C61710086E62B /* ItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

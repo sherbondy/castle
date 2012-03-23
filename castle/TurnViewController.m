@@ -8,10 +8,7 @@
 
 #import "TurnViewController.h"
 #import "Game.h"
-
-@interface TurnViewController ()
-
-@end
+#import "ItemView.h"
 
 @implementation TurnViewController
 
@@ -42,10 +39,13 @@
     _professionLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleLeftMargin;
     _professionLabel.textAlignment = UITextAlignmentRight;
     
-    [self.view addSubview:duelButton];
-    [self.view addSubview:spyButton];
-    [self.view addSubview:_affiliationLabel];
-    [self.view addSubview:_professionLabel];
+    _itemCarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 32, self.view.width, self.view.height-96)];
+    _itemCarousel.delegate = self;
+    _itemCarousel.dataSource = self;
+    _itemCarousel.type = iCarouselTypeLinear;
+    _itemCarousel.autoresizingMask = UIViewAutoresizingAll;
+    
+    [self.view addSubviews:duelButton, spyButton, _affiliationLabel, _professionLabel, _itemCarousel];
 }
 
 - (void)viewDidLoad
@@ -56,10 +56,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    Player *currentPlayer = [Game sharedGame].currentPlayer;
-    if (currentPlayer) {
-        _affiliationLabel.text = currentPlayer.teamName;
-        _professionLabel.text = [currentPlayer.profession objectForKey:@"title"];
+    _currentPlayer = [Game sharedGame].currentPlayer;
+    if (_currentPlayer) {
+        _affiliationLabel.text = _currentPlayer.teamName;
+        _professionLabel.text = [_currentPlayer.profession objectForKey:@"title"];
+        [_itemCarousel reloadData];
     }
 }
 
@@ -72,6 +73,29 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
+    return self.currentPlayer.items.count;
+}
+
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
+
+    ItemView *itemView;
+    NSDictionary *theItem = [self.currentPlayer.items objectAtIndex:index];
+    if (!view) {
+        itemView = [[ItemView alloc] initWithItem:theItem];
+    } else {
+        itemView = (ItemView *)view;
+        itemView.item = theItem;
+    }
+    
+    return itemView;
+}
+
+- (CGFloat)carouselItemWidth:(iCarousel *)carousel {
+    return 150;
 }
 
 @end

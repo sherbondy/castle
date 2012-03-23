@@ -37,5 +37,6 @@ typedef NSUInteger UIViewAutoresizing;
 @property (nonatomic, readonly) CGFloat x;
 @property (nonatomic, readonly) CGFloat y;
 
+- (void)addSubviews:(UIView *)firstSubview, ...;
 
 @end

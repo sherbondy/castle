@@ -33,8 +33,8 @@
     _stepper.frame = CGRectMake((self.view.width - _stepper.width)/2, 
                                 (self.view.height - _stepper.height)/2, 
                                 _stepper.width, _stepper.height);
-    _stepper.minimumValue = 3;
-    _stepper.maximumValue = 10;
+    _stepper.minimumValue = 4;
+    _stepper.maximumValue = 8;
     _stepper.value = 6;
     _stepper.stepValue = 1;
     _stepper.autoresizingMask = UIViewAutoresizingFlexibleMargins;
