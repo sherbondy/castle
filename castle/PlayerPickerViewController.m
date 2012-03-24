@@ -9,6 +9,8 @@
 #import "PlayerPickerViewController.h"
 #import "Game.h"
 
+// become grouped table view as you learn players' affiliations
+
 @implementation PlayerPickerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
