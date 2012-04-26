@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Player.h"
 
 enum {
 	kDuelAction = 0,
@@ -15,7 +16,10 @@ enum {
 };
 typedef NSUInteger PlayerAction;
 
-@interface PlayerPickerViewController : UITableViewController
+@interface PlayerPickerViewController : UITableViewController {
+    @private
+    Player *_receivingPlayer;
+}
 
 @property (nonatomic, assign) PlayerAction action;
 

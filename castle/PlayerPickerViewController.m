@@ -18,6 +18,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
+        [self addObserver:self forKeyPath:@"receivingPlayer" options:(NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew) context:nil];
+        _receivingPlayer = nil;
     }
     return self;
 }
@@ -64,8 +67,8 @@
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Player *thePlayer = [[[Game sharedGame] playersOmittingCurrent] objectAtIndex:indexPath.row];
-    
+    Player *thePlayer = [[Game sharedGame] playerAtIndexPath:indexPath];
+
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"PLAYER CELL"];
     if (cell == nil) {
@@ -81,12 +84,37 @@
                                      ((thePlayer.items.count != 1) ? @"s" : @"")];
     }
     cell.imageView.image = thePlayer.characterImage;
-    
+
     return cell;
 }
 
 - (void)cancel {
     [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)done {
+    [[[Game sharedGame] turnVC] performSelector:@selector(setReceivingPlayer:) withObject:_receivingPlayer];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (keyPath == @"currentPlayer"){
+        if ([change objectForKey:NSKeyValueChangeNewKey] == nil){
+            self.navigationItem.rightBarButtonItem.enabled = NO;
+        } else {
+            NSLog(@"Actual player selected");
+            self.navigationItem.rightBarButtonItem.enabled = YES;
+        }
+    }
+}
+
+- (void)setReceivingPlayer:(Player *)thePlayer {
+    _receivingPlayer = thePlayer;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self setReceivingPlayer:[[Game sharedGame] playerAtIndexPath:indexPath]];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

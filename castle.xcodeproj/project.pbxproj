@@ -10,6 +10,8 @@
 		3E0B9437151C61710086E62B /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B9436151C61710086E62B /* ItemView.m */; };
 		3E0B943A151C6BAF0086E62B /* PlayerPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B9439151C6BAF0086E62B /* PlayerPickerViewController.m */; };
 		3E0B9444151D299D0086E62B /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B9443151D299D0086E62B /* DescriptionViewController.m */; };
+		3E1F48FB1549028B00B2A750 /* AcceptTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */; };
+		3E1F48FE15490F1800B2A750 /* ItemCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */; };
 		3E6E96EA1511D28100626416 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
 		3E6E96EE1511D96D00626416 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
 		3E6E96F11511DDC100626416 /* PlayerCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96F01511DDC100626416 /* PlayerCountViewController.m */; };
@@ -72,6 +74,10 @@
 		3E0B9442151D299D0086E62B /* DescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = "<group>"; };
 		3E0B9443151D299D0086E62B /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
 		3E1F48F71548F20D00B2A750 /* castle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = castle.entitlements; sourceTree = "<group>"; };
+		3E1F48F91549028B00B2A750 /* AcceptTradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptTradeViewController.h; sourceTree = "<group>"; };
+		3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptTradeViewController.m; sourceTree = "<group>"; };
+		3E1F48FC15490F1800B2A750 /* ItemCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCarouselViewController.h; sourceTree = "<group>"; };
+		3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCarouselViewController.m; sourceTree = "<group>"; };
 		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		3E6E96E91511D28100626416 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		3E6E96EC1511D96D00626416 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -203,6 +209,8 @@
 				3E0B9443151D299D0086E62B /* DescriptionViewController.m */,
 				3EEF1A5C151C4F1A006E1D8F /* TurnViewController.h */,
 				3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */,
+				3E1F48FC15490F1800B2A750 /* ItemCarouselViewController.h */,
+				3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */,
 				3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */,
 				3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */,
 				3E75941915114E2100C5F6E6 /* DeckViewController.h */,
@@ -225,6 +233,8 @@
 				3E6E96F31511DED000626416 /* UIView+Utilities.m */,
 				3E6E96E81511D28100626416 /* Game.h */,
 				3E6E96E91511D28100626416 /* Game.m */,
+				3E1F48F91549028B00B2A750 /* AcceptTradeViewController.h */,
+				3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */,
 				3E6E96EC1511D96D00626416 /* Player.h */,
 				3E6E96ED1511D96D00626416 /* Player.m */,
 				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
@@ -471,6 +481,8 @@
 				3E0B9437151C61710086E62B /* ItemView.m in Sources */,
 				3E0B943A151C6BAF0086E62B /* PlayerPickerViewController.m in Sources */,
 				3E0B9444151D299D0086E62B /* DescriptionViewController.m in Sources */,
+				3E1F48FB1549028B00B2A750 /* AcceptTradeViewController.m in Sources */,
+				3E1F48FE15490F1800B2A750 /* ItemCarouselViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -110,6 +110,7 @@
 
 - (void)presentPlayerPickerWithAction:(PlayerAction)action {
     _playerPicker.action = action;
+    _turnAction = action;
     UINavigationController *playerPickerNav = [[UINavigationController alloc] initWithRootViewController:_playerPicker];
     [self presentModalViewController:playerPickerNav animated:YES];
 }
@@ -127,6 +128,25 @@
 - (void)pressedTrade:(id)sender {
     NSLog(@"Trade offered");
     [self presentPlayerPickerWithAction:kTradeAction];
+}
+
+- (void)setReceivingPlayer:(Player *)player {
+    NSLog(@"The receiving player is: %@", player);
+    // need state for action type
+    switch (_turnAction) {
+        case kDuelAction:
+            break;
+        case kSpyAction:
+            NSLog(@"Time to duel.");
+            break;
+        case kTradeAction:
+            NSLog(@"Time to trade.");
+            [[Game sharedGame] offerTradeFrom:self.currentPlayer to:player];
+            break;
+
+        default:
+            break;
+    }
 }
 
 - (void)getProfessionDescription:(id)sender {

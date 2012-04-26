@@ -11,8 +11,6 @@
 
 @implementation Game
 
-@synthesize navController = _navController;
-
 + (Game *)sharedGame {
     static dispatch_once_t pred;
     static Game *game = nil;
@@ -27,6 +25,7 @@
         _round = 0;
         _navController = [UINavigationController new];
         _turnVC = [TurnViewController new];
+        _tradeVC = [AcceptTradeViewController new];
     }
     return self;
 }
@@ -68,6 +67,10 @@
     }
 }
 
+- (TurnViewController *)turnVC {
+    return _turnVC;
+}
+
 - (NSArray *)players {
     return [NSArray arrayWithArray:_players];
 }
@@ -80,9 +83,23 @@
 - (NSArray *)playersOmittingCurrent {
     return [self playersOmitting:self.currentPlayer];
 }
+/* Omitting Current */
+- (Player *)playerAtIndexPath:(NSIndexPath *)indexPath {
+    return [[self playersOmittingCurrent] objectAtIndex:indexPath.row];
+}
 
 - (void)newTurn {
     [_navController pushViewController:_turnVC animated:YES];
+}
+
+- (void)setOfferedItem:(NSDictionary *)offeredItem {
+    _offeredItem = offeredItem;
+}
+
+- (void)offerTradeFrom:(Player *)fromPlayer to:(Player *)toPlayer {
+    _givingPlayer = fromPlayer;
+    _receivingPlayer = toPlayer;
+    [_navController pushViewController:_tradeVC animated:YES];
 }
 
 - (void)distributeCards {

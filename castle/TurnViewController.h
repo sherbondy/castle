@@ -16,10 +16,12 @@
     UILabel *_professionLabel;
     iCarousel *_itemCarousel;
     PlayerPickerViewController *_playerPicker;
+    PlayerAction _turnAction;
 }
 
 @property (nonatomic, strong) Player *currentPlayer;
 
 - (void)pressedTrade:(id)sender;
+- (void)setReceivingPlayer:(Player *)player;
 
 @end

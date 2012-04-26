@@ -7,6 +7,7 @@
 //
 
 #import "ItemView.h"
+#import "Game.h"
 
 @implementation ItemView
 
@@ -30,12 +31,18 @@
     self = [self initWithFrame:CGRectMake(0,0,150,200)];
     if (self){
         self.delegate = delegate;
+        self.item = item;
         _nameLabel.text = [item objectForKey:@"name"];
         _descriptionView.text = [item objectForKey:@"description"];
-        [_tradeButton addTarget:self.delegate action:@selector(pressedTrade:)
+        [_tradeButton addTarget:self action:@selector(pressedTrade:)
                forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+- (void)pressedTrade:(id)sender {
+    [[Game sharedGame] setOfferedItem:self.item];
+    [self.delegate pressedTrade:self];
 }
 
 /*
