@@ -71,6 +71,7 @@
 		3E0B9439151C6BAF0086E62B /* PlayerPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerPickerViewController.m; sourceTree = "<group>"; };
 		3E0B9442151D299D0086E62B /* DescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = "<group>"; };
 		3E0B9443151D299D0086E62B /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
+		3E1F48F71548F20D00B2A750 /* castle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = castle.entitlements; sourceTree = "<group>"; };
 		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		3E6E96E91511D28100626416 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		3E6E96EC1511D96D00626416 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -195,6 +196,7 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
+				3E1F48F71548F20D00B2A750 /* castle.entitlements */,
 				3E0B9435151C61710086E62B /* ItemView.h */,
 				3E0B9436151C61710086E62B /* ItemView.m */,
 				3E0B9442151D299D0086E62B /* DescriptionViewController.h */,
@@ -562,7 +564,7 @@
 		3E7593ED151147FB00C5F6E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = castle/castle.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "castle/castle-Prefix.pch";
 				INFOPLIST_FILE = "castle/castle-Info.plist";
@@ -574,6 +576,7 @@
 		3E7593EE151147FB00C5F6E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = castle/castle.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "castle/castle-Prefix.pch";
 				INFOPLIST_FILE = "castle/castle-Info.plist";
