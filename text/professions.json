@@ -44,7 +44,7 @@
   }, {
     "id": 7,
     "title": "Priest",
-    "description": "You can prevent a duel from taking place. You must use this ability before supporters are revealed. If the attacker holds at least two objects he must give you one of them (his choice). The attacker&rsquo;s turn ends.",
+    "description": "You can prevent a duel from taking place. You must use this ability before supporters are revealed. If the attacker holds at least two objects he must give you one of them (his choice). The attacker’s turn ends.",
     "one_use": true,
     "type": 0
   }, {

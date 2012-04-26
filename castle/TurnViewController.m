@@ -38,13 +38,12 @@
     
     _affiliationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 160, 24)];
     _affiliationLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    _professionLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.width-160, 0, 120, 24)];
-    _professionLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleLeftMargin;
-    _professionLabel.textAlignment = UITextAlignmentRight;
-    UIButton *professionButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
-    [professionButton addTarget:self action:@selector(getProfessionDescription:)
+    
+    _professionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _professionButton.frame = CGRectMake(self.view.width-120, 0, 120, 24);
+    _professionButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleLeftMargin;
+    [_professionButton addTarget:self action:@selector(getProfessionDescription:)
                forControlEvents:UIControlEventTouchUpInside];
-    professionButton.frame = CGRectMake(self.view.width-28, 4, 24, 24);
     
     _itemCarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 32, self.view.width, self.view.height-96)];
     _itemCarousel.delegate = self;
@@ -55,7 +54,7 @@
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
     [self.view addSubviews:duelButton, spyButton, _affiliationLabel,
-                           _professionLabel, _itemCarousel, professionButton, nil];
+                           _itemCarousel, _professionButton, nil];
 }
 
 - (void)viewDidLoad
@@ -69,7 +68,7 @@
     _currentPlayer = [Game sharedGame].currentPlayer;
     if (_currentPlayer) {
         _affiliationLabel.text = _currentPlayer.teamName;
-        _professionLabel.text = [_currentPlayer.profession objectForKey:@"title"];
+        [_professionButton setTitle:[_currentPlayer.profession objectForKey:@"title"] forState:UIControlStateNormal];
         [_itemCarousel reloadData];
     }
 }
