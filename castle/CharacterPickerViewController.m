@@ -9,6 +9,7 @@
 #import "CharacterPickerViewController.h"
 #import "Game.h"
 #import "JSONKit.h"
+#import "NSString+Additions.h"
 
 @interface CharacterPickerViewController ()
 
@@ -33,17 +34,25 @@
 - (void)loadView
 {
     [super loadView];
-    _playerNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 32)];
-    _playerNameLabel.textAlignment = UITextAlignmentCenter;
-    _playerNameLabel.autoresizingMask = UIViewAutoresizingHorizontal;
-    [self updatePlayerNameLabel];
-    [self.view addSubview:_playerNameLabel];
     _carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
     _carousel.delegate = self;
     _carousel.dataSource = self;
     _carousel.type = iCarouselTypeCoverFlow;
     _carousel.autoresizingMask = UIViewAutoresizingAll;
     [self.view addSubview:_carousel];
+    
+    _nameField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 48)];
+    _nameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    _nameField.returnKeyType = UIReturnKeyDone;
+    _nameField.clearsOnBeginEditing = YES;
+    _nameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _nameField.textAlignment = UITextAlignmentCenter;
+    _nameField.autoresizingMask = UIViewAutoresizingHorizontal;
+    _nameField.delegate = self;
+    [self updatePlayerNameLabel];
+    [_nameField addTarget:self action:@selector(checkName) forControlEvents:UIControlEventEditingChanged];
+
+    [self.view addSubview:_nameField];
 }
 
 - (void)viewDidLoad
@@ -61,7 +70,12 @@
 - (void)pickNextCharacter:(id)sender {
     NSUInteger characterIndex = _carousel.currentItemIndex;
     NSString *character = [_characters objectAtIndex:characterIndex];
-    [[[Game sharedGame] currentPlayer] setCharacter:character];
+    
+    Player *currentPlayer = [[Game sharedGame] currentPlayer];
+    [currentPlayer setCharacter:character];
+    currentPlayer.name = _nameField.text;
+    [_nameField resignFirstResponder];
+    
     [_characters removeObjectAtIndex:characterIndex];
     [_carousel removeItemAtIndex:characterIndex animated:YES];
     [[Game sharedGame] nextTurn];
@@ -74,7 +88,7 @@
 }
 
 - (void)updatePlayerNameLabel {
-    _playerNameLabel.text = [[Game sharedGame] currentPlayer].name;
+    _nameField.text = [[Game sharedGame] currentPlayer].name;
 }
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
@@ -95,6 +109,23 @@
 - (CGFloat)carouselItemWidth:(iCarousel *)carousel {
     return 150;
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField.text trimmed].length != 0) {
+        [textField endEditing:YES];
+        return YES;
+    }
+    return NO;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [self checkName];
+}
+
+- (void)checkName {
+    self.navigationItem.rightBarButtonItem.enabled = ([_nameField.text trimmed].length != 0);
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

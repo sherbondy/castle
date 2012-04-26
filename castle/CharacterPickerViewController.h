@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
 
-@interface CharacterPickerViewController : UIViewController <iCarouselDataSource, iCarouselDelegate> {
-    UILabel *_playerNameLabel;
+@interface CharacterPickerViewController : UIViewController <iCarouselDataSource, iCarouselDelegate, UITextFieldDelegate> {
     NSMutableArray *_characters;
     iCarousel *_carousel;
+    UITextField *_nameField;
 }
 
 @end
