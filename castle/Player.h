@@ -27,6 +27,7 @@ typedef NSUInteger Affiliation;
 @property (nonatomic, readonly) NSUInteger    handSize;
 @property (nonatomic, readonly) Affiliation   affiliation;
 @property (nonatomic, readonly) NSString     *teamName;
+@property (nonatomic, readonly) NSString     *shortTeamName;
 @property (nonatomic, strong)   NSDictionary *profession;
 @property (nonatomic, assign)   BOOL          professionRevealed;
 @property (nonatomic, readonly) NSArray      *items;

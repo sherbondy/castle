@@ -205,6 +205,7 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
+				3E774F5A154A132E00FA237E /* Categories */,
 				3E0B9435151C61710086E62B /* ItemView.h */,
 				3E0B9436151C61710086E62B /* ItemView.m */,
 				3E0B9442151D299D0086E62B /* DescriptionViewController.h */,
@@ -219,8 +220,6 @@
 				3E75941A15114E2100C5F6E6 /* DeckViewController.m */,
 				3E75941C15114EDA00C5F6E6 /* Deck.h */,
 				3E75941D15114EDA00C5F6E6 /* Deck.m */,
-				3ECEDF2C1512A9E900EC30E8 /* NSMutableArray+Shuffle.h */,
-				3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */,
 				3E75941F151151CA00C5F6E6 /* ItemDeck.h */,
 				3E759420151151CA00C5F6E6 /* ItemDeck.m */,
 				3E7593D2151147FA00C5F6E6 /* AppDelegate.h */,
@@ -231,10 +230,6 @@
 				3E0B9439151C6BAF0086E62B /* PlayerPickerViewController.m */,
 				3EBB283F1511E79F000236C3 /* CharacterPickerViewController.h */,
 				3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */,
-				3E774F57154A0C7200FA237E /* NSString+Additions.h */,
-				3E774F58154A0C7200FA237E /* NSString+Additions.m */,
-				3E6E96F21511DED000626416 /* UIView+Utilities.h */,
-				3E6E96F31511DED000626416 /* UIView+Utilities.m */,
 				3E6E96E81511D28100626416 /* Game.h */,
 				3E6E96E91511D28100626416 /* Game.m */,
 				3E1F48F91549028B00B2A750 /* AcceptTradeViewController.h */,
@@ -333,6 +328,19 @@
 			);
 			name = JSONKit;
 			path = external/JSONKit;
+			sourceTree = "<group>";
+		};
+		3E774F5A154A132E00FA237E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3ECEDF2C1512A9E900EC30E8 /* NSMutableArray+Shuffle.h */,
+				3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */,
+				3E774F57154A0C7200FA237E /* NSString+Additions.h */,
+				3E774F58154A0C7200FA237E /* NSString+Additions.m */,
+				3E6E96F21511DED000626416 /* UIView+Utilities.h */,
+				3E6E96F31511DED000626416 /* UIView+Utilities.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		3EBB28431511ED68000236C3 /* iCarousel */ = {

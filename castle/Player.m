@@ -56,6 +56,11 @@
     return @"The Brotherhood of True Lies";
 }
 
+- (NSString *)shortTeamName {
+    // oh how I loathe your verbosity, objective-c
+    return [[[[self teamName] componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)]] componentsJoinedByString:@" "];
+}
+
 - (void)setProfession:(NSDictionary *)profession {
     _profession = profession;
     _professionRevealed = NO;

@@ -12,7 +12,7 @@
 #import "PlayerPickerViewController.h"
 
 @interface TurnViewController : UIViewController <iCarouselDataSource, iCarouselDelegate> {
-    UILabel *_affiliationLabel;
+    UIButton *_affiliationButton;
     UIButton *_professionButton;
     iCarousel *_itemCarousel;
     PlayerPickerViewController *_playerPicker;

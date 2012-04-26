@@ -14,6 +14,7 @@
     self = [super init];
     if (self){
         _descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(0,0,self.view.width, self.view.height)];
+        _descriptionView.autoresizingMask = UIViewAutoresizingAll;
         _descriptionView.editable = NO;
         [_descriptionView setFont:[UIFont systemFontOfSize:16]];
         [self.view addSubview:_descriptionView];

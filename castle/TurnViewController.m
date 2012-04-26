@@ -36,8 +36,9 @@
     spyButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleMargins;
     [spyButton addTarget:self action:@selector(pressedSpy:) forControlEvents:UIControlEventTouchUpInside];
     
-    _affiliationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 160, 24)];
-    _affiliationLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    _affiliationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _affiliationButton.frame = CGRectMake(0, 0, 160, 24);
+    _affiliationButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
     _professionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     _professionButton.frame = CGRectMake(self.view.width-120, 0, 120, 24);
@@ -53,7 +54,7 @@
     
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    [self.view addSubviews:duelButton, spyButton, _affiliationLabel,
+    [self.view addSubviews:duelButton, spyButton, _affiliationButton,
                            _itemCarousel, _professionButton, nil];
 }
 
@@ -67,7 +68,7 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     _currentPlayer = [Game sharedGame].currentPlayer;
     if (_currentPlayer) {
-        _affiliationLabel.text = _currentPlayer.teamName;
+        [_affiliationButton setTitle:_currentPlayer.shortTeamName forState:UIControlStateNormal];
         [_professionButton setTitle:[_currentPlayer.profession objectForKey:@"title"] forState:UIControlStateNormal];
         [_itemCarousel reloadData];
     }
