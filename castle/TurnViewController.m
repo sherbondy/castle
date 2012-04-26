@@ -38,7 +38,8 @@
     
     _affiliationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     _affiliationButton.frame = CGRectMake(0, 0, 160, 24);
-    _affiliationButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [_affiliationButton addTarget:self action:@selector(getAffiliationDescription:)
+                 forControlEvents:UIControlEventTouchUpInside];
     
     _professionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     _professionButton.frame = CGRectMake(self.view.width-120, 0, 120, 24);
@@ -151,7 +152,17 @@
 
 - (void)getProfessionDescription:(id)sender {
     NSDictionary *profession = self.currentPlayer.profession;
-    DescriptionViewController *descriptionVC = [[DescriptionViewController alloc] initWithTitle:[profession objectForKey:@"title"] andDescription:[profession objectForKey:@"description"]];
+    [self presentDescriptionWithTitle:[profession objectForKey:@"title"]
+                       andDescription:[profession objectForKey:@"description"]];
+}
+
+- (void)getAffiliationDescription:(id)sender {
+    [self presentDescriptionWithTitle:_currentPlayer.teamName andDescription:_currentPlayer.teamDescription];
+}
+
+- (void)presentDescriptionWithTitle:(NSString *)title andDescription:(NSString *)description {
+    DescriptionViewController *descriptionVC = [[DescriptionViewController alloc] initWithTitle:title
+                                                                                 andDescription:description];
     UINavigationController *descriptionNav = [[UINavigationController alloc] initWithRootViewController:descriptionVC];
     // if iPad, show popover instead
     [self presentModalViewController:descriptionNav animated:YES];

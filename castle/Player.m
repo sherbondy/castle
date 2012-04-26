@@ -61,6 +61,15 @@
     return [[[[self teamName] componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)]] componentsJoinedByString:@" "];
 }
 
+- (NSString *)teamDescription {
+    NSString *itemRequired = @"Goblets";
+    if (self.affiliation == kOrderTeam){
+        itemRequired = @"Keys";
+    }
+    return [NSString stringWithFormat:@"If %@ holds at least 3 %@, you may proclaim victory.",
+            self.shortTeamName, itemRequired];
+}
+
 - (void)setProfession:(NSDictionary *)profession {
     _profession = profession;
     _professionRevealed = NO;
