@@ -4,3 +4,6 @@
 [submodule "external/iCarousel"]
 	path = external/iCarousel
 	url = https://github.com/nicklockwood/iCarousel.git
+[submodule "frameworks/KIF"]
+	path = frameworks/KIF
+	url = https://github.com/square/KIF.git

@@ -15,7 +15,7 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"professions" ofType:@"json"];
     NSData *professions = [NSData dataWithContentsOfFile:filePath];
     NSArray *professionCards = [NSMutableArray arrayWithArray:[professions objectFromJSONData]];
-        
+
     self = [super initWithCards:professionCards];
     [self shuffle];
     

@@ -27,6 +27,7 @@
         
         self.title = @"Pick your Character";
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(pickNextCharacter:)];
+        self.navigationItem.rightBarButtonItem.accessibilityLabel = @"Next";
     }
     return self;
 }
@@ -49,8 +50,9 @@
     _nameField.textAlignment = UITextAlignmentCenter;
     _nameField.autoresizingMask = UIViewAutoresizingHorizontal;
     _nameField.delegate = self;
-    [self updatePlayerNameLabel];
+    _nameField.accessibilityLabel = @"User Name";
     [_nameField addTarget:self action:@selector(checkName) forControlEvents:UIControlEventEditingChanged];
+    [self updatePlayerNameLabel];
 
     [self.view addSubview:_nameField];
 }

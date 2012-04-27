@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#if RUN_KIF_TESTS
+    #import "CastleTestController.h"
+#endif
 
 @implementation AppDelegate
 
@@ -21,7 +24,14 @@
             
     [[Game sharedGame] start];
     [self.window setRootViewController:[Game sharedGame].navController];
-    
+
+    #if RUN_KIF_TESTS
+        [[CastleTestController sharedInstance] startTestingWithCompletionBlock:^{
+            // Exit after the tests complete so that CI knows we're done
+            exit([[CastleTestController sharedInstance] failureCount]);
+        }];
+    #endif
+
     return YES;
 }
 

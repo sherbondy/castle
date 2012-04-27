@@ -22,6 +22,7 @@
     if (self) {
         self.title = @"Players";
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(next:)];
+        self.navigationItem.rightBarButtonItem.accessibilityLabel = @"Done";
     }
     return self;
 }
@@ -38,6 +39,7 @@
     _stepper.value = 6;
     _stepper.stepValue = 1;
     _stepper.autoresizingMask = UIViewAutoresizingFlexibleMargins;
+    _stepper.accessibilityLabel = @"Player Count Stepper";
     [_stepper addTarget:self action:@selector(updateCount:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_stepper];
     
@@ -45,12 +47,14 @@
     _countLabel.textAlignment = UITextAlignmentCenter;
     _countLabel.font = [UIFont systemFontOfSize:32];
     _countLabel.autoresizingMask = UIViewAutoresizingFlexibleMargins;
+    _countLabel.accessibilityLabel = @"Player Count";
     [self updateCount:nil];
     [self.view addSubview:_countLabel];
 }
 
 - (void)updateCount:(id)sender {
     _countLabel.text = [NSString stringWithFormat:@"%i", (int)_stepper.value];
+    _countLabel.accessibilityValue = _countLabel.text;
 }
 
 - (void)next:(id)sender {
