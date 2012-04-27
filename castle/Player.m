@@ -36,16 +36,26 @@
     return [Player imageForCharacter:_character];
 }
 
+// adding KVO-compatibility to items
+- (NSUInteger)countOfItems { return _items.count; }
+- (id)objectInItemsAtIndex:(NSUInteger)index { return [_items objectAtIndex:index]; }
+- (void)insertObject:(NSDictionary *)object inItemsAtIndex:(NSUInteger)index {
+    [_items insertObject:object atIndex:index];
+}
+- (void)removeObjectFromItemsAtIndex:(NSUInteger)index {
+    [_items removeObjectAtIndex:index];
+}
+
 - (void)addItemToHand:(id)item {
     if (!_items){
         _items = [NSMutableArray arrayWithObject:item];
     } else {
-        [_items addObject:item];
+        [self insertObject:item inItemsAtIndex:0];
     }
 }
 - (void)removeItemFromHand:(id)item {
     assert([_items containsObject:item]);
-    [_items removeObject:item];
+    [self removeObjectFromItemsAtIndex:[_items indexOfObject:item]];
 }
 
 - (void)setAffiliation:(Affiliation)affiliation {

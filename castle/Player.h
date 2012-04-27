@@ -42,6 +42,10 @@ typedef NSUInteger Affiliation;
 - (NSArray *)items;
 - (void)addItemToHand:(id)item;
 - (void)removeItemFromHand:(id)item;
+- (NSUInteger)countOfItems;
+- (id)objectInItemsAtIndex:(NSUInteger)index;
+- (void)insertObject:(NSDictionary *)object inItemsAtIndex:(NSUInteger)index;
+- (void)removeObjectFromItemsAtIndex:(NSUInteger)index;
 - (void)setAffiliation:(Affiliation)affiliation;
 
 @end

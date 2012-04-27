@@ -14,6 +14,8 @@
 
 @implementation ItemCarouselViewController
 
+@synthesize items = _items;
+
 - (id)init {
     self = [super init];
     if (self){
@@ -30,19 +32,35 @@
 - (id)initWithPlayer:(Player *)player {
     self = [self init];
     if (self){
-        _items = player.items;
+        _player = player;
+        [_player addObserver:self forKeyPath:@"items" options:0 context:NULL];
     }
     return self;
 }
 
+- (NSArray *)items {
+    return _player.items;
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    [self cleanupObserver];
+}
+
+- (void)cleanupObserver {
+    if (_player) {
+        [_player removeObserver:self forKeyPath:@"items"];
+    }
+}
+
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return _items.count;
+    return self.items.count;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
     
     ItemView *itemView;
-    NSDictionary *theItem = [_items objectAtIndex:index];
+    NSDictionary *theItem = [self.items objectAtIndex:index];
     if (!view) {
         itemView = [[ItemView alloc] initWithItem:theItem andDelegate:self];
     } else {
@@ -57,8 +75,17 @@
     return 150;
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+                        change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqual:@"items"]){
+        [_itemCarousel reloadData];
+    }
+}
+
 - (void)setPlayer:(Player *)player {
-    _items = player.items;
+    [self cleanupObserver];
+    _player = player;
+    [_player addObserver:self forKeyPath:@"items" options:0 context:NULL];
     [_itemCarousel reloadData];
 }
 

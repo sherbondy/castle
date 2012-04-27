@@ -13,9 +13,10 @@
 
 @interface ItemCarouselViewController : UIViewController <iCarouselDataSource, iCarouselDelegate, ItemViewDelegate> {
     iCarousel *_itemCarousel;
+    Player *_player;
 }
 
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, readonly) NSArray *items;
 
 - (void)pressedTrade:(ItemView *)itemView;
 - (id)initWithPlayer:(Player *)player;
