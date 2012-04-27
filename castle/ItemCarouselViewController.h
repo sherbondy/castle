@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
+#import "Player.h"
+#import "ItemView.h"
 
-@interface ItemCarouselViewController : UIViewController
+@interface ItemCarouselViewController : UIViewController <iCarouselDataSource, iCarouselDelegate, ItemViewDelegate> {
+    iCarousel *_itemCarousel;
+}
+
+@property (nonatomic, strong) Player *player;
+
+- (void)pressedTrade:(ItemView *)itemView;
+- (id)initWithPlayer:(Player *)player;
+- (void)setPlayer:(Player *)player;
 
 @end

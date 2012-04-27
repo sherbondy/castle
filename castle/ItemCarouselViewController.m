@@ -14,38 +14,58 @@
 
 @implementation ItemCarouselViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize player = _player;
 
 - (id)init {
-    self =[super init];
+    self = [super init];
     if (self){
-        
+        _itemCarousel = [[iCarousel alloc] init];
+        _itemCarousel.delegate = self;
+        _itemCarousel.dataSource = self;
+        _itemCarousel.type = iCarouselTypeLinear;
+        _itemCarousel.autoresizingMask = UIViewAutoresizingAll;
+        self.view = _itemCarousel;
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+- (id)initWithPlayer:(Player *)player {
+    self = [self init];
+    if (self){
+        _player = player;
+    }
+    return self;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
+    return _player.items.count;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-	return YES;
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
+    
+    ItemView *itemView;
+    NSDictionary *theItem = [_player.items objectAtIndex:index];
+    if (!view) {
+        itemView = [[ItemView alloc] initWithItem:theItem andDelegate:self];
+    } else {
+        itemView = (ItemView *)view;
+        itemView.item = theItem;
+    }
+    
+    return itemView;
+}
+
+- (CGFloat)carouselItemWidth:(iCarousel *)carousel {
+    return 150;
+}
+
+- (void)setPlayer:(Player *)player {
+    _player = player;
+    [_itemCarousel reloadData];
+}
+
+- (void)pressedTrade:(ItemView *)itemView {
+    [self.parentViewController performSelector:@selector(pressedTrade:) withObject:itemView];
 }
 
 @end

@@ -8,7 +8,6 @@
 
 #import "TurnViewController.h"
 #import "Game.h"
-#import "ItemView.h"
 #import "DescriptionViewController.h"
 
 @implementation TurnViewController
@@ -55,65 +54,33 @@
     _pityTokenLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 140, 24)];
     [self updatePityTokenLabel];
 
-    _itemCarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height-128)];
-    _itemCarousel.delegate = self;
-    _itemCarousel.dataSource = self;
-    _itemCarousel.type = iCarouselTypeLinear;
-    _itemCarousel.autoresizingMask = UIViewAutoresizingAll;
+    _itemCarouselVC = [[ItemCarouselViewController alloc] init];
+    _itemCarouselVC.view.frame = CGRectMake(0, 96, self.view.width, 240);
+    [self addChildViewController:_itemCarouselVC];
     
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
     [self.view addSubviews:duelButton, spyButton, _affiliationButton, _pityTokenLabel,
-                           _itemCarousel, _professionButton, gameBoardButton, nil];
+                           _itemCarouselVC.view, _professionButton, gameBoardButton, nil];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
     _currentPlayer = [Game sharedGame].currentPlayer;
     if (_currentPlayer) {
         [_affiliationButton setDefaultTitle:_currentPlayer.shortTeamName];
         [_professionButton setDefaultTitle:[_currentPlayer.profession objectForKey:@"title"]];
-        [_itemCarousel reloadData];
+        [_itemCarouselVC setPlayer:_currentPlayer];
     }
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+- (void)viewDidAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return toInterfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-
-- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return self.currentPlayer.items.count;
-}
-
-- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
-
-    ItemView *itemView;
-    NSDictionary *theItem = [self.currentPlayer.items objectAtIndex:index];
-    if (!view) {
-        itemView = [[ItemView alloc] initWithItem:theItem andDelegate:self];
-    } else {
-        itemView = (ItemView *)view;
-        itemView.item = theItem;
-    }
-    
-    return itemView;
-}
-
-- (CGFloat)carouselItemWidth:(iCarousel *)carousel {
-    return 150;
 }
 
 - (void)presentPlayerPickerWithAction:(PlayerAction)action {

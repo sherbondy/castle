@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "iCarousel.h"
 #import "Player.h"
 #import "PlayerPickerViewController.h"
+#import "ItemCarouselViewController.h"
 
-@interface TurnViewController : UIViewController <iCarouselDataSource, iCarouselDelegate> {
+@interface TurnViewController : UIViewController {
     UIButton *_affiliationButton;
     UIButton *_professionButton;
     UILabel *_pityTokenLabel;
-    iCarousel *_itemCarousel;
+    ItemCarouselViewController *_itemCarouselVC;
     PlayerPickerViewController *_playerPicker;
     PlayerAction _turnAction;
     UIPopoverController *_popover;

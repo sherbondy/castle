@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ItemView;
+
+@protocol ItemViewDelegate
+- (void)pressedTrade:(ItemView *)itemView;
+@end
+
+
 @interface ItemView : UIView {
     UILabel *_nameLabel;
     UITextView *_descriptionView;
@@ -15,7 +22,7 @@
 }
 
 @property (nonatomic, strong) NSDictionary *item;
-@property (nonatomic, weak) id delegate;
+@property (nonatomic, weak) id<ItemViewDelegate> delegate;
 
 - (id)initWithItem:(NSDictionary *)item andDelegate:(id)delegate;
 
