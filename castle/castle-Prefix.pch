@@ -15,4 +15,5 @@
     #import "NSMutableArray+Shuffle.h"
     #import "UIButton+Additions.h"
     #import "NSString+Additions.h"
+    #import "UIDevice+Kind.h"
 #endif

@@ -53,6 +53,7 @@
 		3EBB28491511EDED000236C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBB28471511EDDB000236C3 /* QuartzCore.framework */; };
 		3EBB284A1511EE15000236C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */; };
 		3EC65332154A1BDD0036128C /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC65331154A1BDD0036128C /* UIButton+Additions.m */; };
+		3EC65336154A1D850036128C /* UIDevice+Kind.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC65335154A1D850036128C /* UIDevice+Kind.m */; };
 		3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */; };
 		3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
 		3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */; };
@@ -138,6 +139,8 @@
 		3EBB28471511EDDB000236C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3EC65330154A1BDD0036128C /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
 		3EC65331154A1BDD0036128C /* UIButton+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Additions.m"; sourceTree = "<group>"; };
+		3EC65334154A1D850036128C /* UIDevice+Kind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Kind.h"; sourceTree = "<group>"; };
+		3EC65335154A1D850036128C /* UIDevice+Kind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Kind.m"; sourceTree = "<group>"; };
 		3ECEDF2C1512A9E900EC30E8 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfessionDeck.h; path = castle/ProfessionDeck.h; sourceTree = SOURCE_ROOT; };
@@ -344,6 +347,8 @@
 				3E6E96F31511DED000626416 /* UIView+Utilities.m */,
 				3EC65330154A1BDD0036128C /* UIButton+Additions.h */,
 				3EC65331154A1BDD0036128C /* UIButton+Additions.m */,
+				3EC65334154A1D850036128C /* UIDevice+Kind.h */,
+				3EC65335154A1D850036128C /* UIDevice+Kind.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 				3E1F48FE15490F1800B2A750 /* ItemCarouselViewController.m in Sources */,
 				3E774F59154A0C7200FA237E /* NSString+Additions.m in Sources */,
 				3EC65332154A1BDD0036128C /* UIButton+Additions.m in Sources */,
+				3EC65336154A1D850036128C /* UIDevice+Kind.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

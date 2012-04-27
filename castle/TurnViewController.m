@@ -13,6 +13,8 @@
 
 @implementation TurnViewController
 
+@synthesize popover = _popover;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -155,19 +157,29 @@
 - (void)getProfessionDescription:(id)sender {
     NSDictionary *profession = self.currentPlayer.profession;
     [self presentDescriptionWithTitle:[profession objectForKey:@"title"]
-                       andDescription:[profession objectForKey:@"description"]];
+                       andDescription:[profession objectForKey:@"description"] fromSender:sender];
 }
 
 - (void)getAffiliationDescription:(id)sender {
-    [self presentDescriptionWithTitle:_currentPlayer.teamName andDescription:_currentPlayer.teamDescription];
+    [self presentDescriptionWithTitle:_currentPlayer.teamName
+                       andDescription:_currentPlayer.teamDescription fromSender:sender];
 }
 
-- (void)presentDescriptionWithTitle:(NSString *)title andDescription:(NSString *)description {
+- (void)presentDescriptionWithTitle:(NSString *)title andDescription:(NSString *)description fromSender:(id)sender {
     DescriptionViewController *descriptionVC = [[DescriptionViewController alloc] initWithTitle:title
                                                                                  andDescription:description];
     UINavigationController *descriptionNav = [[UINavigationController alloc] initWithRootViewController:descriptionVC];
     // if iPad, show popover instead
-    [self presentModalViewController:descriptionNav animated:YES];
+    if ([UIDevice isPad]) {
+        if (!_popover){
+            _popover = [[UIPopoverController alloc] initWithContentViewController:descriptionNav];
+        } else {
+            [_popover setContentViewController:descriptionNav];
+        }
+        [_popover presentPopoverFromRect:((UIButton *)sender).frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    } else {
+        [self presentModalViewController:descriptionNav animated:YES];
+    }
 }
 
 @end

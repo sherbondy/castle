@@ -17,9 +17,11 @@
     iCarousel *_itemCarousel;
     PlayerPickerViewController *_playerPicker;
     PlayerAction _turnAction;
+    UIPopoverController *_popover;
 }
 
 @property (nonatomic, strong) Player *currentPlayer;
+@property (nonatomic, readonly) UIPopoverController *popover;
 
 - (void)pressedTrade:(id)sender;
 - (void)setReceivingPlayer:(Player *)player;

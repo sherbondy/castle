@@ -7,12 +7,14 @@
 //
 
 #import "DescriptionViewController.h"
+#import "Game.h"
 
 @implementation DescriptionViewController
 
 - (id)init {
     self = [super init];
     if (self){
+        self.contentSizeForViewInPopover = CGSizeMake(320, 320);
         _descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(0,0,self.view.width, self.view.height)];
         _descriptionView.autoresizingMask = UIViewAutoresizingAll;
         _descriptionView.editable = NO;
@@ -56,7 +58,12 @@
 }
 
 - (void)done {
-    [self dismissModalViewControllerAnimated:YES];
+    if ([UIDevice isPad]) {
+        // what a mess. Why is there no dismissPopoverControllerAnimated?
+        [[Game sharedGame].turnVC.popover dismissPopoverAnimated:YES];
+    } else {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 @end
