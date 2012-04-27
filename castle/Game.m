@@ -105,10 +105,27 @@
     _receivingPlayer = player;
 }
 
+- (void)cleanupTrade {
+    [self setGivingPlayer:nil];
+    [self setReceivingPlayer:nil];
+    self.offeredItem = nil;
+}
 - (void)offerTradeFrom:(Player *)fromPlayer to:(Player *)toPlayer {
     [self setGivingPlayer:fromPlayer];
     [self setReceivingPlayer:toPlayer];
     [_navController pushViewController:_tradeVC animated:YES];
+}
+- (void)acceptTradeWithItem:(NSDictionary *)item {
+    [self.givingPlayer removeItemFromHand:self.offeredItem];
+    [self.givingPlayer addItemToHand:item];
+    [self.receivingPlayer removeItemFromHand:item];
+    [self.receivingPlayer addItemToHand:self.offeredItem];
+    // Trigger A BAG HAS BEEN TRADED, etc.
+    [self cleanupTrade];
+}
+- (void)declineTrade {
+    self.givingPlayer.pityTokens += 1;
+    [self cleanupTrade];
 }
 
 - (void)distributeCards {

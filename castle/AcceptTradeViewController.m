@@ -77,10 +77,12 @@
 
 - (void)pressedTrade:(ItemView *)itemView {
     NSLog(@"Trading back: %@", itemView.item);
+    [[Game sharedGame] acceptTradeWithItem:itemView.item];
 }
 
 - (void)declineTrade:(id)sender {
     NSLog(@"Decline trade");
+    [[Game sharedGame] declineTrade];
 }
 
 @end

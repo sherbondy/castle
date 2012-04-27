@@ -41,6 +41,7 @@ typedef NSUInteger Affiliation;
 - (NSString *)teamName;
 - (NSArray *)items;
 - (void)addItemToHand:(id)item;
+- (void)removeItemFromHand:(id)item;
 - (void)setAffiliation:(Affiliation)affiliation;
 
 @end

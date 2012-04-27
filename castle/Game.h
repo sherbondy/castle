@@ -58,5 +58,7 @@
 - (void)setReceivingPlayer:(Player *)receivingPlayer;
 
 - (void)offerTradeFrom:(Player *)fromPlayer to:(Player *)toPlayer;
+- (void)acceptTradeWithItem:(NSDictionary *)item;
+- (void)declineTrade;
 
 @end

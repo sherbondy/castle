@@ -43,6 +43,10 @@
         [_items addObject:item];
     }
 }
+- (void)removeItemFromHand:(id)item {
+    assert([_items containsObject:item]);
+    [_items removeObject:item];
+}
 
 - (void)setAffiliation:(Affiliation)affiliation {
     if (!_affiliation){
