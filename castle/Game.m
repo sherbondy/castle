@@ -25,13 +25,14 @@
         _round = 0;
         _navController = [UINavigationController new];
         _turnVC = [TurnViewController new];
-        _tradeVC = [AcceptTradeViewController new];
+        _tradeVC = [[AcceptTradeViewController alloc] init];
     }
     return self;
 }
 
 - (void)start {
     PlayerCountViewController *playerCountVC = [PlayerCountViewController new];
+    [_tradeVC registerObservers];
     [_navController addChildViewController:playerCountVC];
 }
 
@@ -96,9 +97,17 @@
     _offeredItem = offeredItem;
 }
 
+- (void)setGivingPlayer:(Player *)player {
+    _givingPlayer = player;
+}
+
+- (void)setReceivingPlayer:(Player *)player {
+    _receivingPlayer = player;
+}
+
 - (void)offerTradeFrom:(Player *)fromPlayer to:(Player *)toPlayer {
-    _givingPlayer = fromPlayer;
-    _receivingPlayer = toPlayer;
+    [self setGivingPlayer:fromPlayer];
+    [self setReceivingPlayer:toPlayer];
     [_navController pushViewController:_tradeVC animated:YES];
 }
 

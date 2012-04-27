@@ -54,6 +54,8 @@
 - (Player *)playerAtIndexPath:(NSIndexPath *)indexPath;
 - (TurnViewController *)turnVC;
 - (void)setOfferedItem:(NSDictionary *)offeredItem;
+- (void)setGivingPlayer:(Player *)givingPlayer;
+- (void)setReceivingPlayer:(Player *)receivingPlayer;
 
 - (void)offerTradeFrom:(Player *)fromPlayer to:(Player *)toPlayer;
 

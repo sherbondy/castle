@@ -14,8 +14,6 @@
 
 @implementation ItemCarouselViewController
 
-@synthesize player = _player;
-
 - (id)init {
     self = [super init];
     if (self){
@@ -32,19 +30,19 @@
 - (id)initWithPlayer:(Player *)player {
     self = [self init];
     if (self){
-        _player = player;
+        _items = player.items;
     }
     return self;
 }
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return _player.items.count;
+    return _items.count;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
     
     ItemView *itemView;
-    NSDictionary *theItem = [_player.items objectAtIndex:index];
+    NSDictionary *theItem = [_items objectAtIndex:index];
     if (!view) {
         itemView = [[ItemView alloc] initWithItem:theItem andDelegate:self];
     } else {
@@ -60,12 +58,14 @@
 }
 
 - (void)setPlayer:(Player *)player {
-    _player = player;
+    _items = player.items;
     [_itemCarousel reloadData];
 }
 
 - (void)pressedTrade:(ItemView *)itemView {
-    [self.parentViewController performSelector:@selector(pressedTrade:) withObject:itemView];
+    if (self.parentViewController){
+        [self.parentViewController performSelector:@selector(pressedTrade:) withObject:itemView];
+    }
 }
 
 @end

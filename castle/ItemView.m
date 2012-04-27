@@ -41,7 +41,6 @@
 }
 
 - (void)pressedTrade:(id)sender {
-    [[Game sharedGame] setOfferedItem:self.item];
     [self.delegate pressedTrade:self];
 }
 

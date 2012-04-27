@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItemCarouselViewController.h"
 
-@interface AcceptTradeViewController : UIViewController
+@interface AcceptTradeViewController : UIViewController {
+    ItemCarouselViewController *_itemCarouselVC;
+    UIButton *_offerButton;
+}
+
+- (void)pressedTrade:(ItemView *)itemView;
+- (void)registerObservers;
 
 @end

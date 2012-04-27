@@ -15,7 +15,7 @@
     iCarousel *_itemCarousel;
 }
 
-@property (nonatomic, strong) Player *player;
+@property (nonatomic, strong) NSArray *items;
 
 - (void)pressedTrade:(ItemView *)itemView;
 - (id)initWithPlayer:(Player *)player;

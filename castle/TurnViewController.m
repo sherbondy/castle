@@ -100,8 +100,9 @@
     [self presentPlayerPickerWithAction:kSpyAction];
 }
 
-- (void)pressedTrade:(id)sender {
+- (void)pressedTrade:(ItemView *)itemView {
     NSLog(@"Trade offered");
+    [[Game sharedGame] setOfferedItem:itemView.item];
     [self presentPlayerPickerWithAction:kTradeAction];
 }
 

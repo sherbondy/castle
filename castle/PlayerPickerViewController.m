@@ -108,12 +108,8 @@
     }
 }
 
-- (void)setReceivingPlayer:(Player *)thePlayer {
-    _receivingPlayer = thePlayer;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self setReceivingPlayer:[[Game sharedGame] playerAtIndexPath:indexPath]];
+    _receivingPlayer = [[Game sharedGame] playerAtIndexPath:indexPath];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
