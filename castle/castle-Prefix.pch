@@ -13,4 +13,6 @@
     #import <Foundation/Foundation.h>
     #import "UIView+Utilities.h"
     #import "NSMutableArray+Shuffle.h"
+    #import "UIButton+Additions.h"
+    #import "NSString+Additions.h"
 #endif

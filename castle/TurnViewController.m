@@ -42,12 +42,15 @@
                  forControlEvents:UIControlEventTouchUpInside];
     
     _professionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _professionButton.frame = CGRectMake(self.view.width-120, 0, 120, 24);
-    _professionButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleLeftMargin;
+    _professionButton.frame = CGRectMake(0, 32, 120, 24);
     [_professionButton addTarget:self action:@selector(getProfessionDescription:)
                forControlEvents:UIControlEventTouchUpInside];
-    
-    _itemCarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 32, self.view.width, self.view.height-96)];
+
+    UIButton *gameBoardButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    gameBoardButton.frame = CGRectMake(self.view.width-140, 0, 140, 64);
+    [gameBoardButton setDefaultTitle:@"Show Game Board"];
+
+    _itemCarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height-128)];
     _itemCarousel.delegate = self;
     _itemCarousel.dataSource = self;
     _itemCarousel.type = iCarouselTypeLinear;
@@ -56,7 +59,7 @@
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
     [self.view addSubviews:duelButton, spyButton, _affiliationButton,
-                           _itemCarousel, _professionButton, nil];
+                           _itemCarousel, _professionButton, gameBoardButton, nil];
 }
 
 - (void)viewDidLoad
@@ -69,8 +72,8 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     _currentPlayer = [Game sharedGame].currentPlayer;
     if (_currentPlayer) {
-        [_affiliationButton setTitle:_currentPlayer.shortTeamName forState:UIControlStateNormal];
-        [_professionButton setTitle:[_currentPlayer.profession objectForKey:@"title"] forState:UIControlStateNormal];
+        [_affiliationButton setDefaultTitle:_currentPlayer.shortTeamName];
+        [_professionButton setDefaultTitle:[_currentPlayer.profession objectForKey:@"title"]];
         [_itemCarousel reloadData];
     }
 }
