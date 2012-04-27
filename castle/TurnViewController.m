@@ -34,7 +34,7 @@
 }
 
 - (void)registerObservers {
-    [[Game sharedGame] addObserver:self forKeyPath:@"currentPlayer" options:0 context:NULL];
+    [[Game sharedGame] addObserver:self forKeyPath:@"currentPlayer" options:(NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew) context:NULL];
 }
 
 - (void)loadView {
@@ -152,7 +152,14 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqual:@"currentPlayer"]){
+        id oldPlayer = [change objectForKey:NSKeyValueChangeOldKey];
+        if ([oldPlayer isKindOfClass:[Player class]]){
+            [oldPlayer removeObserver:self forKeyPath:@"pityTokens"]; // old player
+        }
+        [[Game sharedGame].currentPlayer addObserver:self forKeyPath:@"pityTokens" options:0 context:NULL];
         [self updatePlayerFields];
+    } else if ([keyPath isEqual:@"pityTokens"]){
+        [self updatePityTokenLabel];
     }
 }
 
