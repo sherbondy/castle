@@ -14,16 +14,36 @@
 
 @synthesize popover = _popover;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)init {
+    self = [super init];
     if (self) {
+        _affiliationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [_affiliationButton addTarget:self action:@selector(getAffiliationDescription:)
+                     forControlEvents:UIControlEventTouchUpInside];
+        
+        _professionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [_professionButton addTarget:self action:@selector(getProfessionDescription:)
+                    forControlEvents:UIControlEventTouchUpInside];
+        
+        _pityTokenLabel = [[UILabel alloc] init];
+        
+        _itemCarouselVC = [[ItemCarouselViewController alloc] init];
+        [self addChildViewController:_itemCarouselVC];
     }
     return self;
 }
 
+- (void)registerObservers {
+    [[Game sharedGame] addObserver:self forKeyPath:@"currentPlayer" options:0 context:NULL];
+}
+
 - (void)loadView {
     [super loadView];
+
+    _affiliationButton.frame = CGRectMake(0, 0, 160, 24);
+    _professionButton.frame = CGRectMake(0, 32, 120, 24);
+    _pityTokenLabel.frame = CGRectMake(0, 64, 140, 24);
+    _itemCarouselVC.view.frame = CGRectMake(0, 96, self.view.width, 240);
     
     UIButton *duelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [duelButton setTitle:@"Duel" forState:UIControlStateNormal];
@@ -36,27 +56,12 @@
     [spyButton setFrame:CGRectMake(self.view.width-130-20, self.view.height-64, 130, 48)];
     spyButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleMargins;
     [spyButton addTarget:self action:@selector(pressedSpy:) forControlEvents:UIControlEventTouchUpInside];
-    
-    _affiliationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _affiliationButton.frame = CGRectMake(0, 0, 160, 24);
-    [_affiliationButton addTarget:self action:@selector(getAffiliationDescription:)
-                 forControlEvents:UIControlEventTouchUpInside];
-    
-    _professionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _professionButton.frame = CGRectMake(0, 32, 120, 24);
-    [_professionButton addTarget:self action:@selector(getProfessionDescription:)
-               forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *gameBoardButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     gameBoardButton.frame = CGRectMake(self.view.width-140, 0, 140, 64);
     [gameBoardButton setDefaultTitle:@"Show Game Board"];
 
-    _pityTokenLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 140, 24)];
-    [self updatePityTokenLabel];
-
-    _itemCarouselVC = [[ItemCarouselViewController alloc] init];
-    _itemCarouselVC.view.frame = CGRectMake(0, 96, self.view.width, 240);
-    [self addChildViewController:_itemCarouselVC];
+    [self updatePlayerFields];
     
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
@@ -64,15 +69,12 @@
                            _itemCarouselVC.view, _professionButton, gameBoardButton, nil];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    _currentPlayer = [Game sharedGame].currentPlayer;
-    if (_currentPlayer) {
-        [_affiliationButton setDefaultTitle:_currentPlayer.shortTeamName];
-        [_professionButton setDefaultTitle:[_currentPlayer.profession objectForKey:@"title"]];
-        [_itemCarouselVC setPlayer:_currentPlayer];
-    }
+- (Player *)currentPlayer {
+    return [Game sharedGame].currentPlayer;
+}
+
+- (void)viewDidUnload {
+    [[Game sharedGame] removeObserver:self forKeyPath:@"currentPlayer"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -117,7 +119,7 @@
             break;
         case kTradeAction:
             NSLog(@"Time to trade.");
-            [[Game sharedGame] offerTradeFrom:self.currentPlayer to:player];
+            [[Game sharedGame] offerTradeTo:player];
             break;
 
         default:
@@ -127,7 +129,14 @@
 
 - (void)updatePityTokenLabel {
     _pityTokenLabel.text = [NSString stringWithFormat:@"%i Pity Token%@",
-                            _currentPlayer.pityTokens, (_currentPlayer.pityTokens == 1 ? @"" : @"s")];
+                            [self currentPlayer].pityTokens, ([self currentPlayer].pityTokens == 1 ? @"" : @"s")];
+}
+- (void)updatePlayerFields {
+    Player *cp = [self currentPlayer];
+    [_affiliationButton setDefaultTitle:cp.shortTeamName];
+    [_professionButton setDefaultTitle:[cp.profession objectForKey:@"title"]];
+    [_itemCarouselVC setPlayer:cp];
+    [self updatePityTokenLabel];
 }
 
 - (void)getProfessionDescription:(id)sender {
@@ -137,8 +146,14 @@
 }
 
 - (void)getAffiliationDescription:(id)sender {
-    [self presentDescriptionWithTitle:_currentPlayer.teamName
-                       andDescription:_currentPlayer.teamDescription fromSender:sender];
+    [self presentDescriptionWithTitle:[self currentPlayer].teamName
+                       andDescription:[self currentPlayer].teamDescription fromSender:sender];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqual:@"currentPlayer"]){
+        [self updatePlayerFields];
+    }
 }
 
 - (void)presentDescriptionWithTitle:(NSString *)title andDescription:(NSString *)description fromSender:(id)sender {

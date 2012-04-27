@@ -24,7 +24,7 @@
         _turn = 0;
         _round = 0;
         _navController = [UINavigationController new];
-        _turnVC = [TurnViewController new];
+        _turnVC = [[TurnViewController alloc] init];
         _tradeVC = [[AcceptTradeViewController alloc] init];
     }
     return self;
@@ -33,12 +33,17 @@
 - (void)start {
     PlayerCountViewController *playerCountVC = [PlayerCountViewController new];
     [_tradeVC registerObservers];
+    [_turnVC registerObservers];
     [_navController addChildViewController:playerCountVC];
 }
 
 - (void)pickCharacters {
     CharacterPickerViewController *characterPickerVC = [CharacterPickerViewController new];
     [_navController pushViewController:characterPickerVC animated:YES];
+}
+
+- (void)setCurrentPlayer:(Player *)currentPlayer {
+    _currentPlayer = currentPlayer;
 }
 
 - (void)nextTurn {
@@ -50,7 +55,7 @@
         _round += 1;
     }
     
-    _currentPlayer = [_players objectAtIndex:_turn];
+    [self setCurrentPlayer:[_players objectAtIndex:_turn]];
 }
 
 - (void)setPlayerCount:(NSUInteger)count {
@@ -61,7 +66,7 @@
             [players insertObject:player atIndex:i];
         }
         _players = players;
-        _currentPlayer = [players objectAtIndex:0];
+        [self setCurrentPlayer:[players objectAtIndex:0]];
         _playerCount = count;
     } else {
         NSLog(@"Player count alreay set.");
@@ -109,9 +114,10 @@
     [self setGivingPlayer:nil];
     [self setReceivingPlayer:nil];
     self.offeredItem = nil;
+    [_navController popViewControllerAnimated:YES];
 }
-- (void)offerTradeFrom:(Player *)fromPlayer to:(Player *)toPlayer {
-    [self setGivingPlayer:fromPlayer];
+- (void)offerTradeTo:(Player *)toPlayer {
+    [self setGivingPlayer:self.currentPlayer];
     [self setReceivingPlayer:toPlayer];
     [_navController pushViewController:_tradeVC animated:YES];
 }
@@ -147,7 +153,7 @@
     int i = 0;
     for (Player *player in _players){
         [player addItemToHand:[startingObjects objectAtIndex:i]];
-        
+
         NSNumber *affiliation = [affiliationArray objectAtIndex:i];
         [player setAffiliation:[affiliation unsignedIntValue]];
         

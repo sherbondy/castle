@@ -47,6 +47,7 @@
 - (void)pickCharacters;
 - (void)nextTurn;
 - (void)setPlayerCount:(NSUInteger)count;
+- (void)setCurrentPlayer:(Player *)currentPlayer;
 - (void)distributeCards;
 - (NSArray *)players;
 - (NSArray *)playersOmitting:(Player *)player;
@@ -57,7 +58,7 @@
 - (void)setGivingPlayer:(Player *)givingPlayer;
 - (void)setReceivingPlayer:(Player *)receivingPlayer;
 
-- (void)offerTradeFrom:(Player *)fromPlayer to:(Player *)toPlayer;
+- (void)offerTradeTo:(Player *)toPlayer;
 - (void)acceptTradeWithItem:(NSDictionary *)item;
 - (void)declineTrade;
 
