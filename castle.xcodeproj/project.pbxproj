@@ -94,8 +94,6 @@
 		3EA9C022154A2656003860A3 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594241511555400C5F6E6 /* CHANGELOG.md */; };
 		3EA9C023154A2656003860A3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594271511555400C5F6E6 /* README.md */; };
 		3EA9C02A154A26B5003860A3 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA9BFF1154A262F003860A3 /* libKIF.a */; };
-		3EA9C02E154A2808003860A3 /* CastleTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02D154A2808003860A3 /* CastleTestController.m */; };
-		3EA9C031154A28CE003860A3 /* KIFTestScenario+CastleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C030154A28CE003860A3 /* KIFTestScenario+CastleAdditions.m */; };
 		3EA9C033154A2C84003860A3 /* CastleTestController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02C154A2808003860A3 /* CastleTestController.h */; };
 		3EA9C034154A2C84003860A3 /* CastleTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02D154A2808003860A3 /* CastleTestController.m */; };
 		3EA9C035154A2C84003860A3 /* KIFTestScenario+CastleAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02F154A28CE003860A3 /* KIFTestScenario+CastleAdditions.h */; };
@@ -667,8 +665,6 @@
 				3E774F59154A0C7200FA237E /* NSString+Additions.m in Sources */,
 				3EC65332154A1BDD0036128C /* UIButton+Additions.m in Sources */,
 				3EC65336154A1D850036128C /* UIDevice+Kind.m in Sources */,
-				3EA9C02E154A2808003860A3 /* CastleTestController.m in Sources */,
-				3EA9C031154A28CE003860A3 /* KIFTestScenario+CastleAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
