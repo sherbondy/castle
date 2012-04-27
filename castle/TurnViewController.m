@@ -52,6 +52,9 @@
     gameBoardButton.frame = CGRectMake(self.view.width-140, 0, 140, 64);
     [gameBoardButton setDefaultTitle:@"Show Game Board"];
 
+    _pityTokenLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 140, 24)];
+    [self updatePityTokenLabel];
+
     _itemCarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height-128)];
     _itemCarousel.delegate = self;
     _itemCarousel.dataSource = self;
@@ -60,7 +63,7 @@
     
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    [self.view addSubviews:duelButton, spyButton, _affiliationButton,
+    [self.view addSubviews:duelButton, spyButton, _affiliationButton, _pityTokenLabel,
                            _itemCarousel, _professionButton, gameBoardButton, nil];
 }
 
@@ -152,6 +155,11 @@
         default:
             break;
     }
+}
+
+- (void)updatePityTokenLabel {
+    _pityTokenLabel.text = [NSString stringWithFormat:@"%i Pity Token%@",
+                            _currentPlayer.pityTokens, (_currentPlayer.pityTokens == 1 ? @"" : @"s")];
 }
 
 - (void)getProfessionDescription:(id)sender {

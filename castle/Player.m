@@ -21,6 +21,7 @@
 - (id)initWithName:(NSString *)name {
     if ((self = [super init])){
         self.name = name;
+        self.pityTokens = 0;
     }
     return self;
 }

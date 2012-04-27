@@ -14,6 +14,7 @@
 @interface TurnViewController : UIViewController <iCarouselDataSource, iCarouselDelegate> {
     UIButton *_affiliationButton;
     UIButton *_professionButton;
+    UILabel *_pityTokenLabel;
     iCarousel *_itemCarousel;
     PlayerPickerViewController *_playerPicker;
     PlayerAction _turnAction;

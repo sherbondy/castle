@@ -32,6 +32,7 @@ typedef NSUInteger Affiliation;
 @property (nonatomic, strong)   NSDictionary *profession;
 @property (nonatomic, assign)   BOOL          professionRevealed;
 @property (nonatomic, readonly) NSArray      *items;
+@property (nonatomic, assign)   NSUInteger    pityTokens;
 
 + (UIImage *)imageForCharacter:(NSString *)character;
 
