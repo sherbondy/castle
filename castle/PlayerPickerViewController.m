@@ -84,6 +84,7 @@
                                      ((thePlayer.items.count != 1) ? @"s" : @"")];
     }
     cell.imageView.image = thePlayer.characterImage;
+    cell.accessoryType = (_checkedPath && [_checkedPath isEqual:indexPath]) ? UITableViewCellAccessoryCheckmark: UITableViewCellAccessoryNone;
 
     return cell;
 }
@@ -110,6 +111,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     _receivingPlayer = [[Game sharedGame] playerAtIndexPath:indexPath];
+
+    // checking behavior
+    if (![_checkedPath isEqual:indexPath]) {
+        NSMutableArray *oldAndNewPaths = [NSMutableArray new];
+        if (_checkedPath) [oldAndNewPaths addObject:_checkedPath];
+        _checkedPath = indexPath;
+        [oldAndNewPaths addObject:_checkedPath];
+        [tableView reloadRowsAtIndexPaths:oldAndNewPaths withRowAnimation:UITableViewRowAnimationNone];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

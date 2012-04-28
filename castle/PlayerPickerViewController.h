@@ -19,6 +19,7 @@ typedef NSUInteger PlayerAction;
 @interface PlayerPickerViewController : UITableViewController {
     @private
     Player *_receivingPlayer;
+    NSIndexPath *_checkedPath;
 }
 
 @property (nonatomic, assign) PlayerAction action;

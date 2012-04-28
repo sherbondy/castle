@@ -11,24 +11,24 @@
     "count": 3
   }, {
     "id": 2,
-    "name": "Bag of Secrets",
-    "description": "Trade this object and you can draw the top object from the \ndraw pile. You cannot trade this for another Bag of Secrets. \nThis bag turns into a Key as soon as all objects have been drawn."
+    "name": "Bag of Secrets (K)",
+    "description": "Trade this object and you can draw the top object from the draw pile. You cannot trade this for another Bag of Secrets. This bag turns into a Key as soon as all objects have been drawn."
   }, {
     "id": 3,
-    "name": "Bag of Secrets",
-    "description": "Trade this object and you can draw the top object from the \ndraw pile. You cannot trade this for another Bag of Secrets. \nThis bag turns into a Goblet as soon as all objects have been drawn."
+    "name": "Bag of Secrets (G)",
+    "description": "Trade this object and you can draw the top object from the draw pile. You cannot trade this for another Bag of Secrets. This bag turns into a Goblet as soon as all objects have been drawn."
   }, {
     "id": 4,
     "name": "Dagger",
-    "description": "Add +1 to your score in any duel if you are the attacker. \nYou cannot use this bonus if you are supporting another player."
+    "description": "Add +1 to your score in any duel if you are the attacker. You cannot use this bonus if you are supporting another player."
   }, {
     "id": 5,
     "name": "Gloves",
-    "description": "Add +1 to your score in any duel if you are the defender. \nYou cannot use this bonus if you are supporting another player."
+    "description": "Add +1 to your score in any duel if you are the defender. You cannot use this bonus if you are supporting another player."
   }, {
     "id": 6,
     "name": "Poison Ring",
-    "description": "You win any duel that ends in a tie if you are either the \nattacker or the defender. You cannot use this bonus if you are \nsupporting another player."
+    "description": "You win any duel that ends in a tie if you are either the attacker or the defender. You cannot use this bonus if you are supporting another player."
   }, {
     "id": 7,
     "name": "Throwing Knives",
@@ -40,34 +40,34 @@
   }, {
     "id": 9,
     "name": "Tome",
-    "description": "Trade this object and you can exchange your profession with \nyour trading partner. Turn these professions face-down if they \nwere face up."
+    "description": "Trade this object and you can exchange your profession with your trading partner. Turn these professions face-down if they were face up."
   }, {
     "id": 10,
     "name": "Monocle",
-    "description": "Trade this object and you can look at your trading \npartner’s Secret Society card."
+    "description": "Trade this object and you can look at your trading partner’s Secret Society card."
   }, {
     "id": 11,
     "name": "Privilege",
-    "description": "Trade this object and you can look at all of your trading \npartner’s objects."
+    "description": "Trade this object and you can look at all of your trading partner’s objects."
   }, {
     "id": 12,
     "name": "Coat",
-    "description": "Trade this object and you can choose a new profession \nfrom those left over. Place your new profession face-down \nin front of you and add the old one to those left over."
+    "description": "Trade this object and you can choose a new profession from those left over. Place your new profession face-down in front of you and add the old one to those left over."
   }, {
     "id": 13,
     "name": "Sextant",
-    "description": "Trade this object and you can choose a direction \n(right or left). All players must then pass one object of \ntheir choice to their neighbor in the chosen direction."
+    "description": "Trade this object and you can choose a direction (right or left). All players must then pass one object of their choice to their neighbor in the chosen direction."
   }, {
     "id": 14,
     "name": "Shattered Mirror",
-    "description": "You must always accept this object if offered in a trade. \nYou cannot use the trade ability of any object you exchange \nfor the Shattered Mirror"
+    "description": "You must always accept this object if offered in a trade. You cannot use the trade ability of any object you exchange for the Shattered Mirror"
   }, {
     "id": 15,
     "name": "Black Pearl",
-    "description": "You must always accept this object if offered in a trade. \nIf you hold the Black Pearl you cannot proclaim victory for \nyour Secret Society."
+    "description": "You must always accept this object if offered in a trade. If you hold the Black Pearl you cannot proclaim victory for your Secret Society."
   }, {
     "id": 16,
     "name": "Seal of the Lodge",
-    "description": "You can proclaim yourself the sole winner if you hold the \nSeal of the Lodge and at least 3 Keys and/or Goblets"
+    "description": "You can proclaim yourself the sole winner if you hold the Seal of the Lodge and at least 3 Keys and/or Goblets"
   }
 ]
