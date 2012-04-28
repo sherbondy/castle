@@ -10,6 +10,7 @@
 
 @implementation NSArray (Additions)
 
+// could reimplement with indexOfObjectPassingTest
 - (BOOL)any:(BOOL (^)(id item))block {
     for (id elem in self){
         if (block(elem)){
