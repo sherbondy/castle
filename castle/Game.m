@@ -6,8 +6,11 @@
 //  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
+#define NEITHER(A, B) = 
+
 #import "Game.h"
 #import "CharacterPickerViewController.h"
+#import "NSArray+Additions.h"
 
 @implementation Game
 
@@ -127,8 +130,9 @@
     [self.receivingPlayer removeItemFromHand:item];
     [self.receivingPlayer addItemToHand:self.offeredItem];
     // Trigger A BAG HAS BEEN TRADED message
-    if (!_itemDeck.isEmpty){
-        if (item.isBag){
+    
+    if (!_itemDeck.isEmpty && ![@[item, self.offeredItem] any:[Item checkerFor:kBlackPearl]]){
+        if (item.isBag && !self.offeredItem.id == kShatteredMirror){
             [self.receivingPlayer addItemToHand:[_itemDeck drawCard]];
         } else if (self.offeredItem.isBag){
             [self.givingPlayer addItemToHand:[_itemDeck drawCard]];

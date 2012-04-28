@@ -18,6 +18,12 @@
     return [[self alloc] initWithDictionary:dictionary];
 }
 
++ (BOOL (^)(id))checkerFor:(NSUInteger)card {
+    return ^(id item) {
+        BOOL result = ((Item *)item).id == card;
+        return result;
+    };
+}
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];

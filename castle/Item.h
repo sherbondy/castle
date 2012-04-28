@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+static NSUInteger kTome = 9;
+static NSUInteger kMonocle = 10;
+static NSUInteger kPriviledge = 11;
+static NSUInteger kCoat = 12;
+static NSUInteger kSextant = 13;
+static NSUInteger kShatteredMirror = 14;
+static NSUInteger kBlackPearl = 15;
+static NSUInteger kSealOfTheLodge = 16;
+
 @interface Item : NSObject <NSCopying>
 
 @property (nonatomic, readonly) NSUInteger   id;
@@ -18,5 +27,6 @@
 
 + (Item *)fromDictionary:(NSDictionary *)dictionary;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
++ (BOOL (^)(id))checkerFor:(NSUInteger)card;
 
 @end
