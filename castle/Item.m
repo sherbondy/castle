@@ -44,6 +44,8 @@
     return (self.id == 14 || self.id == 15);
 }
 
+// need to check if deck is empty: then bags transform.
+// either that, or change the bag ids!
 - (BOOL)isBag {
     return (self.id == 2 || self.id == 3);
 }

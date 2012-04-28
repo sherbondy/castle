@@ -79,7 +79,12 @@
 
 - (void)pressedTrade:(ItemView *)itemView {
     NSLog(@"Trading back: %@", itemView.item);
-    [[Game sharedGame] acceptTradeWithItem:itemView.item];
+    // cannot trade two bags
+    if (itemView.item.isBag && [Game sharedGame].offeredItem.isBag) {
+        NSLog(@"Cannot do that");
+    } else {
+        [[Game sharedGame] acceptTradeWithItem:itemView.item];
+    }
 }
 
 - (void)declineTrade:(id)sender {

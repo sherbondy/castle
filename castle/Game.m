@@ -131,11 +131,13 @@
     [self.receivingPlayer addItemToHand:self.offeredItem];
     // Trigger A BAG HAS BEEN TRADED message
 
-    if (!_itemDeck.isEmpty && ![@[item, self.offeredItem] any:[Item checkerFor:kBlackPearl]]){
-        if (item.isBag && self.offeredItem.id != kShatteredMirror){
-            [self.receivingPlayer addItemToHand:[_itemDeck drawCard]];
-        } else if (self.offeredItem.isBag && item.id != kShatteredMirror){
-            [self.givingPlayer addItemToHand:[_itemDeck drawCard]];
+    if (!![@[item, self.offeredItem] any:[Item checkerFor:kShatteredMirror]]){
+        if (!_itemDeck.isEmpty){
+            if (item.isBag){
+                [self.receivingPlayer addItemToHand:[_itemDeck drawCard]];
+            } else if (self.offeredItem.isBag){
+                [self.givingPlayer addItemToHand:[_itemDeck drawCard]];
+            }
         }
     }
 
