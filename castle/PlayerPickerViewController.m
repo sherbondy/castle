@@ -19,8 +19,7 @@
     if (self) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
-        [self addObserver:self forKeyPath:@"receivingPlayer" options:(NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew) context:nil];
-        _receivingPlayer = nil;
+        [self setReceivingPlayer:nil];
     }
     return self;
 }
@@ -35,6 +34,14 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+- (void)viewDidDisappear:(BOOL)animated {
+    _checkedPath = nil;
+    [self setReceivingPlayer:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -98,19 +105,13 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if (keyPath == @"currentPlayer"){
-        if ([change objectForKey:NSKeyValueChangeNewKey] == nil){
-            self.navigationItem.rightBarButtonItem.enabled = NO;
-        } else {
-            NSLog(@"Actual player selected");
-            self.navigationItem.rightBarButtonItem.enabled = YES;
-        }
-    }
+- (void)setReceivingPlayer:(Player *)player {
+    _receivingPlayer = player;
+    self.navigationItem.rightBarButtonItem.enabled = (player != nil);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    _receivingPlayer = [[Game sharedGame] playerAtIndexPath:indexPath];
+    [self setReceivingPlayer:[[Game sharedGame] playerAtIndexPath:indexPath]];
 
     // checking behavior
     if (![_checkedPath isEqual:indexPath]) {
