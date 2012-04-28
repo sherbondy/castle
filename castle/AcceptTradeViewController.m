@@ -3,11 +3,12 @@
 //  castle
 //
 //  Created by Ethan Sherbondy on 4/26/12.
-//  Copyright (c) 2012 MIT. All rights reserved.
+//  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
 #import "AcceptTradeViewController.h"
 #import "Game.h"
+#import "Item.h"
 
 @interface AcceptTradeViewController ()
 
@@ -54,14 +55,13 @@
 
 - (void)updateOffer {
     [_offerButton setDefaultTitle:[NSString stringWithFormat:@"Offered: %@",
-                                   [[Game sharedGame].offeredItem objectForKey:@"name"]]];
+                                   [Game sharedGame].offeredItem.name]];
 }
 
 - (void)showItemDescription:(id)sender {
-    NSDictionary *offeredItem = [Game sharedGame].offeredItem;
-    [[Game sharedGame].turnVC presentDescriptionWithTitle:[offeredItem
-                                                          objectForKey:@"name"]
-                                           andDescription:[offeredItem objectForKey:@"description"]
+    Item *offeredItem = [Game sharedGame].offeredItem;
+    [[Game sharedGame].turnVC presentDescriptionWithTitle:offeredItem.name
+                                           andDescription:offeredItem.description
                                                fromSender:sender];
 
 }

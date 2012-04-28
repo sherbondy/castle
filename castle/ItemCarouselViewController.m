@@ -3,10 +3,11 @@
 //  castle
 //
 //  Created by Ethan Sherbondy on 4/26/12.
-//  Copyright (c) 2012 MIT. All rights reserved.
+//  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
 #import "ItemCarouselViewController.h"
+#import "Item.h"
 
 @interface ItemCarouselViewController ()
 
@@ -60,7 +61,7 @@
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
     
     ItemView *itemView;
-    NSDictionary *theItem = [self.items objectAtIndex:index];
+    Item *theItem = [self.items objectAtIndex:index];
     if (!view) {
         itemView = [[ItemView alloc] initWithItem:theItem andDelegate:self];
     } else {

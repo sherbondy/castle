@@ -3,10 +3,11 @@
 //  castle
 //
 //  Created by Ethan Sherbondy on 3/23/12.
-//  Copyright (c) 2012 MIT. All rights reserved.
+//  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "Item.h"
 
 @class ItemView;
 
@@ -21,9 +22,9 @@
     UIButton *_tradeButton;
 }
 
-@property (nonatomic, strong) NSDictionary *item;
+@property (nonatomic, strong) Item *item;
 @property (nonatomic, weak) id<ItemViewDelegate> delegate;
 
-- (id)initWithItem:(NSDictionary *)item andDelegate:(id)delegate;
+- (id)initWithItem:(Item *)item andDelegate:(id)delegate;
 
 @end

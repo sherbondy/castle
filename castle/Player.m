@@ -3,10 +3,11 @@
 //  castle
 //
 //  Created by Ethan Sherbondy on 3/15/12.
-//  Copyright (c) 2012 MIT. All rights reserved.
+//  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
 #import "Player.h"
+#import "Item.h"
 
 @implementation Player
 
@@ -39,7 +40,7 @@
 // adding KVO-compatibility to items
 - (NSUInteger)countOfItems { return _items.count; }
 - (id)objectInItemsAtIndex:(NSUInteger)index { return [_items objectAtIndex:index]; }
-- (void)insertObject:(NSDictionary *)object inItemsAtIndex:(NSUInteger)index {
+- (void)insertObject:(Item *)object inItemsAtIndex:(NSUInteger)index {
     [_items insertObject:object atIndex:index];
 }
 - (void)removeObjectFromItemsAtIndex:(NSUInteger)index {

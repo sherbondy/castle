@@ -3,7 +3,7 @@
 //  castle
 //
 //  Created by Ethan Sherbondy on 3/23/12.
-//  Copyright (c) 2012 MIT. All rights reserved.
+//  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
 #import "ItemView.h"
@@ -27,13 +27,13 @@
     return self;
 }
 
-- (id)initWithItem:(NSDictionary *)item andDelegate:(id)delegate {
+- (id)initWithItem:(Item *)item andDelegate:(id)delegate {
     self = [self initWithFrame:CGRectMake(0,0,150,200)];
     if (self){
         self.delegate = delegate;
         self.item = item;
-        _nameLabel.text = [item objectForKey:@"name"];
-        _descriptionView.text = [item objectForKey:@"description"];
+        _nameLabel.text = item.name;
+        _descriptionView.text = item.description;
         [_tradeButton addTarget:self action:@selector(pressedTrade:)
                forControlEvents:UIControlEventTouchUpInside];
     }

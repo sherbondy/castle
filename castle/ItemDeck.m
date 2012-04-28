@@ -3,11 +3,12 @@
 //  castle
 //
 //  Created by Ethan Sherbondy on 3/14/12.
-//  Copyright (c) 2012 MIT. All rights reserved.
+//  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
 #import "ItemDeck.h"
 #import "JSONKit.h"
+#import "Item.h"
 
 @implementation ItemDeck
 
@@ -16,22 +17,24 @@
     NSData *items = [NSData dataWithContentsOfFile:filePath];                       
     NSArray *itemCards = [NSMutableArray arrayWithArray:[items objectFromJSONData]];
     
-    NSMutableArray *duplicateCards = [NSMutableArray array];
+    NSMutableArray *realCards = [NSMutableArray array];
     for (NSDictionary *card in itemCards){
+        [realCards addObject:[Item fromDictionary:card]];
+
         if ([card objectForKey:@"count"]){
             NSInteger count = [[card objectForKey:@"count"] integerValue];
 
             while (count > 1) {
-                [duplicateCards addObject:[card copy]];
+                [realCards addObject:[Item fromDictionary:card]];
                 count -= 1;
             }
         }
     }
-    
-    itemCards = [itemCards arrayByAddingObjectsFromArray:duplicateCards];
-    
-    self = [super initWithCards:itemCards];
+        
+    self = [super initWithCards:realCards];
     [self shuffle];
+
+    NSLog(@"Number of cards: %i", self.count);
         
     return self;
 }
@@ -42,8 +45,8 @@
     int i = 0;
     
     NSMutableIndexSet *indicesToDrawFrom = [NSMutableIndexSet new];
-    for (NSDictionary *card in self.cards){
-        NSUInteger cardID = [[card objectForKey:@"id"] integerValue];
+    for (Item *card in self.cards){
+        NSUInteger cardID = [card.id integerValue];
         if (cardID == 0 && desiredKeyCount > 0){
             [indicesToDrawFrom addIndex:i];
             desiredKeyCount -= 1;

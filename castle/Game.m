@@ -3,7 +3,7 @@
 //  castle
 //
 //  Created by Ethan Sherbondy on 3/15/12.
-//  Copyright (c) 2012 MIT. All rights reserved.
+//  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
 #import "Game.h"
@@ -98,7 +98,7 @@
     [_navController pushViewController:_turnVC animated:YES];
 }
 
-- (void)setOfferedItem:(NSDictionary *)offeredItem {
+- (void)setOfferedItem:(Item *)offeredItem {
     _offeredItem = offeredItem;
 }
 
@@ -121,7 +121,7 @@
     [self setReceivingPlayer:toPlayer];
     [_navController pushViewController:_tradeVC animated:YES];
 }
-- (void)acceptTradeWithItem:(NSDictionary *)item {
+- (void)acceptTradeWithItem:(Item *)item {
     [self.givingPlayer removeItemFromHand:self.offeredItem];
     [self.givingPlayer addItemToHand:item];
     [self.receivingPlayer removeItemFromHand:item];
