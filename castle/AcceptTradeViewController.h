@@ -12,6 +12,7 @@
 @interface AcceptTradeViewController : UIViewController {
     ItemCarouselViewController *_itemCarouselVC;
     UIButton *_offerButton;
+    UIButton *_declineButton;
 }
 
 - (void)pressedTrade:(ItemView *)itemView;

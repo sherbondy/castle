@@ -14,6 +14,7 @@
 }
 
 @property (nonatomic, readonly) NSUInteger count;
+@property (nonatomic, readonly) BOOL       isEmpty;
 
 - (id)init;
 - (id)initWithCards:(NSArray *)cards;

@@ -22,7 +22,7 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self){
-        _id = [dictionary objectForKey:@"id"];
+        _id = [[dictionary objectForKey:@"id"] intValue];
         _name = [dictionary objectForKey:@"name"];
         _description = [dictionary objectForKey:@"description"];
     }
@@ -30,8 +30,16 @@
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [Item fromDictionary:[NSDictionary dictionaryWithObjects:@[_id, _name, _description]
+    return [Item fromDictionary:[NSDictionary dictionaryWithObjects:@[[NSNumber numberWithUnsignedInteger:_id], _name, _description]
                                                             forKeys:@[@"id",@"name",@"description"]]];
+}
+
+- (BOOL)mustAccept {
+    return (self.id == 14 || self.id == 15);
+}
+
+- (BOOL)isBag {
+    return (self.id == 2 || self.id == 3);
 }
 
 @end

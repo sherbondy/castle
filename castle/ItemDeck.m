@@ -46,14 +46,13 @@
     
     NSMutableIndexSet *indicesToDrawFrom = [NSMutableIndexSet new];
     for (Item *card in self.cards){
-        NSUInteger cardID = [card.id integerValue];
-        if (cardID == 0 && desiredKeyCount > 0){
+        if (card.id == 0 && desiredKeyCount > 0){
             [indicesToDrawFrom addIndex:i];
             desiredKeyCount -= 1;
-        } else if (cardID == 1 && desiredGobletCount > 0){
+        } else if (card.id == 1 && desiredGobletCount > 0){
             [indicesToDrawFrom addIndex:i];
             desiredGobletCount -= 1;
-        } else if (cardID == 2 || cardID == 3){
+        } else if (card.id == 2 || card.id == 3){
             [indicesToDrawFrom addIndex:i];
         }
         i++;

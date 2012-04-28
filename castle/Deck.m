@@ -61,4 +61,8 @@
     return _cards.count;
 }
 
+- (BOOL)isEmpty {
+    return _cards.count == 0;
+}
+
 @end

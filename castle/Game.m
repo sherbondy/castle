@@ -126,7 +126,15 @@
     [self.givingPlayer addItemToHand:item];
     [self.receivingPlayer removeItemFromHand:item];
     [self.receivingPlayer addItemToHand:self.offeredItem];
-    // Trigger A BAG HAS BEEN TRADED, etc.
+    // Trigger A BAG HAS BEEN TRADED message
+    if (!_itemDeck.isEmpty){
+        if (item.isBag){
+            [self.receivingPlayer addItemToHand:[_itemDeck drawCard]];
+        } else if (self.offeredItem.isBag){
+            [self.givingPlayer addItemToHand:[_itemDeck drawCard]];
+        }
+    }
+
     [self cleanupTrade];
 }
 - (void)declineTrade {
@@ -153,6 +161,8 @@
     int i = 0;
     for (Player *player in _players){
         [player addItemToHand:[startingObjects objectAtIndex:i]];
+        [player addItemToHand:[_itemDeck drawCard]];
+        [player addItemToHand:[_itemDeck drawCard]];
 
         NSNumber *affiliation = [affiliationArray objectAtIndex:i];
         [player setAffiliation:[affiliation unsignedIntValue]];

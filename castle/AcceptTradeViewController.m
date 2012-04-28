@@ -20,6 +20,7 @@
     self = [super init];
     if (self){
         _offerButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _declineButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         _itemCarouselVC = [[ItemCarouselViewController alloc] init];
         [self addChildViewController:_itemCarouselVC];
     }
@@ -35,17 +36,17 @@
 {
     [super viewDidLoad];
 
-    [_offerButton setFrame: CGRectMake(0, 0, self.view.width, 32)];
+    _offerButton.frame = CGRectMake(0, 0, self.view.width, 32);
     [_offerButton addTarget:self action:@selector(showItemDescription:) forControlEvents:UIControlEventTouchUpInside];
     _itemCarouselVC.view.frame = CGRectMake(0, 96, self.view.width, 240);
     
     // add view to select counter-offer, or press decline.
-    UIButton *declineButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    declineButton.frame = CGRectMake(0, self.view.height-32, self.view.width, 32);
-    [declineButton setDefaultTitle:@"Decline"];
-    [declineButton addTarget:self action:@selector(declineTrade:) forControlEvents:UIControlEventTouchUpInside];
+    _declineButton.frame = CGRectMake(0, self.view.height-32, self.view.width, 32);
+    [_declineButton setDefaultTitle:@"Decline"];
+    [_declineButton setTitle:@"Must Accept" forState:UIControlStateDisabled];
+    [_declineButton addTarget:self action:@selector(declineTrade:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self.view addSubviews:_offerButton, _itemCarouselVC.view, declineButton, nil];
+    [self.view addSubviews:_offerButton, _itemCarouselVC.view, _declineButton, nil];
 }
 
 - (void)viewDidUnload {
@@ -56,6 +57,7 @@
 - (void)updateOffer {
     [_offerButton setDefaultTitle:[NSString stringWithFormat:@"Offered: %@",
                                    [Game sharedGame].offeredItem.name]];
+    _declineButton.enabled = ![Game sharedGame].offeredItem.mustAccept;
 }
 
 - (void)showItemDescription:(id)sender {
