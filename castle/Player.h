@@ -47,6 +47,5 @@ typedef NSUInteger Affiliation;
 - (void)insertObject:(NSDictionary *)object inItemsAtIndex:(NSUInteger)index;
 - (void)removeObjectFromItemsAtIndex:(NSUInteger)index;
 - (void)setAffiliation:(Affiliation)affiliation;
-- (void)pickNewProfession;
 
 @end
