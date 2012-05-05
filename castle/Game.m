@@ -29,6 +29,7 @@
         _navController = [UINavigationController new];
         _turnVC = [[TurnViewController alloc] init];
         _tradeVC = [[AcceptTradeViewController alloc] init];
+        _professionVC = [[ProfessionPickerViewController alloc] init];
     }
     return self;
 }
@@ -124,20 +125,26 @@
     [self setReceivingPlayer:toPlayer];
     [_navController pushViewController:_tradeVC animated:YES];
 }
-- (void)acceptTradeWithItem:(Item *)item {
+- (void)acceptTradeWithItem:(Item *)receivedItem {
     [self.givingPlayer removeItemFromHand:self.offeredItem];
-    [self.givingPlayer addItemToHand:item];
-    [self.receivingPlayer removeItemFromHand:item];
+    [self.givingPlayer addItemToHand:receivedItem];
+    [self.receivingPlayer removeItemFromHand:receivedItem];
     [self.receivingPlayer addItemToHand:self.offeredItem];
     // Trigger A BAG HAS BEEN TRADED message
 
-    if (!![@[item, self.offeredItem] any:[Item checkerFor:kShatteredMirror]]){
+    if (!![@[receivedItem, self.offeredItem] any:[Item checkerFor:kShatteredMirror]]){
         if (!_itemDeck.isEmpty){
-            if (item.isBag){
+            if (receivedItem.isBag){
                 [self.receivingPlayer addItemToHand:[_itemDeck drawCard]];
             } else if (self.offeredItem.isBag){
                 [self.givingPlayer addItemToHand:[_itemDeck drawCard]];
             }
+        }
+
+        if (receivedItem.id == kCoat){
+            [_professionVC pickProfessionForPlayer:self.givingPlayer];
+        } else if (self.offeredItem.id == kCoat){
+            [_professionVC pickProfessionForPlayer:self.receivingPlayer];
         }
     }
 

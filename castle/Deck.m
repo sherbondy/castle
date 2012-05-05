@@ -17,7 +17,7 @@
     }
     return self;
 }
-                
+
 - (id)initWithCards:(NSArray *)cards {
     if ((self = [super init])){
         _cards = [NSMutableArray arrayWithArray:cards];

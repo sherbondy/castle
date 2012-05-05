@@ -109,6 +109,7 @@
 		3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */; };
 		3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
 		3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */; };
+		3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +217,8 @@
 		3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfessionDeck.m; path = castle/ProfessionDeck.m; sourceTree = SOURCE_ROOT; };
 		3EEF1A5C151C4F1A006E1D8F /* TurnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnViewController.h; sourceTree = "<group>"; };
 		3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnViewController.m; sourceTree = "<group>"; };
+		3EFB616B1555C640009D27F7 /* ProfessionPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionPickerViewController.h; sourceTree = "<group>"; };
+		3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,25 +298,20 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
-				3E774F5A154A132E00FA237E /* Categories */,
+				3EFB616A1555BEA5009D27F7 /* core */,
+				3E774F5A154A132E00FA237E /* categories */,
 				3E0B9435151C61710086E62B /* ItemView.h */,
 				3E0B9436151C61710086E62B /* ItemView.m */,
+				3EFB616B1555C640009D27F7 /* ProfessionPickerViewController.h */,
+				3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */,
 				3E0B9442151D299D0086E62B /* DescriptionViewController.h */,
 				3E0B9443151D299D0086E62B /* DescriptionViewController.m */,
 				3EEF1A5C151C4F1A006E1D8F /* TurnViewController.h */,
 				3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */,
-				3E9B0FB5154B949D00E2ECFA /* Item.h */,
-				3E9B0FB6154B949D00E2ECFA /* Item.m */,
 				3E1F48FC15490F1800B2A750 /* ItemCarouselViewController.h */,
 				3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */,
-				3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */,
-				3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */,
 				3E75941915114E2100C5F6E6 /* DeckViewController.h */,
 				3E75941A15114E2100C5F6E6 /* DeckViewController.m */,
-				3E75941C15114EDA00C5F6E6 /* Deck.h */,
-				3E75941D15114EDA00C5F6E6 /* Deck.m */,
-				3E75941F151151CA00C5F6E6 /* ItemDeck.h */,
-				3E759420151151CA00C5F6E6 /* ItemDeck.m */,
 				3E7593D2151147FA00C5F6E6 /* AppDelegate.h */,
 				3E7593D3151147FA00C5F6E6 /* AppDelegate.m */,
 				3E6E96EF1511DDC100626416 /* PlayerCountViewController.h */,
@@ -322,12 +320,8 @@
 				3E0B9439151C6BAF0086E62B /* PlayerPickerViewController.m */,
 				3EBB283F1511E79F000236C3 /* CharacterPickerViewController.h */,
 				3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */,
-				3E6E96E81511D28100626416 /* Game.h */,
-				3E6E96E91511D28100626416 /* Game.m */,
 				3E1F48F91549028B00B2A750 /* AcceptTradeViewController.h */,
 				3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */,
-				3E6E96EC1511D96D00626416 /* Player.h */,
-				3E6E96ED1511D96D00626416 /* Player.m */,
 				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
 			);
 			path = castle;
@@ -422,7 +416,7 @@
 			path = external/JSONKit;
 			sourceTree = "<group>";
 		};
-		3E774F5A154A132E00FA237E /* Categories */ = {
+		3E774F5A154A132E00FA237E /* categories */ = {
 			isa = PBXGroup;
 			children = (
 				3ECEDF2C1512A9E900EC30E8 /* NSMutableArray+Shuffle.h */,
@@ -438,7 +432,7 @@
 				3E422685154BDDAF0071E53F /* NSArray+Additions.h */,
 				3E422686154BDDAF0071E53F /* NSArray+Additions.m */,
 			);
-			name = Categories;
+			name = categories;
 			sourceTree = "<group>";
 		};
 		3EA9BFEA154A262F003860A3 /* Products */ = {
@@ -468,6 +462,25 @@
 			);
 			name = iCarousel;
 			path = external/iCarousel/iCarousel;
+			sourceTree = "<group>";
+		};
+		3EFB616A1555BEA5009D27F7 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				3E9B0FB5154B949D00E2ECFA /* Item.h */,
+				3E9B0FB6154B949D00E2ECFA /* Item.m */,
+				3EEF1A58151C470D006E1D8F /* ProfessionDeck.h */,
+				3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */,
+				3E75941C15114EDA00C5F6E6 /* Deck.h */,
+				3E75941D15114EDA00C5F6E6 /* Deck.m */,
+				3E75941F151151CA00C5F6E6 /* ItemDeck.h */,
+				3E759420151151CA00C5F6E6 /* ItemDeck.m */,
+				3E6E96E81511D28100626416 /* Game.h */,
+				3E6E96E91511D28100626416 /* Game.m */,
+				3E6E96EC1511D96D00626416 /* Player.h */,
+				3E6E96ED1511D96D00626416 /* Player.m */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,6 +690,7 @@
 				3EC65336154A1D850036128C /* UIDevice+Kind.m in Sources */,
 				3E9B0FB7154B949D00E2ECFA /* Item.m in Sources */,
 				3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */,
+				3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

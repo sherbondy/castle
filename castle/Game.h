@@ -14,6 +14,7 @@
 #import "PlayerCountViewController.h"
 #import "TurnViewController.h"
 #import "AcceptTradeViewController.h"
+#import "ProfessionPickerViewController.h"
 #import "Item.h"
 
 @interface Game : NSObject {
@@ -31,6 +32,7 @@
     UINavigationController *_navController;
     TurnViewController *_turnVC;
     AcceptTradeViewController *_tradeVC;
+    ProfessionPickerViewController *_professionVC;
 }
 
 @property (nonatomic, assign)   NSUInteger           playerCount;
@@ -60,7 +62,7 @@
 - (void)setReceivingPlayer:(Player *)receivingPlayer;
 
 - (void)offerTradeTo:(Player *)toPlayer;
-- (void)acceptTradeWithItem:(Item *)item;
+- (void)acceptTradeWithItem:(Item *)receivedItem;
 - (void)declineTrade;
 
 @end
