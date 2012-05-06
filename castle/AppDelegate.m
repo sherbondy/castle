@@ -21,7 +21,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-            
+
+    _windowManager = [[WindowManager alloc] init];
+
     [[Game sharedGame] start];
     [self.window setRootViewController:[Game sharedGame].navController];
 

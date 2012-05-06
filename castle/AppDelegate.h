@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Game.h"
+#import "WindowManager.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    WindowManager *_windowManager;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

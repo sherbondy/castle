@@ -110,6 +110,8 @@
 		3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
 		3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */; };
 		3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */; };
+		3EFB617F1555F45B009D27F7 /* WindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB617E1555F45B009D27F7 /* WindowManager.m */; };
+		3EFB61821555F54E009D27F7 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB61811555F54E009D27F7 /* DebugViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +221,10 @@
 		3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnViewController.m; sourceTree = "<group>"; };
 		3EFB616B1555C640009D27F7 /* ProfessionPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionPickerViewController.h; sourceTree = "<group>"; };
 		3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionPickerViewController.m; sourceTree = "<group>"; };
+		3EFB617D1555F45B009D27F7 /* WindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowManager.h; sourceTree = "<group>"; };
+		3EFB617E1555F45B009D27F7 /* WindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowManager.m; sourceTree = "<group>"; };
+		3EFB61801555F54E009D27F7 /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
+		3EFB61811555F54E009D27F7 /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +320,10 @@
 				3E75941A15114E2100C5F6E6 /* DeckViewController.m */,
 				3E7593D2151147FA00C5F6E6 /* AppDelegate.h */,
 				3E7593D3151147FA00C5F6E6 /* AppDelegate.m */,
+				3EFB617D1555F45B009D27F7 /* WindowManager.h */,
+				3EFB617E1555F45B009D27F7 /* WindowManager.m */,
+				3EFB61801555F54E009D27F7 /* DebugViewController.h */,
+				3EFB61811555F54E009D27F7 /* DebugViewController.m */,
 				3E6E96EF1511DDC100626416 /* PlayerCountViewController.h */,
 				3E6E96F01511DDC100626416 /* PlayerCountViewController.m */,
 				3E0B9438151C6BAF0086E62B /* PlayerPickerViewController.h */,
@@ -691,6 +701,8 @@
 				3E9B0FB7154B949D00E2ECFA /* Item.m in Sources */,
 				3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */,
 				3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */,
+				3EFB617F1555F45B009D27F7 /* WindowManager.m in Sources */,
+				3EFB61821555F54E009D27F7 /* DebugViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,7 +830,7 @@
 		3E7593ED151147FB00C5F6E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = castle/castle.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "castle/castle-Prefix.pch";
 				INFOPLIST_FILE = "castle/castle-Info.plist";
@@ -830,7 +842,7 @@
 		3E7593EE151147FB00C5F6E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = castle/castle.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "castle/castle-Prefix.pch";
 				INFOPLIST_FILE = "castle/castle-Info.plist";
