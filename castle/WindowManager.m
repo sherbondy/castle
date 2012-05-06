@@ -43,6 +43,7 @@
 - (void)setupSecondScreen:(UIScreen *)newScreen {
     if (!_secondWindow) {
         _secondWindow = [[UIWindow alloc] initWithFrame:newScreen.bounds];
+        NSLog(@"New screen bounds: %@", NSStringFromCGRect(newScreen.bounds));
         _secondWindow.screen = newScreen;
         _secondWindow.opaque = YES;
         _secondWindow.hidden = NO;
@@ -50,6 +51,7 @@
         NSLog(@"Adding second window");
         
         // Set the initial UI for the window.
+        _debugVC.view.frame = _secondWindow.frame;
         [_secondWindow addSubview:_debugVC.view];
     } else {
         _secondWindow.screen = newScreen;

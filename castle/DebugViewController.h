@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DebugViewController : UIViewController
+@interface DebugViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, strong) UITextField  *textField;
+@property (nonatomic, strong) UITextView   *textView;
 
 @end
