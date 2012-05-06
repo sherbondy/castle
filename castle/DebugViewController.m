@@ -70,7 +70,7 @@
     // special single character commands
     if (textField.text.length == 1){
 
-        switch ([textField.text characterAtIndex:0]) {
+        switch ([textField.text.lowercaseString characterAtIndex:0]) {
             case 'w':
                 NSLog(@"Scroll up");
                 [_textView setContentOffset:CGPointMake(0, _textView.contentOffset.y-20) animated:YES];
@@ -84,6 +84,11 @@
         }
     } else {
         _textView.text = [NSString stringWithFormat:@"%@\n%@", _textView.text, textField.text];
+        
+        if ([_textField.text.lowercaseString isEqual:@"clear"]){
+            _textView.text = @"";
+            [_textView setContentOffset:CGPointZero animated:NO];
+        }
         _textField.text = @"";
     }
     return YES;
