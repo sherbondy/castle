@@ -7,6 +7,7 @@
 //
 
 #import "DebugViewController.h"
+#import "Nu.h"
 
 @interface DebugViewController ()
 
@@ -17,6 +18,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        NuInit();
     }
     return self;
 }
@@ -84,6 +86,8 @@
         }
     } else {
         _textView.text = [NSString stringWithFormat:@"%@\n%@", _textView.text, textField.text];
+        NSString *output = [[Nu sharedParser] parseEval:_textView.text];
+        _textView.text = [NSString stringWithFormat:@"%@\n> %@", _textView.text, output];
         
         if ([_textField.text.lowercaseString isEqual:@"clear"]){
             _textView.text = @"";
