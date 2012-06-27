@@ -13,28 +13,6 @@
 		3E1F48FB1549028B00B2A750 /* AcceptTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */; };
 		3E1F48FE15490F1800B2A750 /* ItemCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */; };
 		3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E422686154BDDAF0071E53F /* NSArray+Additions.m */; };
-		3E5C97DF15561C78004CF65E /* ffi.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C97C515561C78004CF65E /* ffi.c */; };
-		3E5C97E015561C78004CF65E /* ffi.S in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C97C715561C78004CF65E /* ffi.S */; };
-		3E5C97E115561C78004CF65E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97C815561C78004CF65E /* LICENSE */; };
-		3E5C97E215561C78004CF65E /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97C915561C78004CF65E /* README.markdown */; };
-		3E5C97E315561C78004CF65E /* beautify.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97CB15561C78004CF65E /* beautify.nu */; };
-		3E5C97E415561C78004CF65E /* bridgesupport.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97CC15561C78004CF65E /* bridgesupport.nu */; };
-		3E5C97E515561C78004CF65E /* cblocks.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97CD15561C78004CF65E /* cblocks.nu */; };
-		3E5C97E615561C78004CF65E /* cocoa.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97CE15561C78004CF65E /* cocoa.nu */; };
-		3E5C97E715561C78004CF65E /* console.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97CF15561C78004CF65E /* console.nu */; };
-		3E5C97E815561C78004CF65E /* coredata.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D015561C78004CF65E /* coredata.nu */; };
-		3E5C97E915561C78004CF65E /* doc.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D115561C78004CF65E /* doc.nu */; };
-		3E5C97EA15561C78004CF65E /* fscript.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D215561C78004CF65E /* fscript.nu */; };
-		3E5C97EB15561C78004CF65E /* generate.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D315561C78004CF65E /* generate.nu */; };
-		3E5C97EC15561C78004CF65E /* help.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D415561C78004CF65E /* help.nu */; };
-		3E5C97ED15561C78004CF65E /* match.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D515561C78004CF65E /* match.nu */; };
-		3E5C97EE15561C78004CF65E /* math.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D615561C78004CF65E /* math.nu */; };
-		3E5C97EF15561C78004CF65E /* menu.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D715561C78004CF65E /* menu.nu */; };
-		3E5C97F015561C78004CF65E /* nibtools.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D815561C78004CF65E /* nibtools.nu */; };
-		3E5C97F115561C78004CF65E /* nu.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97D915561C78004CF65E /* nu.nu */; };
-		3E5C97F215561C78004CF65E /* template.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97DA15561C78004CF65E /* template.nu */; };
-		3E5C97F315561C78004CF65E /* test.nu in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C97DB15561C78004CF65E /* test.nu */; };
-		3E5C97F415561C78004CF65E /* Nu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C97DE15561C78004CF65E /* Nu.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3E6E96EA1511D28100626416 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
 		3E6E96EE1511D96D00626416 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
 		3E6E96F11511DDC100626416 /* PlayerCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96F01511DDC100626416 /* PlayerCountViewController.m */; };
@@ -132,8 +110,6 @@
 		3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
 		3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */; };
 		3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */; };
-		3EFB617F1555F45B009D27F7 /* WindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB617E1555F45B009D27F7 /* WindowManager.m */; };
-		3EFB61821555F54E009D27F7 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB61811555F54E009D27F7 /* DebugViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,30 +143,6 @@
 		3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCarouselViewController.m; sourceTree = "<group>"; };
 		3E422685154BDDAF0071E53F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		3E422686154BDDAF0071E53F /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
-		3E5C97C515561C78004CF65E /* ffi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi.c; sourceTree = "<group>"; };
-		3E5C97C615561C78004CF65E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
-		3E5C97C715561C78004CF65E /* ffi.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = ffi.S; sourceTree = "<group>"; };
-		3E5C97C815561C78004CF65E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		3E5C97C915561C78004CF65E /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		3E5C97CB15561C78004CF65E /* beautify.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beautify.nu; sourceTree = "<group>"; };
-		3E5C97CC15561C78004CF65E /* bridgesupport.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bridgesupport.nu; sourceTree = "<group>"; };
-		3E5C97CD15561C78004CF65E /* cblocks.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cblocks.nu; sourceTree = "<group>"; };
-		3E5C97CE15561C78004CF65E /* cocoa.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cocoa.nu; sourceTree = "<group>"; };
-		3E5C97CF15561C78004CF65E /* console.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = console.nu; sourceTree = "<group>"; };
-		3E5C97D015561C78004CF65E /* coredata.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = coredata.nu; sourceTree = "<group>"; };
-		3E5C97D115561C78004CF65E /* doc.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = doc.nu; sourceTree = "<group>"; };
-		3E5C97D215561C78004CF65E /* fscript.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fscript.nu; sourceTree = "<group>"; };
-		3E5C97D315561C78004CF65E /* generate.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = generate.nu; sourceTree = "<group>"; };
-		3E5C97D415561C78004CF65E /* help.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.nu; sourceTree = "<group>"; };
-		3E5C97D515561C78004CF65E /* match.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = match.nu; sourceTree = "<group>"; };
-		3E5C97D615561C78004CF65E /* math.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = math.nu; sourceTree = "<group>"; };
-		3E5C97D715561C78004CF65E /* menu.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menu.nu; sourceTree = "<group>"; };
-		3E5C97D815561C78004CF65E /* nibtools.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nibtools.nu; sourceTree = "<group>"; };
-		3E5C97D915561C78004CF65E /* nu.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nu.nu; sourceTree = "<group>"; };
-		3E5C97DA15561C78004CF65E /* template.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.nu; sourceTree = "<group>"; };
-		3E5C97DB15561C78004CF65E /* test.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.nu; sourceTree = "<group>"; };
-		3E5C97DD15561C78004CF65E /* Nu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nu.h; sourceTree = "<group>"; };
-		3E5C97DE15561C78004CF65E /* Nu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nu.m; sourceTree = "<group>"; };
 		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		3E6E96E91511D28100626416 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		3E6E96EC1511D96D00626416 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -267,10 +219,6 @@
 		3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnViewController.m; sourceTree = "<group>"; };
 		3EFB616B1555C640009D27F7 /* ProfessionPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionPickerViewController.h; sourceTree = "<group>"; };
 		3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionPickerViewController.m; sourceTree = "<group>"; };
-		3EFB617D1555F45B009D27F7 /* WindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowManager.h; sourceTree = "<group>"; };
-		3EFB617E1555F45B009D27F7 /* WindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowManager.m; sourceTree = "<group>"; };
-		3EFB61801555F54E009D27F7 /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
-		3EFB61811555F54E009D27F7 /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,64 +258,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E5C97C315561C70004CF65E /* nu */ = {
-			isa = PBXGroup;
-			children = (
-				3E5C97C415561C78004CF65E /* libffi */,
-				3E5C97CA15561C78004CF65E /* nu */,
-				3E5C97DC15561C78004CF65E /* objc */,
-			);
-			name = nu;
-			sourceTree = "<group>";
-		};
-		3E5C97C415561C78004CF65E /* libffi */ = {
-			isa = PBXGroup;
-			children = (
-				3E5C97C515561C78004CF65E /* ffi.c */,
-				3E5C97C615561C78004CF65E /* ffi.h */,
-				3E5C97C715561C78004CF65E /* ffi.S */,
-				3E5C97C815561C78004CF65E /* LICENSE */,
-				3E5C97C915561C78004CF65E /* README.markdown */,
-			);
-			name = libffi;
-			path = external/nu/libffi;
-			sourceTree = "<group>";
-		};
-		3E5C97CA15561C78004CF65E /* nu */ = {
-			isa = PBXGroup;
-			children = (
-				3E5C97CB15561C78004CF65E /* beautify.nu */,
-				3E5C97CC15561C78004CF65E /* bridgesupport.nu */,
-				3E5C97CD15561C78004CF65E /* cblocks.nu */,
-				3E5C97CE15561C78004CF65E /* cocoa.nu */,
-				3E5C97CF15561C78004CF65E /* console.nu */,
-				3E5C97D015561C78004CF65E /* coredata.nu */,
-				3E5C97D115561C78004CF65E /* doc.nu */,
-				3E5C97D215561C78004CF65E /* fscript.nu */,
-				3E5C97D315561C78004CF65E /* generate.nu */,
-				3E5C97D415561C78004CF65E /* help.nu */,
-				3E5C97D515561C78004CF65E /* match.nu */,
-				3E5C97D615561C78004CF65E /* math.nu */,
-				3E5C97D715561C78004CF65E /* menu.nu */,
-				3E5C97D815561C78004CF65E /* nibtools.nu */,
-				3E5C97D915561C78004CF65E /* nu.nu */,
-				3E5C97DA15561C78004CF65E /* template.nu */,
-				3E5C97DB15561C78004CF65E /* test.nu */,
-			);
-			name = nu;
-			path = external/nu/nu;
-			sourceTree = "<group>";
-		};
-		3E5C97DC15561C78004CF65E /* objc */ = {
-			isa = PBXGroup;
-			children = (
-				3E5C97DD15561C78004CF65E /* Nu.h */,
-				3E5C97DE15561C78004CF65E /* Nu.m */,
-			);
-			name = objc;
-			path = external/nu/objc;
-			sourceTree = "<group>";
-		};
 		3E7593B4151147FA00C5F6E6 = {
 			isa = PBXGroup;
 			children = (
@@ -424,10 +314,6 @@
 				3E75941A15114E2100C5F6E6 /* DeckViewController.m */,
 				3E7593D2151147FA00C5F6E6 /* AppDelegate.h */,
 				3E7593D3151147FA00C5F6E6 /* AppDelegate.m */,
-				3EFB617D1555F45B009D27F7 /* WindowManager.h */,
-				3EFB617E1555F45B009D27F7 /* WindowManager.m */,
-				3EFB61801555F54E009D27F7 /* DebugViewController.h */,
-				3EFB61811555F54E009D27F7 /* DebugViewController.m */,
 				3E6E96EF1511DDC100626416 /* PlayerCountViewController.h */,
 				3E6E96F01511DDC100626416 /* PlayerCountViewController.m */,
 				3E0B9438151C6BAF0086E62B /* PlayerPickerViewController.h */,
@@ -512,7 +398,6 @@
 		3E7594221511554E00C5F6E6 /* external */ = {
 			isa = PBXGroup;
 			children = (
-				3E5C97C315561C70004CF65E /* nu */,
 				3EBB28431511ED68000236C3 /* iCarousel */,
 				3E7594231511555400C5F6E6 /* JSONKit */,
 			);
@@ -721,25 +606,6 @@
 				3E75941215114D7000C5F6E6 /* professions.json in Resources */,
 				3E7594281511555400C5F6E6 /* CHANGELOG.md in Resources */,
 				3E75942A1511555400C5F6E6 /* README.md in Resources */,
-				3E5C97E115561C78004CF65E /* LICENSE in Resources */,
-				3E5C97E215561C78004CF65E /* README.markdown in Resources */,
-				3E5C97E315561C78004CF65E /* beautify.nu in Resources */,
-				3E5C97E415561C78004CF65E /* bridgesupport.nu in Resources */,
-				3E5C97E515561C78004CF65E /* cblocks.nu in Resources */,
-				3E5C97E615561C78004CF65E /* cocoa.nu in Resources */,
-				3E5C97E715561C78004CF65E /* console.nu in Resources */,
-				3E5C97E815561C78004CF65E /* coredata.nu in Resources */,
-				3E5C97E915561C78004CF65E /* doc.nu in Resources */,
-				3E5C97EA15561C78004CF65E /* fscript.nu in Resources */,
-				3E5C97EB15561C78004CF65E /* generate.nu in Resources */,
-				3E5C97EC15561C78004CF65E /* help.nu in Resources */,
-				3E5C97ED15561C78004CF65E /* match.nu in Resources */,
-				3E5C97EE15561C78004CF65E /* math.nu in Resources */,
-				3E5C97EF15561C78004CF65E /* menu.nu in Resources */,
-				3E5C97F015561C78004CF65E /* nibtools.nu in Resources */,
-				3E5C97F115561C78004CF65E /* nu.nu in Resources */,
-				3E5C97F215561C78004CF65E /* template.nu in Resources */,
-				3E5C97F315561C78004CF65E /* test.nu in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,11 +691,6 @@
 				3E9B0FB7154B949D00E2ECFA /* Item.m in Sources */,
 				3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */,
 				3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */,
-				3EFB617F1555F45B009D27F7 /* WindowManager.m in Sources */,
-				3EFB61821555F54E009D27F7 /* DebugViewController.m in Sources */,
-				3E5C97DF15561C78004CF65E /* ffi.c in Sources */,
-				3E5C97E015561C78004CF65E /* ffi.S in Sources */,
-				3E5C97F415561C78004CF65E /* Nu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

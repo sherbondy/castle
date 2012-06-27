@@ -10,7 +10,7 @@
 
 @interface UIView (Utilities)
 
-enum {
+typedef enum {
     UIViewAutoresizingHorizontal = (UIViewAutoresizingFlexibleLeftMargin | 
                                     UIViewAutoresizingFlexibleWidth | 
                                     UIViewAutoresizingFlexibleRightMargin),
@@ -29,8 +29,7 @@ enum {
                              UIViewAutoresizingFlexibleTopMargin | 
                              UIViewAutoresizingFlexibleHeight | 
                              UIViewAutoresizingFlexibleBottomMargin)
-};
-typedef NSUInteger UIViewAutoresizing;
+} UDViewAutoresizing;
 
 @property (nonatomic, readonly) CGFloat height;
 @property (nonatomic, readonly) CGFloat width;
