@@ -17,6 +17,8 @@
 #import "ProfessionPickerViewController.h"
 #import "Item.h"
 
+@protocol GameViewManagerDelegate;
+
 @interface Game : NSObject {
     @private
     NSUInteger      _playerCount;
@@ -64,5 +66,17 @@
 - (void)offerTradeTo:(Player *)toPlayer;
 - (void)acceptTradeWithItem:(Item *)receivedItem;
 - (void)declineTrade;
+
+@end
+
+@protocol GameViewManagerDelegate
+
+- (void)setupViewControllers;
+- (void)startNewGame;
+- (void)showCharacterPicker;
+- (void)startNextTurn;
+- (void)didCleanupTrade;
+- (void)handleTradeOffer;
+- (void)handleTradeAcceptWithItem:(Item *)receivedItem;
 
 @end

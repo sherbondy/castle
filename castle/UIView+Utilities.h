@@ -11,24 +11,24 @@
 @interface UIView (Utilities)
 
 typedef enum {
-    UIViewAutoresizingHorizontal = (UIViewAutoresizingFlexibleLeftMargin | 
-                                    UIViewAutoresizingFlexibleWidth | 
-                                    UIViewAutoresizingFlexibleRightMargin),
-    UIViewAutoresizingVertical = (UIViewAutoresizingFlexibleTopMargin | 
-                                  UIViewAutoresizingFlexibleHeight | 
-                                  UIViewAutoresizingFlexibleBottomMargin),
-    UIViewAutoresizingFlexibleMargins = (UIViewAutoresizingFlexibleTopMargin |
-                                         UIViewAutoresizingFlexibleLeftMargin |
-                                         UIViewAutoresizingFlexibleRightMargin |
-                                         UIViewAutoresizingFlexibleBottomMargin),
-    UIViewAutoResizingFlexibleDimensions = (UIViewAutoresizingFlexibleWidth |
-                                            UIViewAutoresizingFlexibleHeight),
-    UIViewAutoresizingAll = (UIViewAutoresizingFlexibleLeftMargin | 
-                             UIViewAutoresizingFlexibleWidth | 
-                             UIViewAutoresizingFlexibleRightMargin | 
-                             UIViewAutoresizingFlexibleTopMargin | 
-                             UIViewAutoresizingFlexibleHeight | 
-                             UIViewAutoresizingFlexibleBottomMargin)
+    UIViewAutoresizingHorizontal            = (UIViewAutoresizingFlexibleLeftMargin | 
+                                               UIViewAutoresizingFlexibleWidth | 
+                                               UIViewAutoresizingFlexibleRightMargin),
+    UIViewAutoresizingVertical              = (UIViewAutoresizingFlexibleTopMargin |
+                                               UIViewAutoresizingFlexibleHeight | 
+                                               UIViewAutoresizingFlexibleBottomMargin),
+    UIViewAutoresizingFlexibleMargins       = (UIViewAutoresizingFlexibleTopMargin |
+                                               UIViewAutoresizingFlexibleLeftMargin |
+                                               UIViewAutoresizingFlexibleRightMargin |
+                                               UIViewAutoresizingFlexibleBottomMargin),
+    UIViewAutoResizingFlexibleDimensions    = (UIViewAutoresizingFlexibleWidth |
+                                               UIViewAutoresizingFlexibleHeight),
+    UIViewAutoresizingAll                   = (UIViewAutoresizingFlexibleLeftMargin |
+                                               UIViewAutoresizingFlexibleWidth | 
+                                               UIViewAutoresizingFlexibleRightMargin | 
+                                               UIViewAutoresizingFlexibleTopMargin | 
+                                               UIViewAutoresizingFlexibleHeight | 
+                                               UIViewAutoresizingFlexibleBottomMargin)
 } UDViewAutoresizing;
 
 @property (nonatomic, readonly) CGFloat height;

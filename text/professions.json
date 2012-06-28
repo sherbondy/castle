@@ -4,13 +4,13 @@
     "title": "Alchemist",
     "description": "You decide who wins one duel. You cannot use this ability if you are the attacker or defender.",
     "one_use": true,
-    "type": 0
+    "type": [3,4]
   }, {
     "id": 1,
     "title": "Bodyguard",
     "description": "The player you suport in any duel adds +1 to his score.",
     "one_use": false,
-    "type": 3
+    "type": [3,4]
   }, {
     "id": 2,
     "title": "Clairvoyant",
@@ -27,8 +27,7 @@
     "id": 4,
     "title": "Doctor",
     "description": "You may cancel the effects of a duel immediately after the duel ends.",
-    "one_use": true,
-    "type": 0
+    "one_use": true
   }, {
     "id": 5,
     "title": "Grand Master",
@@ -40,19 +39,18 @@
     "title": "Hypnotist",
     "description": "If you are the attacker in any duel you may choose one player. The chosen player may not support either side in this duel.",
     "one_use": false,
-    "type": 0
+    "type": 1
   }, {
     "id": 7,
     "title": "Priest",
     "description": "You can prevent a duel from taking place. You must use this ability before supporters are revealed. If the attacker holds at least two objects he must give you one of them (his choice). The attacker’s turn ends.",
-    "one_use": true,
-    "type": 0
+    "one_use": true
   }, {
     "id": 8,
     "title": "Swordsman",
     "description": "If you are the attacker or defender in any duel you may declare that the other players cannot be invovled in the duel. In addition you may add +1 to your score for this duel.",
     "one_use": true,
-    "type": 3
+    "type": [1,2]
   }, {
     "id": 9,
     "title": "Thug",

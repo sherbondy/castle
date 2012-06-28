@@ -16,8 +16,9 @@
     NSData *professions = [NSData dataWithContentsOfFile:filePath];
     NSArray *professionCards = [NSMutableArray arrayWithArray:[professions objectFromJSONData]];
 
-    self = [super initWithCards:professionCards];
-    [self shuffle];
+    if (self = [super initWithCards:professionCards]){
+        [self shuffle];
+    }
     
     return self;
 }

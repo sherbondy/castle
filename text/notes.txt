@@ -1,0 +1,22 @@
+Every client will hold an instance of the entire game state.
+To realize this, all player, deck, and appropriate game data must be serializable.
+
+To make the game modular and portable to Mac OS, all core game code contains 
+no mentions of user interface components. Instead, each platform should implement
+a ViewManager class which registers as the delegate of the main game object.
+This will also allow for easy testing.
+
+To support various multiplayer/singleplayer/online/offline game modes, every 
+client holds the full game logic. For online play, then, the server acts as a 
+"dumb" message-passing pipe. Consider using websockets to allow for future 
+browser-based clients.
+
+The *type* fields in items and professions correspond to the following uses:
+
+0 = usable during your turn, not duel related
+1 = usable if attacking player after initial attack/defense reveal
+2 = usable if defending ...
+3 = usable if suporting the attacker ...
+4 = usable if supporting the defender ...
+5 = has a trade effect
+6 = must accept during trade

@@ -160,7 +160,7 @@
     // count of goblets/bags/etc actually varies based on number of players
     _itemDeck = [ItemDeck new];
     _professionDeck = [ProfessionDeck new];
-
+    NSLog(@"%@", _professionDeck.cards);
     NSMutableArray *startingObjects = [_itemDeck drawStartingObjectsForPlayerCount:_playerCount];
     
     int affiliationAmount = ceil(_playerCount/2.0);

@@ -12,59 +12,73 @@
   }, {
     "id": 2,
     "name": "Bag of Secrets (K)",
-    "description": "Trade this object and you can draw the top object from the draw pile. You cannot trade this for another Bag of Secrets. This bag turns into a Key as soon as all objects have been drawn."
+    "description": "Trade this object and you can draw the top object from the draw pile. You cannot trade this for another Bag of Secrets. This bag turns into a Key as soon as all objects have been drawn.",
+    "type": 5
   }, {
     "id": 3,
     "name": "Bag of Secrets (G)",
-    "description": "Trade this object and you can draw the top object from the draw pile. You cannot trade this for another Bag of Secrets. This bag turns into a Goblet as soon as all objects have been drawn."
+    "description": "Trade this object and you can draw the top object from the draw pile. You cannot trade this for another Bag of Secrets. This bag turns into a Goblet as soon as all objects have been drawn.",
+    "type": 5
   }, {
     "id": 4,
     "name": "Dagger",
-    "description": "Add +1 to your score in any duel if you are the attacker. You cannot use this bonus if you are supporting another player."
+    "description": "Add +1 to your score in any duel if you are the attacker. You cannot use this bonus if you are supporting another player.",
+    "type": 1
   }, {
     "id": 5,
     "name": "Gloves",
-    "description": "Add +1 to your score in any duel if you are the defender. You cannot use this bonus if you are supporting another player."
+    "description": "Add +1 to your score in any duel if you are the defender. You cannot use this bonus if you are supporting another player.",
+    "type": 2
   }, {
     "id": 6,
     "name": "Poison Ring",
-    "description": "You win any duel that ends in a tie if you are either the attacker or the defender. You cannot use this bonus if you are supporting another player."
+    "description": "You win any duel that ends in a tie if you are either the attacker or the defender. You cannot use this bonus if you are supporting another player.",
+    "type": [1,2]
   }, {
     "id": 7,
     "name": "Throwing Knives",
-    "description": "If you support the attacker in any duel add +1 to his score."
+    "description": "If you support the attacker in any duel add +1 to his score.",
+    "type": 3
   }, {
     "id": 8,
     "name": "Whip",
-    "description": "If you suport the defender in any duel add +1 to his score"
+    "description": "If you suport the defender in any duel add +1 to his score",
+    "type": 4
   }, {
     "id": 9,
     "name": "Tome",
-    "description": "Trade this object and you can exchange your profession with your trading partner. Turn these professions face-down if they were face up."
+    "description": "Trade this object and you can exchange your profession with your trading partner. Turn these professions face-down if they were face up.",
+    "type": 5
   }, {
     "id": 10,
     "name": "Monocle",
-    "description": "Trade this object and you can look at your trading partner’s Secret Society card."
+    "description": "Trade this object and you can look at your trading partner’s Secret Society card.",
+    "type": 5
   }, {
     "id": 11,
     "name": "Privilege",
-    "description": "Trade this object and you can look at all of your trading partner’s objects."
+    "description": "Trade this object and you can look at all of your trading partner’s objects.",
+    "type": 5
   }, {
     "id": 12,
     "name": "Coat",
-    "description": "Trade this object and you can choose a new profession from those left over. Place your new profession face-down in front of you and add the old one to those left over."
+    "description": "Trade this object and you can choose a new profession from those left over. Place your new profession face-down in front of you and add the old one to those left over.",
+    "type": 5
   }, {
     "id": 13,
     "name": "Sextant",
-    "description": "Trade this object and you can choose a direction (right or left). All players must then pass one object of their choice to their neighbor in the chosen direction."
+    "description": "Trade this object and you can choose a direction (right or left). All players must then pass one object of their choice to their neighbor in the chosen direction.",
+    "type": 5
   }, {
     "id": 14,
     "name": "Shattered Mirror",
-    "description": "You must always accept this object if offered in a trade. You cannot use the trade ability of any object you exchange for the Shattered Mirror"
+    "description": "You must always accept this object if offered in a trade. You cannot use the trade ability of any object you exchange for the Shattered Mirror",
+    "type": 6
   }, {
     "id": 15,
     "name": "Black Pearl",
-    "description": "You must always accept this object if offered in a trade. If you hold the Black Pearl you cannot proclaim victory for your Secret Society."
+    "description": "You must always accept this object if offered in a trade. If you hold the Black Pearl you cannot proclaim victory for your Secret Society.",
+    "type": 6
   }, {
     "id": 16,
     "name": "Seal of the Lodge",

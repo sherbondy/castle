@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// A simple Fisher-Yates shuffle implementation. 
+
 @interface NSMutableArray (Shuffle)
 
 - (void)shuffle;
