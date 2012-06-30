@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSString *description;
 
++ (void)viewController:(UIViewController *)aVC presentDescriptionWithTitle:(NSString *)title andDescription:(NSString *)description fromSender:(id)sender;
+
 - (id)initWithTitle:(NSString *)title andDescription:(NSString *)description;
 
 @end

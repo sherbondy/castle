@@ -7,6 +7,7 @@
 //
 
 #import "AcceptTradeViewController.h"
+#import "DescriptionViewController.h"
 #import "Game.h"
 #import "Item.h"
 
@@ -62,9 +63,9 @@
 
 - (void)showItemDescription:(id)sender {
     Item *offeredItem = [Game sharedGame].offeredItem;
-    [[Game sharedGame].turnVC presentDescriptionWithTitle:offeredItem.name
-                                           andDescription:offeredItem.description
-                                               fromSender:sender];
+    [DescriptionViewController viewController:self
+                  presentDescriptionWithTitle:offeredItem.name
+                               andDescription:offeredItem.description fromSender:sender];
 
 }
 

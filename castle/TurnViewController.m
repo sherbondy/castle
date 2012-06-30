@@ -75,6 +75,8 @@
 
 - (void)viewDidUnload {
     [[Game sharedGame] removeObserver:self forKeyPath:@"currentPlayer"];
+    [[Game sharedGame].currentPlayer removeObserver:self forKeyPath:@"pityTokens"];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -141,13 +143,15 @@
 
 - (void)getProfessionDescription:(id)sender {
     NSDictionary *profession = self.currentPlayer.profession;
-    [self presentDescriptionWithTitle:[profession objectForKey:@"title"]
-                       andDescription:[profession objectForKey:@"description"] fromSender:sender];
+    [DescriptionViewController viewController:self
+                  presentDescriptionWithTitle:[profession objectForKey:@"title"]
+                               andDescription:[profession objectForKey:@"description"] fromSender:sender];
 }
 
 - (void)getAffiliationDescription:(id)sender {
-    [self presentDescriptionWithTitle:[self currentPlayer].teamName
-                       andDescription:[self currentPlayer].teamDescription fromSender:sender];
+    [DescriptionViewController viewController:self
+                  presentDescriptionWithTitle:[self currentPlayer].teamName
+                               andDescription:[self currentPlayer].teamDescription fromSender:sender];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -160,23 +164,6 @@
         [self updatePlayerFields];
     } else if ([keyPath isEqual:@"pityTokens"]){
         [self updatePityTokenLabel];
-    }
-}
-
-- (void)presentDescriptionWithTitle:(NSString *)title andDescription:(NSString *)description fromSender:(id)sender {
-    DescriptionViewController *descriptionVC = [[DescriptionViewController alloc] initWithTitle:title
-                                                                                 andDescription:description];
-    UINavigationController *descriptionNav = [[UINavigationController alloc] initWithRootViewController:descriptionVC];
-    // if iPad, show popover instead
-    if ([UIDevice isPad]) {
-        if (!_popover){
-            _popover = [[UIPopoverController alloc] initWithContentViewController:descriptionNav];
-        } else {
-            [_popover setContentViewController:descriptionNav];
-        }
-        [_popover presentPopoverFromRect:((UIButton *)sender).frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    } else {
-        [self presentModalViewController:descriptionNav animated:YES];
     }
 }
 

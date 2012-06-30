@@ -18,7 +18,6 @@
     ItemCarouselViewController *_itemCarouselVC;
     PlayerPickerViewController *_playerPicker;
     PlayerAction _turnAction;
-    UIPopoverController *_popover;
 }
 
 @property (nonatomic, readonly) UIPopoverController *popover;
@@ -26,6 +25,5 @@
 - (void)registerObservers;
 - (void)pressedTrade:(ItemView *)itemView;
 - (void)setReceivingPlayer:(Player *)player;
-- (void)presentDescriptionWithTitle:(NSString *)title andDescription:(NSString *)description fromSender:(id)sender;
 
 @end

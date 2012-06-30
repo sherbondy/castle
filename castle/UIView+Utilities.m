@@ -38,4 +38,12 @@
     va_end(args);
 }
 
+- (UIView *)superestView {
+    UIView *nextSuperView = [self superview];
+    while (nextSuperView != nil){
+        nextSuperView = [nextSuperView superview];
+    }
+    return nextSuperView;
+}
+
 @end

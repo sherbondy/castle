@@ -9,7 +9,15 @@
 #import "DescriptionViewController.h"
 #import "Game.h"
 
+static UIPopoverController *_popOver = nil;
+
 @implementation DescriptionViewController
+
++ (void)initialize {
+    if ([UIDevice isPad]){
+        _popOver = [[UIPopoverController alloc] init];
+    }
+}
 
 - (id)init {
     self = [super init];
@@ -63,6 +71,26 @@
         [[Game sharedGame].turnVC.popover dismissPopoverAnimated:YES];
     } else {
         [self dismissModalViewControllerAnimated:YES];
+    }
+}
+
+
+
++ (void)viewController:(UIViewController *)aVC presentDescriptionWithTitle:(NSString *)title
+        andDescription:(NSString *)description fromSender:(id)sender
+{
+    DescriptionViewController *descriptionVC = [[DescriptionViewController alloc] initWithTitle:title
+                                                                                 andDescription:description];
+    
+    UINavigationController *descriptionNav = [[UINavigationController alloc] initWithRootViewController:descriptionVC];
+    UIControl *senderControl = (UIControl *)sender;
+    
+    // if iPad, show popover instead
+    if ([UIDevice isPad]) {
+        [_popOver setContentViewController:descriptionNav];
+        [_popOver presentPopoverFromRect:senderControl.frame inView:aVC.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    } else {
+        [aVC presentModalViewController:descriptionNav animated:YES];
     }
 }
 

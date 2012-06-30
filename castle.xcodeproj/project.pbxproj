@@ -13,7 +13,7 @@
 		3E1F48FB1549028B00B2A750 /* AcceptTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */; };
 		3E1F48FE15490F1800B2A750 /* ItemCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */; };
 		3E2E0F69159C354C006D8D32 /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3E2E0F68159C354C006D8D32 /* notes.txt */; };
-		3E2E0F6C159C385A006D8D32 /* CastleViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E0F6B159C3859006D8D32 /* CastleViewManager.m */; };
+		3E2E0F6C159C385A006D8D32 /* GameViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E0F6B159C3859006D8D32 /* GameViewManager.m */; };
 		3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E422686154BDDAF0071E53F /* NSArray+Additions.m */; };
 		3E6E96EA1511D28100626416 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
 		3E6E96EE1511D96D00626416 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
@@ -144,8 +144,8 @@
 		3E1F48FC15490F1800B2A750 /* ItemCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCarouselViewController.h; sourceTree = "<group>"; };
 		3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCarouselViewController.m; sourceTree = "<group>"; };
 		3E2E0F68159C354C006D8D32 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
-		3E2E0F6A159C3859006D8D32 /* CastleViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastleViewManager.h; sourceTree = "<group>"; };
-		3E2E0F6B159C3859006D8D32 /* CastleViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastleViewManager.m; sourceTree = "<group>"; };
+		3E2E0F6A159C3859006D8D32 /* GameViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewManager.h; sourceTree = "<group>"; };
+		3E2E0F6B159C3859006D8D32 /* GameViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewManager.m; sourceTree = "<group>"; };
 		3E422685154BDDAF0071E53F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		3E422686154BDDAF0071E53F /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -328,8 +328,8 @@
 				3E1F48F91549028B00B2A750 /* AcceptTradeViewController.h */,
 				3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */,
 				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
-				3E2E0F6A159C3859006D8D32 /* CastleViewManager.h */,
-				3E2E0F6B159C3859006D8D32 /* CastleViewManager.m */,
+				3E2E0F6A159C3859006D8D32 /* GameViewManager.h */,
+				3E2E0F6B159C3859006D8D32 /* GameViewManager.m */,
 			);
 			path = castle;
 			sourceTree = "<group>";
@@ -700,7 +700,7 @@
 				3E9B0FB7154B949D00E2ECFA /* Item.m in Sources */,
 				3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */,
 				3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */,
-				3E2E0F6C159C385A006D8D32 /* CastleViewManager.m in Sources */,
+				3E2E0F6C159C385A006D8D32 /* GameViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

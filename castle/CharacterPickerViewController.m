@@ -83,6 +83,7 @@
     [[Game sharedGame] nextTurn];
     [self updatePlayerNameLabel];
     
+    // all players have picked their characters
     if ([Game sharedGame].round != 0){
         NSLog(@"Moving on to next step.");
         [[Game sharedGame] distributeCards];

@@ -37,5 +37,6 @@ typedef enum {
 @property (nonatomic, readonly) CGFloat y;
 
 - (void)addSubviews:(UIView *)firstSubview, ...;
+- (UIView *)superestView;
 
 @end
