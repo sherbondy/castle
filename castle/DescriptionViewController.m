@@ -68,12 +68,11 @@ static UIPopoverController *_popOver = nil;
 - (void)done {
     if ([UIDevice isPad]) {
         // what a mess. Why is there no dismissPopoverControllerAnimated?
-        [[Game sharedGame].turnVC.popover dismissPopoverAnimated:YES];
+        [_popOver dismissPopoverAnimated:YES];
     } else {
         [self dismissModalViewControllerAnimated:YES];
     }
 }
-
 
 
 + (void)viewController:(UIViewController *)aVC presentDescriptionWithTitle:(NSString *)title
