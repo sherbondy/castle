@@ -62,7 +62,6 @@
 
 @protocol GameDelegate
 
-- (void)setupViewControllers;
 - (void)startNewGame;
 - (void)showCharacterPicker;
 - (void)startNextTurn;

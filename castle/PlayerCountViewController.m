@@ -44,7 +44,7 @@
     [self.view addSubview:_stepper];
     
     _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 64)];
-    _countLabel.textAlignment = UITextAlignmentCenter;
+    _countLabel.textAlignment = NSTextAlignmentCenter;
     _countLabel.font = [UIFont systemFontOfSize:32];
     _countLabel.autoresizingMask = UIViewAutoresizingFlexibleMargins;
     _countLabel.accessibilityLabel = @"Player Count";

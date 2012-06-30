@@ -47,7 +47,7 @@
     _nameField.returnKeyType = UIReturnKeyDone;
     _nameField.clearsOnBeginEditing = YES;
     _nameField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    _nameField.textAlignment = UITextAlignmentCenter;
+    _nameField.textAlignment = NSTextAlignmentCenter;
     _nameField.autoresizingMask = UIViewAutoresizingHorizontal;
     _nameField.delegate = self;
     _nameField.accessibilityLabel = @"User Name";

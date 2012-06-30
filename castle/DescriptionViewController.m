@@ -70,7 +70,7 @@ static UIPopoverController *_popOver = nil;
         // what a mess. Why is there no view controller dismissPopoverControllerAnimated?
         [_popOver dismissPopoverAnimated:YES];
     } else {
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
@@ -89,7 +89,7 @@ static UIPopoverController *_popOver = nil;
         [_popOver setContentViewController:descriptionNav];
         [_popOver presentPopoverFromRect:senderControl.frame inView:aVC.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     } else {
-        [aVC presentModalViewController:descriptionNav animated:YES];
+        [aVC presentViewController:descriptionNav animated:YES completion:nil];
     }
 }
 

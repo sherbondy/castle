@@ -91,7 +91,7 @@
     _playerPicker.action = action;
     _turnAction = action;
     UINavigationController *playerPickerNav = [[UINavigationController alloc] initWithRootViewController:_playerPicker];
-    [self presentModalViewController:playerPickerNav animated:YES];
+    [self presentViewController:playerPickerNav animated:YES completion:nil];
 }
 
 - (void)pressedDuel:(id)sender {

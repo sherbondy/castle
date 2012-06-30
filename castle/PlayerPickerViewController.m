@@ -97,12 +97,12 @@
 }
 
 - (void)cancel {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)done {
     [[Game sharedGame].delegate setReceivingPlayer:_receivingPlayer];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setReceivingPlayer:(Player *)player {
