@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Unidextrous. All rights reserved.
 //
 
-#define NEITHER(A, B) = 
-
 #import "Game.h"
 #import "CharacterPickerViewController.h"
 #import "NSArray+Additions.h"
