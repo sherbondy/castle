@@ -11,13 +11,9 @@
 #import "Player.h"
 #import "ItemDeck.h"
 #import "ProfessionDeck.h"
-#import "PlayerCountViewController.h"
-#import "TurnViewController.h"
-#import "AcceptTradeViewController.h"
-#import "ProfessionPickerViewController.h"
 #import "Item.h"
 
-@protocol GameViewManagerDelegate;
+@protocol GameDelegate;
 
 @interface Game : NSObject {
     @private
@@ -31,20 +27,16 @@
     NSMutableArray *_players;
     ItemDeck       *_itemDeck;
     ProfessionDeck *_professionDeck;
-    UINavigationController *_navController;
-    TurnViewController *_turnVC;
-    AcceptTradeViewController *_tradeVC;
-    ProfessionPickerViewController *_professionVC;
 }
 
 @property (nonatomic, assign)   NSUInteger           playerCount;
+@property (nonatomic, weak)     id <GameDelegate>    delegate;
 @property (nonatomic, readonly) NSUInteger           turn;
 @property (nonatomic, readonly) NSUInteger           round;
 @property (nonatomic, readonly) Player              *currentPlayer;
 @property (nonatomic, readonly) Player              *givingPlayer;
 @property (nonatomic, readonly) Player              *receivingPlayer;
 @property (nonatomic, readonly) Item                *offeredItem;
-@property (nonatomic, readonly) UIViewController    *navController;
 @property (nonatomic, readonly) NSArray             *players;
 
 + (Game *)sharedGame;
@@ -58,7 +50,6 @@
 - (NSArray *)playersOmitting:(Player *)player;
 - (NSArray *)playersOmittingCurrent;
 - (Player *)playerAtIndexPath:(NSIndexPath *)indexPath;
-- (TurnViewController *)turnVC;
 - (void)setOfferedItem:(Item *)offeredItem;
 - (void)setGivingPlayer:(Player *)givingPlayer;
 - (void)setReceivingPlayer:(Player *)receivingPlayer;
@@ -69,7 +60,7 @@
 
 @end
 
-@protocol GameViewManagerDelegate
+@protocol GameDelegate
 
 - (void)setupViewControllers;
 - (void)startNewGame;
@@ -77,6 +68,7 @@
 - (void)startNextTurn;
 - (void)didCleanupTrade;
 - (void)handleTradeOffer;
-- (void)handleTradeAcceptWithItem:(Item *)receivedItem;
+- (void)handleCoatReceivedByPlayer:(Player *)recipient;
+- (void)setReceivingPlayer:(Player *)recipient;
 
 @end

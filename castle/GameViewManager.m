@@ -10,35 +10,52 @@
 #import "TurnViewController.h"
 #import "AcceptTradeViewController.h"
 #import "ProfessionPickerViewController.h"
+#import "PlayerCountViewController.h"
+#import "CharacterPickerViewController.h"
 
 @implementation GameViewManager
 
-- (void)setupViewControllers {
-    
+- (id)init {
+    if (self = [super init]){
+        _navController = [UINavigationController new];
+        _turnVC = [[TurnViewController alloc] init];
+        _tradeVC = [[AcceptTradeViewController alloc] init];
+        _professionVC = [[ProfessionPickerViewController alloc] init];
+    }
+    return self;
 }
 
 - (void)startNewGame {
+    [_tradeVC registerObservers];
+    [_turnVC registerObservers];
     
+    PlayerCountViewController *playerCountVC = [PlayerCountViewController new];
+    [_navController addChildViewController:playerCountVC];
 }
 
 - (void)showCharacterPicker {
-    
+    CharacterPickerViewController *characterPickerVC = [CharacterPickerViewController new];
+    [_navController pushViewController:characterPickerVC animated:YES];
 }
 
 - (void)startNextTurn {
-    
+    [_navController pushViewController:_turnVC animated:YES];
 }
 
 - (void)didCleanupTrade {
-    
+    [_navController popViewControllerAnimated:YES];
 }
 
 - (void)handleTradeOffer {
-    
+    [_navController pushViewController:_tradeVC animated:YES];
 }
 
-- (void)handleTradeAcceptWithItem:(Item *)receivedItem {
-    
+- (void)handleCoatReceivedByPlayer:(Player *)recipient{
+    [_professionVC pickProfessionForPlayer:recipient];
+}
+
+- (void)setReceivingPlayer:(Player *)recipient {
+    [_turnVC setReceivingPlayer:recipient];
 }
 
 @end

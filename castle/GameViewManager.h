@@ -13,7 +13,7 @@
 @class AcceptTradeViewController;
 @class ProfessionPickerViewController;
 
-@interface GameViewManager : NSObject <GameViewManagerDelegate> {
+@interface GameViewManager : NSObject <GameDelegate> {
     UINavigationController *_navController;
     TurnViewController *_turnVC;
     AcceptTradeViewController *_tradeVC;
@@ -21,5 +21,6 @@
 }
 
 @property (nonatomic, readonly) UIViewController    *navController;
+@property (nonatomic, readonly) TurnViewController  *turnVC;
 
 @end

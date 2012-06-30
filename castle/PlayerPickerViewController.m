@@ -101,7 +101,7 @@
 }
 
 - (void)done {
-    [[[Game sharedGame] turnVC] performSelector:@selector(setReceivingPlayer:) withObject:_receivingPlayer];
+    [[Game sharedGame].delegate setReceivingPlayer:_receivingPlayer];
     [self dismissModalViewControllerAnimated:YES];
 }
 

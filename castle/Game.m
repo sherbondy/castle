@@ -7,7 +7,6 @@
 //
 
 #import "Game.h"
-#import "CharacterPickerViewController.h"
 #import "NSArray+Additions.h"
 
 @implementation Game
@@ -24,24 +23,16 @@
     if ((self = [super init])){
         _turn = 0;
         _round = 0;
-        _navController = [UINavigationController new];
-        _turnVC = [[TurnViewController alloc] init];
-        _tradeVC = [[AcceptTradeViewController alloc] init];
-        _professionVC = [[ProfessionPickerViewController alloc] init];
     }
     return self;
 }
 
 - (void)start {
-    PlayerCountViewController *playerCountVC = [PlayerCountViewController new];
-    [_tradeVC registerObservers];
-    [_turnVC registerObservers];
-    [_navController addChildViewController:playerCountVC];
+    [self.delegate startNewGame];
 }
 
 - (void)pickCharacters {
-    CharacterPickerViewController *characterPickerVC = [CharacterPickerViewController new];
-    [_navController pushViewController:characterPickerVC animated:YES];
+    [self.delegate showCharacterPicker];
 }
 
 - (void)setCurrentPlayer:(Player *)currentPlayer {
@@ -75,10 +66,6 @@
     }
 }
 
-- (TurnViewController *)turnVC {
-    return _turnVC;
-}
-
 - (NSArray *)players {
     return [NSArray arrayWithArray:_players];
 }
@@ -97,7 +84,7 @@
 }
 
 - (void)newTurn {
-    [_navController pushViewController:_turnVC animated:YES];
+    [self.delegate startNextTurn];
 }
 
 - (void)setOfferedItem:(Item *)offeredItem {
@@ -116,13 +103,15 @@
     [self setGivingPlayer:nil];
     [self setReceivingPlayer:nil];
     self.offeredItem = nil;
-    [_navController popViewControllerAnimated:YES];
+    [self.delegate didCleanupTrade];
 }
+
 - (void)offerTradeTo:(Player *)toPlayer {
     [self setGivingPlayer:self.currentPlayer];
     [self setReceivingPlayer:toPlayer];
-    [_navController pushViewController:_tradeVC animated:YES];
+    [self.delegate handleTradeOffer];
 }
+
 - (void)acceptTradeWithItem:(Item *)receivedItem {
     [self.givingPlayer removeItemFromHand:self.offeredItem];
     [self.givingPlayer addItemToHand:receivedItem];
@@ -140,9 +129,9 @@
         }
 
         if (receivedItem.id == kCoat){
-            [_professionVC pickProfessionForPlayer:self.givingPlayer];
+            [self.delegate handleCoatReceivedByPlayer:self.givingPlayer];
         } else if (self.offeredItem.id == kCoat){
-            [_professionVC pickProfessionForPlayer:self.receivingPlayer];
+            [self.delegate handleCoatReceivedByPlayer:self.receivingPlayer];
         }
     }
 

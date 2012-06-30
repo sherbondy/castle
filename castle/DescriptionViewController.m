@@ -67,7 +67,7 @@ static UIPopoverController *_popOver = nil;
 
 - (void)done {
     if ([UIDevice isPad]) {
-        // what a mess. Why is there no dismissPopoverControllerAnimated?
+        // what a mess. Why is there no view controller dismissPopoverControllerAnimated?
         [_popOver dismissPopoverAnimated:YES];
     } else {
         [self dismissModalViewControllerAnimated:YES];

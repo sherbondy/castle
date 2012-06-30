@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "GameViewManager.h"
+
 #if RUN_KIF_TESTS
     #import "CastleTestController.h"
 #endif
@@ -18,12 +20,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
 
+    self.gameViewManager = [[GameViewManager alloc] init];
+    [Game sharedGame].delegate = self.gameViewManager;
     [[Game sharedGame] start];
-    [self.window setRootViewController:[Game sharedGame].navController];
+    
+    [self.window setRootViewController:self.gameViewManager.navController];
 
     #if RUN_KIF_TESTS
         [[CastleTestController sharedInstance] startTestingWithCompletionBlock:^{
