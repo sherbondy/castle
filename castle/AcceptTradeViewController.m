@@ -28,11 +28,6 @@
     return self;
 }
 
-- (void)registerObservers {
-    [[Game sharedGame] addObserver:self forKeyPath:@"receivingPlayer" options:0 context:NULL];
-    [[Game sharedGame] addObserver:self forKeyPath:@"offeredItem" options:0 context:NULL];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,7 +51,10 @@
 }
 
 - (void)updateOffer {
-    [_offerButton setDefaultTitle:[NSString stringWithFormat:@"Offered: %@",
+    [_itemCarouselVC setPlayer:[Game sharedGame].receivingPlayer];
+
+    [_offerButton setDefaultTitle:[NSString stringWithFormat:@"%@ Offered: %@",
+                                   [Game sharedGame].givingPlayer.name,
                                    [Game sharedGame].offeredItem.name]];
     _declineButton.enabled = ![Game sharedGame].offeredItem.mustAccept;
 }
@@ -67,15 +65,6 @@
                   presentDescriptionWithTitle:offeredItem.name
                                andDescription:offeredItem.description fromSender:sender];
 
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
-                        change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqual:@"receivingPlayer"]){
-        [_itemCarouselVC setPlayer:[Game sharedGame].receivingPlayer];
-    } else if ([keyPath isEqual:@"offeredItem"]) {
-        [self updateOffer];
-    }
 }
 
 - (void)pressedTrade:(ItemView *)itemView {

@@ -16,6 +16,6 @@
 }
 
 - (void)pressedTrade:(ItemView *)itemView;
-- (void)registerObservers;
+- (void)updateOffer;
 
 @end

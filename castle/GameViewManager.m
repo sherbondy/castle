@@ -26,7 +26,6 @@
 }
 
 - (void)startNewGame {
-    [_tradeVC registerObservers];
     [_turnVC registerObservers];
     
     PlayerCountViewController *playerCountVC = [PlayerCountViewController new];
@@ -47,6 +46,7 @@
 }
 
 - (void)handleTradeOffer {
+    [_tradeVC updateOffer];
     [_navController pushViewController:_tradeVC animated:YES];
 }
 

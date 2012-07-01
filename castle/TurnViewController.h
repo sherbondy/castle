@@ -15,12 +15,11 @@
     UIButton *_affiliationButton;
     UIButton *_professionButton;
     UILabel *_pityTokenLabel;
+    UILabel *_playerNameLabel;
     ItemCarouselViewController *_itemCarouselVC;
     PlayerPickerViewController *_playerPicker;
     PlayerAction _turnAction;
 }
-
-@property (nonatomic, readonly) UIPopoverController *popover;
 
 - (void)registerObservers;
 - (void)pressedTrade:(ItemView *)itemView;

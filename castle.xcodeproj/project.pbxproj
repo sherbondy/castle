@@ -102,6 +102,7 @@
 		3EA9C034154A2C84003860A3 /* CastleTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02D154A2808003860A3 /* CastleTestController.m */; };
 		3EA9C035154A2C84003860A3 /* KIFTestScenario+CastleAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02F154A28CE003860A3 /* KIFTestScenario+CastleAdditions.h */; };
 		3EA9C036154A2C84003860A3 /* KIFTestScenario+CastleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C030154A28CE003860A3 /* KIFTestScenario+CastleAdditions.m */; };
+		3EBAF5D9159F7F3100CE5C8C /* TurnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EBAF5D8159F7F3100CE5C8C /* TurnView.xib */; };
 		3EBB28411511E79F000236C3 /* CharacterPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */; };
 		3EBB28461511ED68000236C3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBB28451511ED68000236C3 /* iCarousel.m */; };
 		3EBB28491511EDED000236C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBB28471511EDDB000236C3 /* QuartzCore.framework */; };
@@ -207,6 +208,7 @@
 		3EA9C02D154A2808003860A3 /* CastleTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CastleTestController.m; path = integration/CastleTestController.m; sourceTree = "<group>"; };
 		3EA9C02F154A28CE003860A3 /* KIFTestScenario+CastleAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFTestScenario+CastleAdditions.h"; path = "integration/KIFTestScenario+CastleAdditions.h"; sourceTree = "<group>"; };
 		3EA9C030154A28CE003860A3 /* KIFTestScenario+CastleAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "KIFTestScenario+CastleAdditions.m"; path = "integration/KIFTestScenario+CastleAdditions.m"; sourceTree = "<group>"; };
+		3EBAF5D8159F7F3100CE5C8C /* TurnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TurnView.xib; sourceTree = "<group>"; };
 		3EBB283F1511E79F000236C3 /* CharacterPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterPickerViewController.h; sourceTree = "<group>"; };
 		3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterPickerViewController.m; sourceTree = "<group>"; };
 		3EBB28441511ED68000236C3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -303,10 +305,10 @@
 		3E7593C9151147FA00C5F6E6 /* castle */ = {
 			isa = PBXGroup;
 			children = (
+				3E9D83ED159F7DEE00EBC184 /* nibs */,
+				3E9D83EC159F7DC700EBC184 /* views */,
 				3EFB616A1555BEA5009D27F7 /* core */,
 				3E774F5A154A132E00FA237E /* categories */,
-				3E0B9435151C61710086E62B /* ItemView.h */,
-				3E0B9436151C61710086E62B /* ItemView.m */,
 				3EFB616B1555C640009D27F7 /* ProfessionPickerViewController.h */,
 				3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */,
 				3E0B9442151D299D0086E62B /* DescriptionViewController.h */,
@@ -327,9 +329,9 @@
 				3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */,
 				3E1F48F91549028B00B2A750 /* AcceptTradeViewController.h */,
 				3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */,
-				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
 				3E2E0F6A159C3859006D8D32 /* GameViewManager.h */,
 				3E2E0F6B159C3859006D8D32 /* GameViewManager.m */,
+				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
 			);
 			path = castle;
 			sourceTree = "<group>";
@@ -441,6 +443,23 @@
 				3E422686154BDDAF0071E53F /* NSArray+Additions.m */,
 			);
 			name = categories;
+			sourceTree = "<group>";
+		};
+		3E9D83EC159F7DC700EBC184 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B9435151C61710086E62B /* ItemView.h */,
+				3E0B9436151C61710086E62B /* ItemView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		3E9D83ED159F7DEE00EBC184 /* nibs */ = {
+			isa = PBXGroup;
+			children = (
+				3EBAF5D8159F7F3100CE5C8C /* TurnView.xib */,
+			);
+			name = nibs;
 			sourceTree = "<group>";
 		};
 		3EA9BFEA154A262F003860A3 /* Products */ = {
@@ -615,6 +634,7 @@
 				3E7594281511555400C5F6E6 /* CHANGELOG.md in Resources */,
 				3E75942A1511555400C5F6E6 /* README.md in Resources */,
 				3E2E0F69159C354C006D8D32 /* notes.txt in Resources */,
+				3EBAF5D9159F7F3100CE5C8C /* TurnView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

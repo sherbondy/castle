@@ -10,9 +10,13 @@
 #import "Game.h"
 #import "DescriptionViewController.h"
 
-@implementation TurnViewController
+@interface TurnViewController ()
 
-@synthesize popover = _popover;
+@property (nonatomic, readonly) Player *currentPlayer;
+
+@end
+
+@implementation TurnViewController
 
 - (id)init {
     self = [super init];
@@ -27,6 +31,8 @@
         
         _pityTokenLabel = [[UILabel alloc] init];
         
+        _playerNameLabel = [[UILabel alloc] init];
+        
         _itemCarouselVC = [[ItemCarouselViewController alloc] init];
         [self addChildViewController:_itemCarouselVC];
     }
@@ -39,11 +45,16 @@
 
 - (void)loadView {
     [super loadView];
-
-    _affiliationButton.frame = CGRectMake(0, 0, 160, 24);
-    _professionButton.frame = CGRectMake(0, 32, 120, 24);
-    _pityTokenLabel.frame = CGRectMake(0, 64, 140, 24);
+    _playerNameLabel.frame = CGRectMake(0, 0, 120, 24);
+    _affiliationButton.frame = CGRectMake(0, 32, 160, 24);
+    _professionButton.frame = CGRectMake(0, 64, 120, 24);
+    _pityTokenLabel.frame = CGRectMake(160, 64, 140, 24);
+    _pityTokenLabel.textAlignment = NSTextAlignmentRight;
     _itemCarouselVC.view.frame = CGRectMake(0, 96, self.view.width, 240);
+    
+    UIButton *gameBoardButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    gameBoardButton.frame = CGRectMake(self.view.width-140, 0, 140, 64);
+    [gameBoardButton setDefaultTitle:@"Show Game Board"];
     
     UIButton *duelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [duelButton setTitle:@"Duel" forState:UIControlStateNormal];
@@ -57,15 +68,11 @@
     spyButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleMargins;
     [spyButton addTarget:self action:@selector(pressedSpy:) forControlEvents:UIControlEventTouchUpInside];
 
-    UIButton *gameBoardButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    gameBoardButton.frame = CGRectMake(self.view.width-140, 0, 140, 64);
-    [gameBoardButton setDefaultTitle:@"Show Game Board"];
-
     [self updatePlayerFields];
     
     _playerPicker = [[PlayerPickerViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    [self.view addSubviews:duelButton, spyButton, _affiliationButton, _pityTokenLabel,
+    [self.view addSubviews:_playerNameLabel, duelButton, spyButton, _affiliationButton, _pityTokenLabel,
                            _itemCarouselVC.view, _professionButton, gameBoardButton, nil];
 }
 
@@ -75,7 +82,7 @@
 
 - (void)viewDidUnload {
     [[Game sharedGame] removeObserver:self forKeyPath:@"currentPlayer"];
-    [[Game sharedGame].currentPlayer removeObserver:self forKeyPath:@"pityTokens"];
+    [self.currentPlayer removeObserver:self forKeyPath:@"pityTokens"];
 
 }
 
@@ -131,12 +138,13 @@
 
 - (void)updatePityTokenLabel {
     _pityTokenLabel.text = [NSString stringWithFormat:@"%i Pity Token%@",
-                            [self currentPlayer].pityTokens, ([self currentPlayer].pityTokens == 1 ? @"" : @"s")];
+                            self.currentPlayer.pityTokens, (self.currentPlayer.pityTokens == 1 ? @"" : @"s")];
 }
 - (void)updatePlayerFields {
-    Player *cp = [self currentPlayer];
+    Player *cp = self.currentPlayer;
     [_affiliationButton setDefaultTitle:cp.shortTeamName];
     [_professionButton setDefaultTitle:[cp.profession objectForKey:@"title"]];
+    [_playerNameLabel setText:cp.name];
     [_itemCarouselVC setPlayer:cp];
     [self updatePityTokenLabel];
 }
@@ -150,8 +158,8 @@
 
 - (void)getAffiliationDescription:(id)sender {
     [DescriptionViewController viewController:self
-                  presentDescriptionWithTitle:[self currentPlayer].teamName
-                               andDescription:[self currentPlayer].teamDescription fromSender:sender];
+                  presentDescriptionWithTitle:self.currentPlayer.teamName
+                               andDescription:self.currentPlayer.teamDescription fromSender:sender];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -160,7 +168,7 @@
         if ([oldPlayer isKindOfClass:[Player class]]){
             [oldPlayer removeObserver:self forKeyPath:@"pityTokens"]; // old player
         }
-        [[Game sharedGame].currentPlayer addObserver:self forKeyPath:@"pityTokens" options:0 context:NULL];
+        [self.currentPlayer addObserver:self forKeyPath:@"pityTokens" options:0 context:NULL];
         [self updatePlayerFields];
     } else if ([keyPath isEqual:@"pityTokens"]){
         [self updatePityTokenLabel];
