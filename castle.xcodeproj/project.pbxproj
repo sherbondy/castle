@@ -14,7 +14,9 @@
 		3E1F48FE15490F1800B2A750 /* ItemCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */; };
 		3E2E0F6C159C385A006D8D32 /* GameViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E0F6B159C3859006D8D32 /* GameViewManager.m */; };
 		3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E422686154BDDAF0071E53F /* NSArray+Additions.m */; };
-		3E480BEB15BB788A00090359 /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3E480BEA15BB788A00090359 /* notes.txt */; };
+		3E480C0515BB7BA000090359 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E480C0215BB7BA000090359 /* characters.json */; };
+		3E480C0615BB7BA000090359 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E480C0315BB7BA000090359 /* items.json */; };
+		3E480C0715BB7BA000090359 /* professions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E480C0415BB7BA000090359 /* professions.json */; };
 		3E6E96EA1511D28100626416 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
 		3E6E96EE1511D96D00626416 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
 		3E6E96F11511DDC100626416 /* PlayerCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96F01511DDC100626416 /* PlayerCountViewController.m */; };
@@ -41,15 +43,9 @@
 		3E75940915114D6B00C5F6E6 /* theodora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FD15114D6B00C5F6E6 /* theodora.jpg */; };
 		3E75940A15114D6B00C5F6E6 /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FE15114D6B00C5F6E6 /* shield.png */; };
 		3E75940B15114D6B00C5F6E6 /* sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FF15114D6B00C5F6E6 /* sword.png */; };
-		3E75941015114D7000C5F6E6 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940D15114D7000C5F6E6 /* characters.json */; };
-		3E75941115114D7000C5F6E6 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940E15114D7000C5F6E6 /* items.json */; };
-		3E75941215114D7000C5F6E6 /* professions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940F15114D7000C5F6E6 /* professions.json */; };
 		3E75941B15114E2100C5F6E6 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941A15114E2100C5F6E6 /* DeckViewController.m */; };
 		3E75941E15114EDA00C5F6E6 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941D15114EDA00C5F6E6 /* Deck.m */; };
 		3E759421151151CA00C5F6E6 /* ItemDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E759420151151CA00C5F6E6 /* ItemDeck.m */; };
-		3E7594281511555400C5F6E6 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594241511555400C5F6E6 /* CHANGELOG.md */; };
-		3E7594291511555400C5F6E6 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7594261511555400C5F6E6 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3E75942A1511555400C5F6E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594271511555400C5F6E6 /* README.md */; };
 		3E774F59154A0C7200FA237E /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E774F58154A0C7200FA237E /* NSString+Additions.m */; };
 		3E9B0FB7154B949D00E2ECFA /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B0FB6154B949D00E2ECFA /* Item.m */; };
 		3EA9BFF5154A2656003860A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7593CF151147FA00C5F6E6 /* main.m */; };
@@ -57,13 +53,11 @@
 		3EA9BFF7154A2656003860A3 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941A15114E2100C5F6E6 /* DeckViewController.m */; };
 		3EA9BFF8154A2656003860A3 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75941D15114EDA00C5F6E6 /* Deck.m */; };
 		3EA9BFF9154A2656003860A3 /* ItemDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E759420151151CA00C5F6E6 /* ItemDeck.m */; };
-		3EA9BFFA154A2656003860A3 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7594261511555400C5F6E6 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3EA9BFFB154A2656003860A3 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
 		3EA9BFFC154A2656003860A3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
 		3EA9BFFD154A2656003860A3 /* PlayerCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96F01511DDC100626416 /* PlayerCountViewController.m */; };
 		3EA9BFFE154A2656003860A3 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96F31511DED000626416 /* UIView+Utilities.m */; };
 		3EA9BFFF154A2656003860A3 /* CharacterPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */; };
-		3EA9C000154A2656003860A3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBB28451511ED68000236C3 /* iCarousel.m */; };
 		3EA9C001154A2656003860A3 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEDF2D1512A9E900EC30E8 /* NSMutableArray+Shuffle.m */; };
 		3EA9C002154A2656003860A3 /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
 		3EA9C003154A2656003860A3 /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */; };
@@ -92,19 +86,12 @@
 		3EA9C01C154A2656003860A3 /* theodora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FD15114D6B00C5F6E6 /* theodora.jpg */; };
 		3EA9C01D154A2656003860A3 /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FE15114D6B00C5F6E6 /* shield.png */; };
 		3EA9C01E154A2656003860A3 /* sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7593FF15114D6B00C5F6E6 /* sword.png */; };
-		3EA9C01F154A2656003860A3 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940D15114D7000C5F6E6 /* characters.json */; };
-		3EA9C020154A2656003860A3 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940E15114D7000C5F6E6 /* items.json */; };
-		3EA9C021154A2656003860A3 /* professions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E75940F15114D7000C5F6E6 /* professions.json */; };
-		3EA9C022154A2656003860A3 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594241511555400C5F6E6 /* CHANGELOG.md */; };
-		3EA9C023154A2656003860A3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E7594271511555400C5F6E6 /* README.md */; };
-		3EA9C02A154A26B5003860A3 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA9BFF1154A262F003860A3 /* libKIF.a */; };
 		3EA9C033154A2C84003860A3 /* CastleTestController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02C154A2808003860A3 /* CastleTestController.h */; };
 		3EA9C034154A2C84003860A3 /* CastleTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02D154A2808003860A3 /* CastleTestController.m */; };
 		3EA9C035154A2C84003860A3 /* KIFTestScenario+CastleAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C02F154A28CE003860A3 /* KIFTestScenario+CastleAdditions.h */; };
 		3EA9C036154A2C84003860A3 /* KIFTestScenario+CastleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9C030154A28CE003860A3 /* KIFTestScenario+CastleAdditions.m */; };
 		3EBAF5D9159F7F3100CE5C8C /* TurnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EBAF5D8159F7F3100CE5C8C /* TurnView.xib */; };
 		3EBB28411511E79F000236C3 /* CharacterPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */; };
-		3EBB28461511ED68000236C3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBB28451511ED68000236C3 /* iCarousel.m */; };
 		3EBB28491511EDED000236C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBB28471511EDDB000236C3 /* QuartzCore.framework */; };
 		3EBB284A1511EE15000236C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */; };
 		3EC65332154A1BDD0036128C /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC65331154A1BDD0036128C /* UIButton+Additions.m */; };
@@ -113,6 +100,7 @@
 		3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A59151C470D006E1D8F /* ProfessionDeck.m */; };
 		3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */; };
 		3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */; };
+		5861C0F23A714B96ABC398C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F59945B64C4FFABDAB62DD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,13 +110,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3E7593BE151147FA00C5F6E6;
 			remoteInfo = castle;
-		};
-		3EA9BFF0154A262F003860A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3EA9BFE9154A262F003860A3 /* KIF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AAB07268139719AC008AF393;
-			remoteInfo = KIF;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -148,7 +129,9 @@
 		3E2E0F6B159C3859006D8D32 /* GameViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewManager.m; sourceTree = "<group>"; };
 		3E422685154BDDAF0071E53F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		3E422686154BDDAF0071E53F /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
-		3E480BEA15BB788A00090359 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = notes.txt; path = notes/notes.txt; sourceTree = SOURCE_ROOT; };
+		3E480C0215BB7BA000090359 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
+		3E480C0315BB7BA000090359 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		3E480C0415BB7BA000090359 /* professions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = professions.json; sourceTree = "<group>"; };
 		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		3E6E96E91511D28100626416 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		3E6E96EC1511D96D00626416 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -158,9 +141,9 @@
 		3E6E96F21511DED000626416 /* UIView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utilities.h"; sourceTree = "<group>"; };
 		3E6E96F31511DED000626416 /* UIView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utilities.m"; sourceTree = "<group>"; };
 		3E7593BF151147FA00C5F6E6 /* castle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = castle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E7593C3151147FA00C5F6E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3E7593C5151147FA00C5F6E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E7593C3151147FA00C5F6E6 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3E7593C5151147FA00C5F6E6 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3E7593CB151147FA00C5F6E6 /* castle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "castle-Info.plist"; sourceTree = "<group>"; };
 		3E7593CD151147FA00C5F6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E7593CF151147FA00C5F6E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,24 +168,16 @@
 		3E7593FD15114D6B00C5F6E6 /* theodora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theodora.jpg; sourceTree = "<group>"; };
 		3E7593FE15114D6B00C5F6E6 /* shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield.png; sourceTree = "<group>"; };
 		3E7593FF15114D6B00C5F6E6 /* sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sword.png; sourceTree = "<group>"; };
-		3E75940D15114D7000C5F6E6 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
-		3E75940E15114D7000C5F6E6 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
-		3E75940F15114D7000C5F6E6 /* professions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = professions.json; sourceTree = "<group>"; };
 		3E75941915114E2100C5F6E6 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
 		3E75941A15114E2100C5F6E6 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
 		3E75941C15114EDA00C5F6E6 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		3E75941D15114EDA00C5F6E6 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		3E75941F151151CA00C5F6E6 /* ItemDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDeck.h; sourceTree = "<group>"; };
 		3E759420151151CA00C5F6E6 /* ItemDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDeck.m; sourceTree = "<group>"; };
-		3E7594241511555400C5F6E6 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		3E7594251511555400C5F6E6 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		3E7594261511555400C5F6E6 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		3E7594271511555400C5F6E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3E774F57154A0C7200FA237E /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		3E774F58154A0C7200FA237E /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		3E9B0FB5154B949D00E2ECFA /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		3E9B0FB6154B949D00E2ECFA /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
-		3EA9BFE9154A262F003860A3 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = frameworks/KIF/KIF.xcodeproj; sourceTree = "<group>"; };
 		3EA9C027154A2656003860A3 /* castle (Integration Tests).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "castle (Integration Tests).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA9C02C154A2808003860A3 /* CastleTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CastleTestController.h; path = integration/CastleTestController.h; sourceTree = "<group>"; };
 		3EA9C02D154A2808003860A3 /* CastleTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CastleTestController.m; path = integration/CastleTestController.m; sourceTree = "<group>"; };
@@ -211,9 +186,7 @@
 		3EBAF5D8159F7F3100CE5C8C /* TurnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TurnView.xib; sourceTree = "<group>"; };
 		3EBB283F1511E79F000236C3 /* CharacterPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterPickerViewController.h; sourceTree = "<group>"; };
 		3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterPickerViewController.m; sourceTree = "<group>"; };
-		3EBB28441511ED68000236C3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		3EBB28451511ED68000236C3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		3EBB28471511EDDB000236C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3EBB28471511EDDB000236C3 /* QuartzCore.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3EC65330154A1BDD0036128C /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
 		3EC65331154A1BDD0036128C /* UIButton+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Additions.m"; sourceTree = "<group>"; };
 		3EC65334154A1D850036128C /* UIDevice+Kind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Kind.h"; sourceTree = "<group>"; };
@@ -226,6 +199,8 @@
 		3EEF1A5D151C4F1B006E1D8F /* TurnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnViewController.m; sourceTree = "<group>"; };
 		3EFB616B1555C640009D27F7 /* ProfessionPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionPickerViewController.h; sourceTree = "<group>"; };
 		3EFB616C1555C640009D27F7 /* ProfessionPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionPickerViewController.m; sourceTree = "<group>"; };
+		B0F59945B64C4FFABDAB62DD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54509945F81440D8BCF61B3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +212,7 @@
 				3EBB28491511EDED000236C3 /* QuartzCore.framework in Frameworks */,
 				3E7593C4151147FA00C5F6E6 /* UIKit.framework in Frameworks */,
 				3E7593C6151147FA00C5F6E6 /* Foundation.framework in Frameworks */,
+				5861C0F23A714B96ABC398C6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +230,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EA9C02A154A26B5003860A3 /* libKIF.a in Frameworks */,
 				3EA9C00D154A2656003860A3 /* CoreGraphics.framework in Frameworks */,
 				3EA9C00E154A2656003860A3 /* QuartzCore.framework in Frameworks */,
 				3EA9C00F154A2656003860A3 /* UIKit.framework in Frameworks */,
@@ -265,18 +240,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E480C0115BB7BA000090359 /* text */ = {
+			isa = PBXGroup;
+			children = (
+				3E480C0215BB7BA000090359 /* characters.json */,
+				3E480C0315BB7BA000090359 /* items.json */,
+				3E480C0415BB7BA000090359 /* professions.json */,
+			);
+			path = text;
+			sourceTree = "<group>";
+		};
 		3E7593B4151147FA00C5F6E6 = {
 			isa = PBXGroup;
 			children = (
-				3EA9BFE9154A262F003860A3 /* KIF.xcodeproj */,
 				3EA9C02B154A27CD003860A3 /* integration */,
-				3E7594221511554E00C5F6E6 /* external */,
-				3E75940C15114D7000C5F6E6 /* text */,
 				3E7593F215114D6B00C5F6E6 /* resources */,
 				3E7593C9151147FA00C5F6E6 /* castle */,
 				3E7593E1151147FA00C5F6E6 /* castleTests */,
 				3E7593C2151147FA00C5F6E6 /* Frameworks */,
 				3E7593C0151147FA00C5F6E6 /* Products */,
+				C54509945F81440D8BCF61B3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,6 +281,7 @@
 				3E7593C5151147FA00C5F6E6 /* Foundation.framework */,
 				3E7593C7151147FA00C5F6E6 /* CoreGraphics.framework */,
 				3E7593DB151147FA00C5F6E6 /* SenTestingKit.framework */,
+				B0F59945B64C4FFABDAB62DD /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,6 +354,7 @@
 		3E7593F215114D6B00C5F6E6 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E480C0115BB7BA000090359 /* text */,
 				3E7593F315114D6B00C5F6E6 /* characters */,
 				3E7593FE15114D6B00C5F6E6 /* shield.png */,
 				3E7593FF15114D6B00C5F6E6 /* sword.png */,
@@ -392,38 +377,6 @@
 				3E7593FD15114D6B00C5F6E6 /* theodora.jpg */,
 			);
 			path = characters;
-			sourceTree = "<group>";
-		};
-		3E75940C15114D7000C5F6E6 /* text */ = {
-			isa = PBXGroup;
-			children = (
-				3E75940D15114D7000C5F6E6 /* characters.json */,
-				3E75940E15114D7000C5F6E6 /* items.json */,
-				3E75940F15114D7000C5F6E6 /* professions.json */,
-				3E480BEA15BB788A00090359 /* notes.txt */,
-			);
-			path = text;
-			sourceTree = "<group>";
-		};
-		3E7594221511554E00C5F6E6 /* external */ = {
-			isa = PBXGroup;
-			children = (
-				3EBB28431511ED68000236C3 /* iCarousel */,
-				3E7594231511555400C5F6E6 /* JSONKit */,
-			);
-			name = external;
-			sourceTree = "<group>";
-		};
-		3E7594231511555400C5F6E6 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				3E7594241511555400C5F6E6 /* CHANGELOG.md */,
-				3E7594251511555400C5F6E6 /* JSONKit.h */,
-				3E7594261511555400C5F6E6 /* JSONKit.m */,
-				3E7594271511555400C5F6E6 /* README.md */,
-			);
-			name = JSONKit;
-			path = external/JSONKit;
 			sourceTree = "<group>";
 		};
 		3E774F5A154A132E00FA237E /* categories */ = {
@@ -462,14 +415,6 @@
 			name = nibs;
 			sourceTree = "<group>";
 		};
-		3EA9BFEA154A262F003860A3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3EA9BFF1154A262F003860A3 /* libKIF.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3EA9C02B154A27CD003860A3 /* integration */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,16 +424,6 @@
 				3EA9C030154A28CE003860A3 /* KIFTestScenario+CastleAdditions.m */,
 			);
 			name = integration;
-			sourceTree = "<group>";
-		};
-		3EBB28431511ED68000236C3 /* iCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				3EBB28441511ED68000236C3 /* iCarousel.h */,
-				3EBB28451511ED68000236C3 /* iCarousel.m */,
-			);
-			name = iCarousel;
-			path = external/iCarousel/iCarousel;
 			sourceTree = "<group>";
 		};
 		3EFB616A1555BEA5009D27F7 /* core */ = {
@@ -520,6 +455,7 @@
 				3E7593BB151147FA00C5F6E6 /* Sources */,
 				3E7593BC151147FA00C5F6E6 /* Frameworks */,
 				3E7593BD151147FA00C5F6E6 /* Resources */,
+				48573927A2824422AFC258CC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -585,12 +521,6 @@
 			mainGroup = 3E7593B4151147FA00C5F6E6;
 			productRefGroup = 3E7593C0151147FA00C5F6E6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3EA9BFEA154A262F003860A3 /* Products */;
-					ProjectRef = 3EA9BFE9154A262F003860A3 /* KIF.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3E7593BE151147FA00C5F6E6 /* castle */,
@@ -599,16 +529,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3EA9BFF1154A262F003860A3 /* libKIF.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKIF.a;
-			remoteRef = 3EA9BFF0154A262F003860A3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3E7593BD151147FA00C5F6E6 /* Resources */ = {
@@ -628,13 +548,10 @@
 				3E75940915114D6B00C5F6E6 /* theodora.jpg in Resources */,
 				3E75940A15114D6B00C5F6E6 /* shield.png in Resources */,
 				3E75940B15114D6B00C5F6E6 /* sword.png in Resources */,
-				3E75941015114D7000C5F6E6 /* characters.json in Resources */,
-				3E75941115114D7000C5F6E6 /* items.json in Resources */,
-				3E75941215114D7000C5F6E6 /* professions.json in Resources */,
-				3E7594281511555400C5F6E6 /* CHANGELOG.md in Resources */,
-				3E75942A1511555400C5F6E6 /* README.md in Resources */,
 				3EBAF5D9159F7F3100CE5C8C /* TurnView.xib in Resources */,
-				3E480BEB15BB788A00090359 /* notes.txt in Resources */,
+				3E480C0515BB7BA000090359 /* characters.json in Resources */,
+				3E480C0615BB7BA000090359 /* items.json in Resources */,
+				3E480C0715BB7BA000090359 /* professions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,11 +580,6 @@
 				3EA9C01C154A2656003860A3 /* theodora.jpg in Resources */,
 				3EA9C01D154A2656003860A3 /* shield.png in Resources */,
 				3EA9C01E154A2656003860A3 /* sword.png in Resources */,
-				3EA9C01F154A2656003860A3 /* characters.json in Resources */,
-				3EA9C020154A2656003860A3 /* items.json in Resources */,
-				3EA9C021154A2656003860A3 /* professions.json in Resources */,
-				3EA9C022154A2656003860A3 /* CHANGELOG.md in Resources */,
-				3EA9C023154A2656003860A3 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +599,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		48573927A2824422AFC258CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -699,13 +625,11 @@
 				3E75941B15114E2100C5F6E6 /* DeckViewController.m in Sources */,
 				3E75941E15114EDA00C5F6E6 /* Deck.m in Sources */,
 				3E759421151151CA00C5F6E6 /* ItemDeck.m in Sources */,
-				3E7594291511555400C5F6E6 /* JSONKit.m in Sources */,
 				3E6E96EA1511D28100626416 /* Game.m in Sources */,
 				3E6E96EE1511D96D00626416 /* Player.m in Sources */,
 				3E6E96F11511DDC100626416 /* PlayerCountViewController.m in Sources */,
 				3E6E96F41511DED000626416 /* UIView+Utilities.m in Sources */,
 				3EBB28411511E79F000236C3 /* CharacterPickerViewController.m in Sources */,
-				3EBB28461511ED68000236C3 /* iCarousel.m in Sources */,
 				3ECEDF2E1512A9E900EC30E8 /* NSMutableArray+Shuffle.m in Sources */,
 				3EEF1A5A151C470D006E1D8F /* ProfessionDeck.m in Sources */,
 				3EEF1A5E151C4F1B006E1D8F /* TurnViewController.m in Sources */,
@@ -745,13 +669,11 @@
 				3EA9BFF7154A2656003860A3 /* DeckViewController.m in Sources */,
 				3EA9BFF8154A2656003860A3 /* Deck.m in Sources */,
 				3EA9BFF9154A2656003860A3 /* ItemDeck.m in Sources */,
-				3EA9BFFA154A2656003860A3 /* JSONKit.m in Sources */,
 				3EA9BFFB154A2656003860A3 /* Game.m in Sources */,
 				3EA9BFFC154A2656003860A3 /* Player.m in Sources */,
 				3EA9BFFD154A2656003860A3 /* PlayerCountViewController.m in Sources */,
 				3EA9BFFE154A2656003860A3 /* UIView+Utilities.m in Sources */,
 				3EA9BFFF154A2656003860A3 /* CharacterPickerViewController.m in Sources */,
-				3EA9C000154A2656003860A3 /* iCarousel.m in Sources */,
 				3EA9C001154A2656003860A3 /* NSMutableArray+Shuffle.m in Sources */,
 				3EA9C002154A2656003860A3 /* ProfessionDeck.m in Sources */,
 				3EA9C003154A2656003860A3 /* TurnViewController.m in Sources */,
@@ -847,6 +769,7 @@
 		};
 		3E7593ED151147FB00C5F6E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54509945F81440D8BCF61B3 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -860,6 +783,7 @@
 		};
 		3E7593EE151147FB00C5F6E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54509945F81440D8BCF61B3 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
