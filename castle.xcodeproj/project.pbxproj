@@ -12,11 +12,11 @@
 		3E0B9444151D299D0086E62B /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B9443151D299D0086E62B /* DescriptionViewController.m */; };
 		3E1F48FB1549028B00B2A750 /* AcceptTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */; };
 		3E1F48FE15490F1800B2A750 /* ItemCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */; };
-		3E2E0F6C159C385A006D8D32 /* GameViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E0F6B159C3859006D8D32 /* GameViewManager.m */; };
 		3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E422686154BDDAF0071E53F /* NSArray+Additions.m */; };
 		3E480C0515BB7BA000090359 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E480C0215BB7BA000090359 /* characters.json */; };
 		3E480C0615BB7BA000090359 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E480C0315BB7BA000090359 /* items.json */; };
 		3E480C0715BB7BA000090359 /* professions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E480C0415BB7BA000090359 /* professions.json */; };
+		3E480C2415BB7EBC00090359 /* GameViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E480C2315BB7EBC00090359 /* GameViewManager.m */; };
 		3E6E96EA1511D28100626416 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96E91511D28100626416 /* Game.m */; };
 		3E6E96EE1511D96D00626416 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96ED1511D96D00626416 /* Player.m */; };
 		3E6E96F11511DDC100626416 /* PlayerCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E96F01511DDC100626416 /* PlayerCountViewController.m */; };
@@ -125,13 +125,13 @@
 		3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptTradeViewController.m; sourceTree = "<group>"; };
 		3E1F48FC15490F1800B2A750 /* ItemCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCarouselViewController.h; sourceTree = "<group>"; };
 		3E1F48FD15490F1800B2A750 /* ItemCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCarouselViewController.m; sourceTree = "<group>"; };
-		3E2E0F6A159C3859006D8D32 /* GameViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewManager.h; sourceTree = "<group>"; };
-		3E2E0F6B159C3859006D8D32 /* GameViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewManager.m; sourceTree = "<group>"; };
 		3E422685154BDDAF0071E53F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		3E422686154BDDAF0071E53F /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		3E480C0215BB7BA000090359 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 		3E480C0315BB7BA000090359 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		3E480C0415BB7BA000090359 /* professions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = professions.json; sourceTree = "<group>"; };
+		3E480C2215BB7EBC00090359 /* GameViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewManager.h; sourceTree = "<group>"; };
+		3E480C2315BB7EBC00090359 /* GameViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewManager.m; sourceTree = "<group>"; };
 		3E6E96E81511D28100626416 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		3E6E96E91511D28100626416 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		3E6E96EC1511D96D00626416 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -313,8 +313,8 @@
 				3EBB28401511E79F000236C3 /* CharacterPickerViewController.m */,
 				3E1F48F91549028B00B2A750 /* AcceptTradeViewController.h */,
 				3E1F48FA1549028B00B2A750 /* AcceptTradeViewController.m */,
-				3E2E0F6A159C3859006D8D32 /* GameViewManager.h */,
-				3E2E0F6B159C3859006D8D32 /* GameViewManager.m */,
+				3E480C2215BB7EBC00090359 /* GameViewManager.h */,
+				3E480C2315BB7EBC00090359 /* GameViewManager.m */,
 				3E7593CA151147FA00C5F6E6 /* Supporting Files */,
 			);
 			path = castle;
@@ -644,7 +644,7 @@
 				3E9B0FB7154B949D00E2ECFA /* Item.m in Sources */,
 				3E422687154BDDAF0071E53F /* NSArray+Additions.m in Sources */,
 				3EFB616D1555C640009D27F7 /* ProfessionPickerViewController.m in Sources */,
-				3E2E0F6C159C385A006D8D32 /* GameViewManager.m in Sources */,
+				3E480C2415BB7EBC00090359 /* GameViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +775,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "castle/castle-Prefix.pch";
 				INFOPLIST_FILE = "castle/castle-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -789,7 +789,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "castle/castle-Prefix.pch";
 				INFOPLIST_FILE = "castle/castle-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
